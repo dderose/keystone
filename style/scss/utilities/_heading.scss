@@ -1,0 +1,71 @@
+// Heading Sizes
+//
+// These classes decouple heading styling/sizing from structure and allow us to redefine the size of any heading to match the design while keeping semantic meaning in element usage.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>   
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr class="u-alpha">
+//     <td>.u-alpha</td>
+//     <td>24px font size</td>
+//   </tr>
+//   <tr class="u-beta">
+//     <td>.u-beta</td>
+//     <td>21.3 font size</td>
+//   </tr>
+//   <tr class="u-gamma">
+//     <td>.u-gamma</td>
+//     <td>18.7px font size</td>
+//   </tr>
+//   <tr class="u-delta">
+//     <td>.u-delta</td>
+//     <td>16px font size</td>
+//   </tr>
+//   <tr class="u-epsilon">
+//     <td>.u-epsilon</td>
+//     <td>14.7px font size</td>
+//   </tr>
+//   <tr class="u-zeta">
+//     <td>.u-zeta</td>
+//     <td>13.3px font size</td>
+//   </tr>
+// </tbody>
+// </table>
+// 
+// Styleguide 2.1.0
+
+/**
+ * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ *
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
+ * heading hierarchy. Note: default hN sizes are in the switch above.
+ */
+.u-alpha { // h1
+    @include font-size($h1-size, important);
+}
+
+.u-beta { // h2
+    @include font-size($h2-size, important);
+}
+
+.u-gamma { // h3
+    @include font-size($h3-size, important);
+}
+
+.u-delta { // h4
+    @include font-size($h4-size, important);
+}
+
+.u-epsilon { // h5
+    @include font-size($h5-size, important);
+}
+
+.u-zeta { // h6
+    @include font-size($h6-size, important);
+}

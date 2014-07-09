@@ -1,0 +1,162 @@
+/*------------------------------------*\
+    $BORDER-BOX
+\*------------------------------------*/
+/**
+ * Do you want all elements to adopt `box-sizing:border-box;` as per
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+$global-border-box: true!default;
+
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base stuff
+ */
+$base-font-size:    16!default;
+$base-line-height:  28!default;
+
+/**
+ * Base font-family.
+ */
+$base-font-family:  'Lato', Helvetica Neue, Arial, sans-serif!default;
+
+/**
+ * Default colour for objects’ borders etc.
+ */
+$base-ui-color:     #ccc!default;
+
+
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
+
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+$breakpoint1:   481px!default;
+$breakpoint2:   620px!default;
+$breakpoint3:   769px!default;
+$breakpoint4:   1000px!default;
+$breakpoint5:   1280px!default;
+
+
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+$giga-size:         56!default;
+$mega-size:         42!default;
+$kilo-size:         38!default;
+$centi-size:        14!default;
+$milli-size:        12!default;
+$micro-size:        10!default;
+
+$h1-size:           32!default; // .alpha
+$h2-size:           24!default; // .beta
+$h3-size:           20!default; // .gamma
+$h4-size:           18!default; // .delta
+$h5-size:           16!default; // .epsilon
+$h6-size:           14!default; // .zeta
+
+
+/*------------------------------------*\
+    $FONT-COLORS
+\*------------------------------------*/
+/**
+ * Font-colors (in hex). Refer to relevant sections for their implementations.
+ */
+$color1:  #67737c!default; // Base color
+$color2:  #2584cf!default; // Link color
+$color3:  #394147!default; // 
+$color4:  #5b656d!default; // Heading color
+$color5:  #4b555c!default; // Heading color 2
+$color6:  #58799d!default; // Title color
+
+// BACKGROUND COLORS
+$bgcolorPrimary1:      #00477f!default;
+$bgcolorPrimary2:      #f7f9fb!default;
+$bgcolorPrimary3:      #f5f8fa!default;
+
+// Dropdown Colors
+$dropdownColor1:  #0078c1!default;
+$dropdownColor2:  #606d78!default;
+$dropdownColor3:  #394856!default;
+$dropdownColor4:  #b0b6bb!default;
+$dropdownColor5:  #f5463b!default;
+
+
+/*------------------------------------*\
+    $BORDER COLLORS
+\*------------------------------------*/
+/**
+ * Button-colors (in hex). Refer to relevant sections for their implementations.
+ */
+$brdrColor: #dee4eb!default;
+$brdrColorDark: #b0b6bb!default;
+
+
+/*------------------------------------*\
+    $QUOTES
+\*------------------------------------*/
+/**
+ * English quote marks?
+ */
+$english-quotes:    true!default;
+
+/**
+ * If you want English quotes then please do not edit these; they’re only here
+ * because Sass needs them.
+ */
+$open-quote:    null;
+$close-quote:   null;
+
+@if $english-quotes == true {
+    $open-quote:    \201C;
+    $close-quote:   \201D;
+}
+
+/**
+ * If you need non-English quotes, please alter the following values accordingly:
+ */
+@if $english-quotes != true {
+    $open-quote:    \00AB;
+    $close-quote:   \00BB;
+}
+
+
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+$brand-color:       $color1!default;
+$brand-face:        'Lato', Helvetica Neue, Arial, sans-serif!default;
+
+/**
+ * How big would you like round corners to be by default?
+ */
+$brand-round:        4!default;
+
+
+ /**
+ * The default transition (buttons, links, etc.)
+ */
+$brand-transition:        all 0.1s ease-in-out!default;
+
+
+/*------------------------------------*\
+    $FRAMEWORK
+\*------------------------------------*/
+/**
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+$base-spacing-unit: 20!default;
+$half-spacing-unit: $base-spacing-unit / 2!default;
+$one-and-half-spacing-unit: $base-line-height * 1.5!default;
+$double-spacing-unit: $base-spacing-unit * 2!default;
+$line-height-ratio: $base-line-height / $base-font-size;

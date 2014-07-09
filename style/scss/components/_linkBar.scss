@@ -1,0 +1,28 @@
+.LinkBar {
+	margin-bottom: $double-spacing-unit + px;
+	margin-bottom: rem($double-spacing-unit);
+	font-size: 0;
+}
+	.LinkBar-item {
+		display: inline-block;
+		padding: 0 10px;
+		padding: 0 rem(10);
+		@include font-size($centi-size);
+		font-weight: 400;
+		border-left: 1px solid #ccc;
+
+		&:first-of-type {
+			margin-left: -10px;
+			margin-left: -rem(-10);
+			border-left: none;
+		}
+
+		@include rwd-b2() {
+			@include font-size($h4-size);
+			line-height: 1;
+		}
+	}
+	.LinkBar-heading {
+		margin-bottom: $half-spacing-unit + px;
+		margin-bottom: rem($half-spacing-unit);
+	}

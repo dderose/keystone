@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 fed-wrapper" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js fed-wrapper" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Keystone Dental Style Guide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+    <!-- vvv DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+    <link rel="stylesheet" href="//cloud.typography.com/7508852/770622/css/fonts.css" />
+    <!-- ^^^ DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/style.css">
+
+  <!-- the FED -->
+  <link rel="stylesheet" href="../dist/fed.min.css">
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="kss-topnav" class="u-marginFlushEnds u-paddingSidesHalf">
+  <ul class="u-alpha u-weightSemiBold u-marginFlush u-listStyleNone">
+    <li class="u-inlineBlock u-marginFlush"><a href="../index.html" class="u-block u-paddingSides u-paddingEndsHalf">Overview</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-1.html" class="u-block u-paddingSides u-paddingEndsHalf">Base</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-2.html" class="u-block u-paddingSides u-paddingEndsHalf">Utilities</a></li>
+    <li class="u-inlineBlock u-marginFlush">
+      <div class="Dropdown Dropdown--plain is-closed js-dropdown u-clearfix u-paddingSides u-paddingEndsHalf">
+        <button type="button" class="Dropdown-toggle js-dropdownTrigger u-alpha u-lineHeight1">
+          <span>Components</span>
+        </button>
+        <ul class="Dropdown-menu js-dropdownMenu">
+          
+            <li class="Dropdown-menu-item"><a href="section-6.html">Grid</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-11.html">Dropdowns</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-20.html">Modals</a></li>
+          
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+<header id="kss-main-header" class="u-paddingEnds u-paddingSidesDouble">
+  <h1 class="u-mega u-colorWhite u-weightSemiBold u-marginFlush u-paddingFlush">Keystone Style Guide</h1>
+</header>
+
+<div class="u-table">
+<!-- <div class="Grid u-clearfix"> -->
+  <nav id="kss-nav" class="u-tableCell">
+  <!-- <nav id="kss-nav" class="Grid-item u-sizeShrinkWrapLeft"> -->
+    <ul class="u-paddingDouble u-textNoWrap u-listStyleNone u-hide b2-u-show">
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-6.html">Grid</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-11.html">Dropdowns</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-20.html">Modals</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+    </ul>
+  </nav>
+
+  <section class="u-tableCell u-paddingDouble u-sizeFillAlt">
+  <!-- <section class="Grid-item u-sizeFill u-paddingDouble"> -->
+    
+
+      
+
+      
+        
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="20.0"><span class="u-colorSectionHeading">20.0 ::</span> Modals</h1>
+        
+          
+          <div class="kss-lead"><p>The Modal creates a transparent overlay over the page content and a window containing new/additional content.
+
+</p>
+<p>By default, the modal will be centered vertically and horizontally and have a a min-width of 350px and a max-width of 95%. If an explicit width is not set on the modal it will expand to fit the content up to the max-width of 95%.
+
+</p>
+<p>The modal script was created by Dmitry Semenov and full documentation can be found here: <a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html">http://dimsemenov.com/plugins/magnific-popup/documentation.html</a>.
+
+</p>
+<p><strong>Note that the version used in FED only includes the inline, ajax, and iframe content types.</strong>
+
+</p>
+<h2>USAGE:</h2>
+<p><code> $(&apos;.js-modal&apos;).magnificPopup(options);</code></p>
+
+<h2>OPTIONS:</h2>
+The modal is configurable via jQuery options. The various options can be mixed and matched in any combination. The following are the most commonly used options; see <a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html">http://dimsemenov.com/plugins/magnific-popup/documentation.html</a> for a complete list of options.
+
+<table class="Table Table--border Table--striped u-centi u-marginTop">
+<thead class="Table-head">
+  <tr>
+    <th>Option</th>
+    <th>Description</th>
+    <th>jQuery option</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>type</td>
+    <td>What kind of content is being loaded into the modal. Options are inline, ajax, and iframe.<br /><strong>Default: inline.</strong></td>
+    <td class="u-textBreak">$(&apos;.js-modal&apos;).magnificPopup({type: &apos;ajax&apos;});</td>
+  </tr>
+  <tr>
+    <td>disableOn</td>
+    <td>If window width is less then number in this option the modal will not be opened and default behavior of element will be triggered.<br /><strong>Default: null.</strong></td>
+    <td class="u-textBreak">$(&apos;.js-modal&apos;).magnificPopup({disableOn:480});</td>
+  </tr>
+  <tr>
+    <td>closeOnBgClick</td>
+    <td>Close the popup when user clicks on the dark overlay.<br /><strong>Default: true.</strong></td>
+    <td class="u-textBreak">$(&apos;.js-modal&apos;).magnificPopup({closeOnBgClick:false});</td>
+  </tr>
+  <tr>
+    <td>showCloseBtn</td>
+    <td>Controls whether the close button will be displayed or not.<br /><strong>Default: true.</strong></td>
+    <td class="u-textBreak">$(&apos;.js-modal&apos;).magnificPopup({showCloseBtn:false});</td>
+  </tr>
+  <tr>
+    <td>enableEscapeKey</td>
+    <td>Controls whether pressing the escape key will dismiss the active popup or not.<br /><strong>Default: true.</strong></td>
+    <td class="u-textBreak">$(&apos;.js-modal&apos;).magnificPopup({enableEscapeKey:false});</td>
+  </tr>
+  <tr>
+    <td>alignTop</td>
+    <td>If set to true the modal is vertically aligned to the top instead of the center.<br /><strong>Default: false.</strong></td>
+    <td class="u-textBreak">$(&apos;.js-modal&apos;).magnificPopup({alignTop:true});</td>
+  </tr>
+</tbody>
+</table>
+
+<h2>EVENTS AND METHODS:</h2>
+<p><a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html#api">http://dimsemenov.com/plugins/magnific-popup/documentation.html#api</a> </p>
+
+<h2>EXAMPLES:</h2></div>
+
+              <p><a href="html/mobile-friendly-page.html" data-mfp-src="#modal" class="js-modal" data-qe-id="{{modal.trigger}}">Modal with inline content</a> - Note that this links to a mobile friendly page. This behavior is triggered when the screen width is less then 481px by using the <code>disableOn</code> option.</p>
+<div id="modal" class="Modal u-visuallyHidden" style="width:700px;width:43.75rem;" data-qe-id="{{modal.content}}">
+  <h1 class="Modal-heading">Heading Text Goes Here</h1>
+  <p>You ran out of time and your campaigns have been disabled. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <form class="Form Grid Grid--gutter Grid--verticalGutter">
+    <div class="Grid-item">
+      <label for="field1" class="Form-required">Field label</label>
+      <p class="Form-description">Description text helps define the field.</p>
+      <input type="text" id="field1" />
+    </div>
+    <div class="Grid-item u-size1of2">
+      <label for="field2" class="Form-required">Field label</label>
+      <input type="text" id="field2" />
+    </div>
+    <div class="Grid-item u-size1of2">
+      <label for="field3" class="Form-required">Field label</label>
+      <input type="text" id="field3" />
+    </div>
+    <div class="Grid-item Modal-actions">
+      <button class="u-linkPseudo u-marginRight" id="cancel">No Thanks</button>
+      <button class="Button Button--secondary" id="cancel">Do Something</button>
+    </div>
+  </form>
+</div>
+<p><a href="html/section-20-ajax.html" class="js-modal-ajax" data-qe-id="{{modal2.trigger}}">Modal with ajax content</a></p>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;p&gt;&lt;a href=&quot;html/mobile-friendly-page.html&quot; data-mfp-src=&quot;#modal&quot; class=&quot;js-modal&quot; data-qe-id=&quot;{{modal.trigger}}&quot;&gt;Modal with inline content&lt;/a&gt; - Note that this links to a mobile friendly page. This behavior is triggered when the screen width is less then 481px by using the &lt;code&gt;disableOn&lt;/code&gt; option.&lt;/p&gt;
+&lt;div id=&quot;modal&quot; class=&quot;Modal u-visuallyHidden&quot; style=&quot;width:700px;width:43.75rem;&quot; data-qe-id=&quot;{{modal.content}}&quot;&gt;
+  &lt;h1 class=&quot;Modal-heading&quot;&gt;Heading Text Goes Here&lt;/h1&gt;
+  &lt;p&gt;You ran out of time and your campaigns have been disabled. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
+  &lt;form class=&quot;Form Grid Grid--gutter Grid--verticalGutter&quot;&gt;
+    &lt;div class=&quot;Grid-item&quot;&gt;
+      &lt;label for=&quot;field1&quot; class=&quot;Form-required&quot;&gt;Field label&lt;/label&gt;
+      &lt;p class=&quot;Form-description&quot;&gt;Description text helps define the field.&lt;/p&gt;
+      &lt;input type=&quot;text&quot; id=&quot;field1&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Grid-item u-size1of2&quot;&gt;
+      &lt;label for=&quot;field2&quot; class=&quot;Form-required&quot;&gt;Field label&lt;/label&gt;
+      &lt;input type=&quot;text&quot; id=&quot;field2&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Grid-item u-size1of2&quot;&gt;
+      &lt;label for=&quot;field3&quot; class=&quot;Form-required&quot;&gt;Field label&lt;/label&gt;
+      &lt;input type=&quot;text&quot; id=&quot;field3&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Grid-item Modal-actions&quot;&gt;
+      &lt;button class=&quot;u-linkPseudo u-marginRight&quot; id=&quot;cancel&quot;&gt;No Thanks&lt;/button&gt;
+      &lt;button class=&quot;Button Button--secondary&quot; id=&quot;cancel&quot;&gt;Do Something&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;html/section-20-ajax.html&quot; class=&quot;js-modal-ajax&quot; data-qe-id=&quot;{{modal2.trigger}}&quot;&gt;Modal with ajax content&lt;/a&gt;&lt;/p&gt;</pre>
+                </div>
+              
+          
+         
+      
+    
+  </section>
+</div>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="public/moment.min.js"></script>
+<script src="../dist/fed.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Ensure code blocks are highlighted properly...
+    $('pre>code').addClass('prettyprint');
+    prettyPrint();
+
+    if ($('.js-popover').length) {
+      $('.js-popover').popover({
+        container: 'body',
+        html: true,
+        content: function () {
+          return $(this).next('.Popover-content').html();
+        }
+      });
+    }
+
+    if ($('.js-tooltip').length) {
+      $('.js-tooltip').tooltip({
+        container: 'body'
+      });
+    }
+
+    if ($('.js-dropdown').length) {
+      $('.js-dropdown').Dropdown();
+    }
+
+    if ($('.js-modal').length) {
+      $('.js-modal').magnificPopup({
+        type:'inline',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-modal-ajax').length) {
+      $('.js-modal-ajax').magnificPopup({
+        type:'ajax',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-date-picker').length) {
+      $('.js-date-picker').daterangepicker({singleDatePicker:true});
+    }
+
+    if ($('.js-date-range-picker').length) {
+      $('.js-date-range-picker').daterangepicker();
+    }
+
+  });
+</script>
+</body>
+</html>

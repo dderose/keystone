@@ -1,0 +1,8 @@
+node_modules/
+test/
+tool/
+Gruntfile.js
+deployment.properties
+npm-shrinkwrap.json
+package.json
+.DS_Store

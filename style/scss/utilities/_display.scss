@@ -1,0 +1,136 @@
+// Display Options
+//
+// A series of classes to change the display attribute of an element. These classes are enabled for individual breakpoints.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>.u-inline</td>
+//     <td>Assigns a display of inline to an element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-inlineBlock</td>
+//     <td>Assigns a display of inline-block to an element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-block</td>
+//     <td>Assigns a display of block to an element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-table</td>
+//     <td>Assigns a display of table to an element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-tableRow</td>
+//     <td>Assigns a display of table-row to an element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-tableCell</td>
+//     <td>Assigns a display of table-cell to an element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-displayNone, u.hide</td>
+//     <td>Completely removes the element from the page.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-visuallyHidden</td>
+//     <td>Visually hides an element but leaves it visible to screen readers.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-show</td>
+//     <td>Sets the display property to block. Commonly used to show a hidden element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-showInlineBlock</td>
+//     <td>Sets the display property to inline-block. Commonly used to show a hidden element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-showTableCell</td>
+//     <td>Sets the display property to table-cell. Commonly used to show a hidden element.</td>
+//   </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 2.4.0
+
+/* Create breakpoint utility classes for showing and hiding elements */
+@mixin display-setup($namespace: "") {
+	.#{$namespace}u-inline {
+	    display: inline !important;
+	}
+
+	.#{$namespace}u-inlineBlock {
+	    display: inline-block !important;
+	}
+
+	.#{$namespace}u-block {
+	    display: block !important;
+	}
+
+	.#{$namespace}u-table {
+	    display: table !important;
+	    width: 100% !important;
+	}
+
+	.#{$namespace}u-tableInline {
+	    display: inline-table !important;
+	}
+
+	.#{$namespace}u-tableRow {
+	    display: table-row !important;
+	}
+
+	.#{$namespace}u-tableCell {
+	    display: table-cell !important;
+	}
+
+	.#{$namespace}u-tableCellCollapse {
+	    display: table-cell !important;
+	    width: rem(1);
+	}
+
+	.#{$namespace}u-hide,
+	.#{$namespace}u-displayNone {
+		display: none !important;
+	}
+
+	.#{$namespace}u-visuallyHidden {
+		@extend %visuallyHidden;
+	}
+
+	.#{$namespace}u-show {
+		display: block !important;
+	}
+
+	.#{$namespace}u-showInlineBlock {
+		display: inline-block !important;
+	}
+
+	.#{$namespace}u-showTableCell {
+		display: table-cell !important;
+	}
+}
+
+@include display-setup();
+
+@media only screen and (min-width:$breakpoint1) {
+    @include display-setup("b1-");
+}
+
+@media only screen and (min-width:$breakpoint2) {
+    @include display-setup("b2-");
+}
+
+@media only screen and (min-width:$breakpoint3) {
+    @include display-setup("b3-");
+}
+
+@media only screen and (min-width:$breakpoint4) {
+    @include display-setup("b4-");
+}

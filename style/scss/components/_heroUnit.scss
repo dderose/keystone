@@ -1,0 +1,94 @@
+// Hero Unit
+//
+// The Hero Unit
+//
+// Styleguide 7.0.0
+
+.HeroUnit {
+	width: 100%;
+	background-color: #d2e4f3;
+}
+	.HeroUnit-inner {
+		width: 100%;
+		max-width: 1200px;
+		max-width: rem(1200);
+		margin: 0 auto;
+	}
+		.HeroUnit-heading {
+			@include font-size($kilo-size);
+			font-weight: 300;
+			text-align: center;
+
+			@include rwd-b2() {
+				text-align: left;
+			}
+
+			@include rwd-b4() {
+				@include font-size($giga-size);
+			}
+		}
+		.HeroUnit-image {
+			max-height: 300px;	
+			vertical-align: top;
+			line-height: 0;
+			margin-left: -125px;
+
+			@include rwd-b4() {
+				max-height: 100%;
+				margin-left: 0;
+			}
+		}
+		.HeroUnit-image--product {
+			width: 100%;
+			margin-left: 0;
+		}
+		.HeroUnit-content {
+			width: 100%;
+			max-width: 1200px;
+			max-width: rem(1200);
+			margin: 0 auto;
+			vertical-align: top;
+			padding: 20px 20px 0 20px;
+			padding: rem(20) rem(20) 0 rem(20);
+			color: $color3;
+			font-weight: 300;
+			font-size: $h4-size + px;
+			font-size: rem($h4-size);
+			text-align: justify;
+
+			@include rwd-b2() {
+				text-align: left;
+			}
+		}
+		.HeroUnit-content--product {
+			font-size: $h5-size + px;
+			font-size: rem($h5-size);
+
+			@include rwd-b3() {
+				font-size: $h2-size + px;
+				font-size: rem($h2-size);
+			}
+		}
+
+.HeroUnit--product {
+	// background-color: #f5f8fa;
+	border-top: 1px solid #dee4eb;
+	border-top: rem(1) solid #dee4eb;
+	border-bottom: 1px solid #dee4eb;
+	border-bottom: rem(1) solid #dee4eb;
+
+	.HeroUnit-inner {
+		max-width: 1000px;
+		max-width: rem(1000);
+	}
+
+	.HeroUnit-content {
+		padding: 20px 20px 0 20px;
+		padding: rem(20) rem(20) 0 rem(20);
+
+		@include rwd-b4() {
+			padding: 50px 50px 0 50px;
+			padding: rem(50) rem(20) rem(30) rem(20);
+		}
+	}
+}

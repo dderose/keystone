@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 fed-wrapper" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js fed-wrapper" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Keystone Dental Style Guide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+    <!-- vvv DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+    <link rel="stylesheet" href="//cloud.typography.com/7508852/770622/css/fonts.css" />
+    <!-- ^^^ DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/style.css">
+
+  <!-- the FED -->
+  <link rel="stylesheet" href="../dist/fed.min.css">
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]--></head>
+<body>
+<nav id="kss-topnav" class="u-marginFlushEnds u-paddingSidesHalf">
+  <ul class="u-alpha u-weightSemiBold u-marginFlush u-listStyleNone">
+    <li class="u-inlineBlock u-marginFlush"><a href="index.html" class="u-block u-paddingSides u-paddingEndsHalf">Overview</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-1.html" class="u-block u-paddingSides u-paddingEndsHalf">Base</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-2.html" class="u-block u-paddingSides u-paddingEndsHalf">Utilities</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-3.html" class="u-block u-paddingSides u-paddingEndsHalf">Components</a></li>
+</ul>
+</nav>
+<header id="kss-main-header" class="u-paddingEnds u-paddingSidesDouble">
+  <h1 class="u-mega u-colorWhite u-weightSemiBold u-marginFlush u-paddingFlush">Keystone Dental Style Guide</h1>
+</header>
+
+<div class="u-table">
+    
+
+    
+
+  <section class="u-tableCell u-sizeFillAlt u-paddingDouble">
+    
+      <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf"><span class="u-colorSectionHeading">0.0 ::</span> Overview</h1>
+
+<p>The Front-End Development Framework (The FED) is a rapid-development framework for easy and quick adoption of the ConstantContact look and feel.
+FED includes base styles, flexible utilities and copy-and-paste components, delivered via Akamai, our CDN.
+
+
+</p>
+<p><br>
+</p>
+<h4>How to use the FED:</h4>
+<p>There are seven steps to getting FED into your application:
+
+</p>
+<ol>
+<li><strong>Cloud Typography:</strong> include font definitions from third party service. <em>Will only render on constantcontact.com or roving.com domains</em></li>
+<li><strong>FED CSS:</strong> include the latest version of FED from the CDN</li>
+<li><strong>FED Wrapper:</strong> activate FED CSS for areas of your page by wrapping it inside <code>&lt;div class=&quot;fed-wrapper&quot;&gt;&lt;/div&gt;</code></li>
+<li><strong>jQuery:</strong> include version 1.7.1 or higher of jQuery on your page if you need any FED JavaScript components</li>
+<li><strong>moment:</strong>  include version 2.5.1 or higher of moment.js if you need the date picker component</li>
+<li><strong>FED JavaScript:</strong> include the latest version of FED JavaScript from the CDN</li>
+<li><strong>Initialize FED JavaScript:</strong> FED JavaScript components are jQuery plugins, and they must be initialized with your required options</li>
+</ol>
+<p><a href="https://github.roving.com/gist/bwalter/655">Here&apos;s a starter template to get you up and running quickly</a>.
+
+</p>
+<p><br>
+</p>
+<h4>Quick Reference Embeds:</h4>
+<ul>
+<li><strong>CSS:</strong> <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://static.ctctcdn.com/h/fed-framework/{version}/fed.min.css&quot; /&gt;</code></li>
+<li><strong>JS:</strong> <code>&lt;script src=&quot;https://static.ctctcdn.com/h/fed-framework/{version}/fed.min.js&quot;&gt;&lt;/script&gt;</code></li>
+<li><strong>Fonts:</strong> <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;//cloud.typography.com/7508852/770622/css/fonts.css&quot; /&gt;</code></li>
+</ul>
+<p><br>
+</p>
+<h4>FED Project Links:</h4>
+<ul>
+<li><a href="https://github.roving.com/ES/fed-framework">Github Repo</a></li>
+<li><a href="https://github.roving.com/ES/fed-framework/wiki">Wiki</a></li>
+<li><a href="https://github.roving.com/ES/fed-framework/wiki/CHANGELOG">CHANGELOG</a></li>
+<li><a href="https://jenkins1.roving.com/job/build-fed_framework-master/">Jenkins: Prod</a></li>
+<li><a href="https://jenkins1.roving.com/job/build-fed_framework-development/">Jenkins: Dev</a></li>
+<li><a href="https://p2-qajenkins101.ad.prodcc.net/jenkins/view/%20CachedViews/view/HUXLEY/view/hux-Runs/">Jenkins: Huxley Jobs</a></li>
+<li><a href="https://p2-qajenkins101.ad.prodcc.net/jenkins/job/JOB-BUILD-HUX/">Jenkins: Make Huxley Jobs</a></li>
+</ul>
+<p><br>
+</p>
+<h4>FED Syntax Conventions:</h4>
+<ul>
+<li><strong>Utility:</strong> <em>[ u-utilityName ]</em> Targeted, isolated style helpers intended to overwrite the default behavior of components.</li>
+<li><strong>Component:</strong> <em>[ ComponentName ]</em> Components are modules of isolated markup, like reusable building blocks.</li>
+<li><strong>Children:</strong> <em>[ ComponentName-childName ]</em> Children elements are contained within components.</li>
+<li><strong>Modifiers:</strong> <em>[ ComponentName--modifierName ]</em> A modifier is an alternative skin or appearance of a component.</li>
+<li><strong>State:</strong> <em>[ is-stateName ]</em> State classes are applied to components and denote an altered status of a component, usually toggled by JavaScript.</li>
+<li><strong>JavaScript:</strong> <em>[ js-hookName ]</em> All handles for JavaScript interactivity should be explicitly denoted and separate from styling classes.</li>
+<li><strong>Responsive:</strong> <em>[ b1-u-utilityName ]</em> There are 4 breakpoints in FED, denoted by b1-&#42;, b2-&#42;, b3-&#42;, b4-&#42;. They are min-width.</li>
+</ul>
+<p><br>
+</p>
+<h4>QE Automation Helpers:</h4>
+<p>All interactive and dynamic components should be tagged with Quality Engineering IDs. The &quot;qe-ids&quot; enable QE to easily automate testing of FED components integrated into applications.
+
+</p>
+<ul>
+<li><strong>HTML Attribute:</strong> <em>data-qe-id</em></li>
+<li><strong>Value Naming Convention:</strong><ul>
+<li>Each data-qe-id should be unique per page.</li>
+<li>Each data-qe-id should communicate the component, type and name if applicable</li>
+<li>Example: <em>data-qe-id=&quot;modal1.trigger&quot;</em></li>
+<li>Iterator Example: <em>data-qe-id=&quot;List.Item List.item1&quot;</em></li>
+</ul>
+</li>
+</ul>
+
+    
+  </section>
+</div>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="public/moment.min.js"></script>
+<script src="../dist/fed.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    // Ensure code blocks are highlighted properly...
+    $('pre>code').addClass('prettyprint');
+    prettyPrint();
+
+    if ($('.js-dropdown').length) {
+      $('.js-dropdown').Dropdown();
+    }
+  });
+</script>
+</body>
+</html>

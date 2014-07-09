@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 fed-wrapper" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js fed-wrapper" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Keystone Dental Style Guide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+    <!-- vvv DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+    <link rel="stylesheet" href="//cloud.typography.com/7508852/770622/css/fonts.css" />
+    <!-- ^^^ DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/style.css">
+
+  <!-- the FED -->
+  <link rel="stylesheet" href="../dist/fed.min.css">
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="kss-topnav" class="u-marginFlushEnds u-paddingSidesHalf">
+  <ul class="u-alpha u-weightSemiBold u-marginFlush u-listStyleNone">
+    <li class="u-inlineBlock u-marginFlush"><a href="../index.html" class="u-block u-paddingSides u-paddingEndsHalf">Overview</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-1.html" class="u-block u-paddingSides u-paddingEndsHalf">Base</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-2.html" class="u-block u-paddingSides u-paddingEndsHalf">Utilities</a></li>
+    <li class="u-inlineBlock u-marginFlush">
+      <div class="Dropdown Dropdown--plain is-closed js-dropdown u-clearfix u-paddingSides u-paddingEndsHalf">
+        <button type="button" class="Dropdown-toggle js-dropdownTrigger u-alpha u-lineHeight1">
+          <span>Components</span>
+        </button>
+        <ul class="Dropdown-menu js-dropdownMenu">
+          
+            <li class="Dropdown-menu-item"><a href="section-3.html">Grid</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-4.html">Dropdowns</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-5.html">Modals</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-6.html">Offcanvas</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-7.html">Hero Unit</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-8.html">Category Unit</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-9.html">Carousel</a></li>
+          
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+<header id="kss-main-header" class="u-paddingEnds u-paddingSidesDouble">
+  <h1 class="u-mega u-colorWhite u-weightSemiBold u-marginFlush u-paddingFlush">Keystone Style Guide</h1>
+</header>
+
+<div class="u-table">
+<!-- <div class="Grid u-clearfix"> -->
+  <nav id="kss-nav" class="u-tableCell">
+  <!-- <nav id="kss-nav" class="Grid-item u-sizeShrinkWrapLeft"> -->
+    <ul class="u-paddingDouble u-textNoWrap u-listStyleNone u-hide b2-u-show">
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-3.html">Grid</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-4.html">Dropdowns</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-5.html">Modals</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-6.html">Offcanvas</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-7.html">Hero Unit</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-8.html">Category Unit</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-9.html">Carousel</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+    </ul>
+  </nav>
+
+  <section class="u-tableCell u-paddingDouble u-sizeFillAlt">
+  <!-- <section class="Grid-item u-sizeFill u-paddingDouble"> -->
+    
+
+      
+
+      
+        
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="4.0"><span class="u-colorSectionHeading">4.0 ::</span> Dropdowns</h1>
+        
+          
+          <div class="kss-lead"><p>A dropdown menu that can be used as a list of links or as a form input, utilizing an optional, hidden &lt;select&gt; menu.
+
+</p>
+<h2>USAGE:</h2>
+<code>$(&apos;.js-dropdown&apos;).Dropdown(options);</code>
+
+<br><br><br>
+<h2>OPTIONS:</h2>
+The dropdown is configurable via data-attributes and jQuery options. The various options can be mixed and matched in any combination.
+
+<table class="Table Table--border Table--striped u-centi u-marginTop">
+<thead class="Table-head">
+  <tr>
+    <th>Option</th>
+    <th>Description</th>
+    <th>data-attribute</th>
+    <th>jQuery option</th>
+    <th style="width:250px">Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Fixed Height</td>
+    <td>Limit the height of the dropdown menu. Default: auto.</td>
+    <td class="u-textBreak">data-height=&quot;100&quot;</td>
+    <td class="u-textBreak">$(&apos;.js-dropdown&apos;).Dropdown({height: &apos;100&apos;});</td>
+    <td>
+<div data-height="100" class="Dropdown {$modifiers} js-dropdown u-clearfix is-closed">
+  <button type="button" class="Dropdown-toggle js-dropdownTrigger">
+    <span>fixed height</span>
+  <i class="Icon--roundedCaret"></i>
+  </button>
+  <ul class="Dropdown-menu">
+     <li class="Dropdown-menu-header">Section Heading</li>
+     <li class="Dropdown-menu-item" data-value="One"><span>Link One</span></li>
+     <li class="Dropdown-menu-item" data-value="Two"><span>Link Two</span></li>
+     <li class="Dropdown-menu-item" data-value="Three"><span>Link Three</span></li>
+ </ul>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>Vertical position</td>
+    <td>Position the dropdown below or above the trigger. Default: below.</td>
+    <td class="u-textBreak">data-vposition=&quot;above&quot;</td>
+    <td class="u-textBreak">$(&apos;.js-dropdown&apos;).Dropdown({vposition: &apos;above&apos;});</td>
+    <td>
+<div data-vposition="above" class="Dropdown {$modifiers} js-dropdown u-clearfix is-closed">
+  <button type="button" class="Dropdown-toggle js-dropdownTrigger">
+    <span>position above</span>
+  <i class="Icon--roundedCaret"></i>
+  </button>
+  <ul class="Dropdown-menu">
+     <li class="Dropdown-menu-header">Section Heading</li>
+     <li class="Dropdown-menu-item" data-value="One"><span>Link One</span></li>
+     <li class="Dropdown-menu-item" data-value="Two"><span>Link Two</span></li>
+     <li class="Dropdown-menu-item" data-value="Three"><span>Link Three</span></li>
+ </ul>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>Horizontal position</td>
+    <td>Align the dropdown with the left or right edge of the trigger. Default: left</td>
+    <td class="u-textBreak">data-hposition=&quot;right&quot;</td>
+    <td class="u-textBreak">$(&apos;.js-dropdown&apos;).Dropdown({hposition: &apos;right&apos;});</td>
+    <td>
+<div data-hposition="right" class="Dropdown {$modifiers} js-dropdown u-clearfix is-closed">
+  <button type="button" class="Dropdown-toggle js-dropdownTrigger">
+    <span>position right</span>
+  <i class="Icon--roundedCaret"></i>
+  </button>
+  <ul class="Dropdown-menu">
+     <li class="Dropdown-menu-header">Section Heading</li>
+     <li class="Dropdown-menu-item" data-value="One"><span>Link One</span></li>
+     <li class="Dropdown-menu-item" data-value="Two"><span>Link Two</span></li>
+     <li class="Dropdown-menu-item" data-value="Three"><span>Link Three</span></li>
+ </ul>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>Preselected option</td>
+    <td>Upon initial load of the dropdown, have an item preseleced. The value of this options should match the data-value of the <em>&lt;li class=&quot;Dropdown-menu-item&quot;&gt;</em>. Default: none selected</td>
+    <td class="u-textBreak">data-preselected=&quot;Two&quot;</td>
+    <td class="u-textBreak">$(&apos;.js-dropdown&apos;).Dropdown({preselected: &apos;Two&apos;});</td>
+    <td>
+<div data-preselected="Two" class="Dropdown {$modifiers} js-dropdown u-clearfix is-closed">
+  <button type="button" class="Dropdown-toggle js-dropdownTrigger">
+    <span>position above</span>
+  <i class="Icon--roundedCaret"></i>
+  </button>
+  <ul class="Dropdown-menu">
+     <li class="Dropdown-menu-header">Section Heading</li>
+     <li class="Dropdown-menu-item" data-value="One"><span>Link One</span></li>
+     <li class="Dropdown-menu-item" data-value="Two"><span>Link Two</span></li>
+     <li class="Dropdown-menu-item" data-value="Three"><span>Link Three</span></li>
+ </ul>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>Auto-create hidden &lt;select&gt;</td>
+    <td>Mimick the dropdown and its values in a hidden select element. The value becomes the id attribute of the <em>&lt;select&gt;</em> menu. Default: not created</td>
+    <td class="u-textBreak">data-select=&quot;uniqueID&quot;</td>
+    <td class="u-textBreak">$(&apos;.js-dropdown&apos;).Dropdown({select: &apos;uniqueID&apos;});</td>
+    <td>
+<div data-select="withSelectMenu" class="Dropdown {$modifiers} js-dropdown u-clearfix is-closed">
+  <button type="button" class="Dropdown-toggle js-dropdownTrigger">
+    <span>created &lt;select&gt;</span>
+  <i class="Icon--roundedCaret"></i>
+  </button>
+  <ul class="Dropdown-menu">
+     <li class="Dropdown-menu-header">Section Heading</li>
+     <li class="Dropdown-menu-item" data-value="One"><span>Link One</span></li>
+     <li class="Dropdown-menu-item" data-value="Two"><span>Link Two</span></li>
+     <li class="Dropdown-menu-item" data-value="Three"><span>Link Three</span></li>
+ </ul>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>Silence JavaScript <em>change</em> events</td>
+    <td>When changing a generated <em>&lt;select&gt;</em> element, FED emits a JavaScript <em>change</em> event. You can prevent this by setting emitChange to false. Default: true</td>
+    <td class="u-textBreak"></td>
+    <td class="u-textBreak">$(&apos;.js-dropdown&apos;).Dropdown({select: &apos;uniqueID&apos;,<br />emitChange: false});</td>
+    <td>
+<div data-select="withSelectMenu" class="Dropdown {$modifiers} js-dropdown u-clearfix is-closed">
+  <button type="button" class="Dropdown-toggle js-dropdownTrigger">
+    <span>created &lt;select&gt;</span>
+  <i class="Icon--roundedCaret"></i>
+  </button>
+  <ul class="Dropdown-menu">
+     <li class="Dropdown-menu-header">Section Heading</li>
+     <li class="Dropdown-menu-item" data-value="One"><span>Link One</span></li>
+     <li class="Dropdown-menu-item" data-value="Two"><span>Link Two</span></li>
+     <li class="Dropdown-menu-item" data-value="Three"><span>Link Three</span></li>
+ </ul>
+</div>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<h2>METHODS:</h2>
+<h4>$().Dropdown(&apos;open&apos;)</h4>
+<p>Toggles the dropdown open and closed.</p>
+
+<h4>$().Dropdown(&apos;close&apos;)</h4>
+<p>Close the dropdown.</p>
+
+<h4>$().Dropdown(&apos;select&apos;, $jQueryOptionElementObject)</h4>
+<p>Programatically select an option in the dropdown by passing the jQuery object of the menu-item.</p>
+
+<br>
+<h2>EVENTS:</h2>
+<p>&apos;<em>open.fed.dropdown</em>&apos;: triggered when the dropdown opens, attached to .js-dropdown element</p>
+<p>&apos;<em>close.fed.dropdown</em>&apos;: triggered when the dropdown closes, attached to .js-dropdown element</p>
+
+<br>
+<h2>EXAMPLES:</h2></div>
+
+              <div class="Dropdown {$modifiers} js-dropdown u-clearfix is-closed" data-qe-id="dropdown">
+  <button type="button" class="Dropdown-toggle js-dropdownTrigger" data-qe-id="dropdown-toggle">
+    <span>button.Dropdown-toggle.js-dropdownTrigger</span>
+  <i class="Icon--roundedCaret"></i>
+  </button>
+  <ul class="Dropdown-menu">
+     <li class="Dropdown-menu-header" data-qe-id="dropdown-header">Section Heading</li>
+     <li class="Dropdown-menu-item" data-value="One" data-qe-id="dropdown-{{item}} dropdown-{{option1}}"><span>Link One</span></li>
+     <li class="Dropdown-menu-item" data-value="Two" data-qe-id="dropdown-{{item}} dropdown-{{option2}}"><span>Link Two</span></li>
+     <li class="Dropdown-menu-item" data-value="Three" data-qe-id="dropdown-{{item}} dropdown-{{option3}}"><span>Link Three</span></li>
+	</ul>
+</div>
+
+
+
+              
+              <h2 class="u-mega u-weightSlightBold u-marginTopDouble"><code>.Dropdown--plain</code></h2>
+
+              <p>a plain link version of the dropdown.</p>
+
+
+              <div>
+                <div class="Dropdown Dropdown--plain js-dropdown u-clearfix is-closed" data-qe-id="dropdown">
+  <button type="button" class="Dropdown-toggle js-dropdownTrigger" data-qe-id="dropdown-toggle">
+    <span>button.Dropdown-toggle.js-dropdownTrigger</span>
+  <i class="Icon--roundedCaret"></i>
+  </button>
+  <ul class="Dropdown-menu">
+     <li class="Dropdown-menu-header" data-qe-id="dropdown-header">Section Heading</li>
+     <li class="Dropdown-menu-item" data-value="One" data-qe-id="dropdown-{{item}} dropdown-{{option1}}"><span>Link One</span></li>
+     <li class="Dropdown-menu-item" data-value="Two" data-qe-id="dropdown-{{item}} dropdown-{{option2}}"><span>Link Two</span></li>
+     <li class="Dropdown-menu-item" data-value="Three" data-qe-id="dropdown-{{item}} dropdown-{{option3}}"><span>Link Three</span></li>
+	</ul>
+</div>
+              </div>
+
+              <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                <xmp class="prettyprint lang-html u-marginbottom"><div class="Dropdown Dropdown--plain js-dropdown u-clearfix is-closed" data-qe-id="dropdown">
+  <button type="button" class="Dropdown-toggle js-dropdownTrigger" data-qe-id="dropdown-toggle">
+    <span>button.Dropdown-toggle.js-dropdownTrigger</span>
+  <i class="Icon--roundedCaret"></i>
+  </button>
+  <ul class="Dropdown-menu">
+     <li class="Dropdown-menu-header" data-qe-id="dropdown-header">Section Heading</li>
+     <li class="Dropdown-menu-item" data-value="One" data-qe-id="dropdown-{{item}} dropdown-{{option1}}"><span>Link One</span></li>
+     <li class="Dropdown-menu-item" data-value="Two" data-qe-id="dropdown-{{item}} dropdown-{{option2}}"><span>Link Two</span></li>
+     <li class="Dropdown-menu-item" data-value="Three" data-qe-id="dropdown-{{item}} dropdown-{{option3}}"><span>Link Three</span></li>
+	</ul>
+</div></xmp>
+              </div>
+              
+              <h2 class="u-mega u-weightSlightBold u-marginTopDouble"><code>.Dropdown--block</code></h2>
+
+              <p>full-width, fluid block behavior</p>
+
+
+              <div>
+                <div class="Dropdown Dropdown--block js-dropdown u-clearfix is-closed" data-qe-id="dropdown">
+  <button type="button" class="Dropdown-toggle js-dropdownTrigger" data-qe-id="dropdown-toggle">
+    <span>button.Dropdown-toggle.js-dropdownTrigger</span>
+  <i class="Icon--roundedCaret"></i>
+  </button>
+  <ul class="Dropdown-menu">
+     <li class="Dropdown-menu-header" data-qe-id="dropdown-header">Section Heading</li>
+     <li class="Dropdown-menu-item" data-value="One" data-qe-id="dropdown-{{item}} dropdown-{{option1}}"><span>Link One</span></li>
+     <li class="Dropdown-menu-item" data-value="Two" data-qe-id="dropdown-{{item}} dropdown-{{option2}}"><span>Link Two</span></li>
+     <li class="Dropdown-menu-item" data-value="Three" data-qe-id="dropdown-{{item}} dropdown-{{option3}}"><span>Link Three</span></li>
+	</ul>
+</div>
+              </div>
+
+              <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                <xmp class="prettyprint lang-html u-marginbottom"><div class="Dropdown Dropdown--block js-dropdown u-clearfix is-closed" data-qe-id="dropdown">
+  <button type="button" class="Dropdown-toggle js-dropdownTrigger" data-qe-id="dropdown-toggle">
+    <span>button.Dropdown-toggle.js-dropdownTrigger</span>
+  <i class="Icon--roundedCaret"></i>
+  </button>
+  <ul class="Dropdown-menu">
+     <li class="Dropdown-menu-header" data-qe-id="dropdown-header">Section Heading</li>
+     <li class="Dropdown-menu-item" data-value="One" data-qe-id="dropdown-{{item}} dropdown-{{option1}}"><span>Link One</span></li>
+     <li class="Dropdown-menu-item" data-value="Two" data-qe-id="dropdown-{{item}} dropdown-{{option2}}"><span>Link Two</span></li>
+     <li class="Dropdown-menu-item" data-value="Three" data-qe-id="dropdown-{{item}} dropdown-{{option3}}"><span>Link Three</span></li>
+	</ul>
+</div></xmp>
+              </div>
+              
+
+              
+          
+         
+      
+    
+  </section>
+</div>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="public/moment.min.js"></script>
+<script src="../dist/fed.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Ensure code blocks are highlighted properly...
+    $('pre>code').addClass('prettyprint');
+    prettyPrint();
+
+    if ($('.js-popover').length) {
+      $('.js-popover').popover({
+        container: 'body',
+        html: true,
+        content: function () {
+          return $(this).next('.Popover-content').html();
+        }
+      });
+    }
+
+    if ($('.js-tooltip').length) {
+      $('.js-tooltip').tooltip({
+        container: 'body'
+      });
+    }
+
+    if ($('.js-dropdown').length) {
+      $('.js-dropdown').Dropdown();
+    }
+
+    if ($('.js-modal').length) {
+      $('.js-modal').magnificPopup({
+        type:'inline',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-modal-ajax').length) {
+      $('.js-modal-ajax').magnificPopup({
+        type:'ajax',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-date-picker').length) {
+      $('.js-date-picker').daterangepicker({singleDatePicker:true});
+    }
+
+    if ($('.js-date-range-picker').length) {
+      $('.js-date-range-picker').daterangepicker();
+    }
+
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+// Text utilities
+//
+// Text utilities deal with position, alignment, and manipulation of text elements.
+//
+// Styleguide 2.7.0
+
+/* ==========================================================================
+   Text utilities
+   ========================================================================== */
+
+// Text alignment
+//
+// Align text to the left, center, or right of the container element.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>   
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>.u-textCenter</td>
+//     <td class="u-textCenter">Centers text within the container element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-textLeft</td>
+//     <td class="u-textLeft">Left aligns text within the container element.</td>
+//   </tr>
+//     <td>.u-textRight</td>
+//     <td class="u-textRight">Right aligns text within the container element.</td>
+//   </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 2.7.1
+
+.u-textCenter {
+    text-align: center !important;
+}
+
+.u-textLeft {
+    text-align: left !important;
+}
+
+.u-textRight {
+    text-align: right !important;
+}
+
+// Font Weight
+//
+// Varying weights for typeface.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>   
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>.u-weightNormal</td>
+//     <td class="u-weightNormal">Font weight of 400 for a normal typeface.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-weightSemiBold</td>
+//     <td class="u-weightSemiBold">Font weight of 600 for a semi-bold typeface.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-weightBold</td>
+//     <td class="u-weightSemiBold">Font weight of 700 for a bold typeface.</td>
+//   </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 2.7.2
+
+/**
+ * Font weights
+ */
+.u-weightLight       { font-weight: 300 !important; }
+.u-weightNormal      { font-weight: 400 !important; }
+.u-weightSemiBold    { font-weight: 600 !important; }
+.u-weightBold        { font-weight: 700 !important; }
+
+// Text Decoration
+//
+// Decoration utility classes such as underlines.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>   
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>.u-textUnderline</td>
+//     <td class="u-textUnderline">Adds a default underline to a text element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-textUnderlineBorder</td>
+//     <td><p class="u-textUnderlineBorder">Adds a 100% width branded color underline with more padding to an element.</p></td>
+//   </tr>
+//     <td>.u-caps</td>
+//     <td class="u-caps">Forces a text element to uppercase letters.</td>
+//   </tr>
+//   </tr>
+//     <td>.u-smallCaps</td>
+//     <td class="u-smallCaps">Forces a text element to small uppercase letters.</td>
+//   </tr>
+//   </tr>
+//     <td>.u-camelCase</td>
+//     <td class="u-camelCase">Forces a text element to capitalize the first letter of every word.</td>
+//   </tr>
+//   </tr>
+//     <td>.u-TextTransformNone</td>
+//     <td class="u-TextTransformNone">Removes all text-transform effects, such as capitalization.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-muted</td>
+//     <td class="u-muted">Mutes the impact of an element by reducing the opacity to 30%.</td>
+//   </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 2.7.3
+
+/**
+ * Font decorations
+ */
+.u-textUnderline {
+    text-decoration: underline !important;
+}
+
+.u-textUnderlineBorder {
+    border-bottom: 1px solid $color1 !important;
+    border-bottom: rem(1) solid $color1 !important;
+}
+
+/**
+ * Capitalization
+ */
+.u-caps {
+    text-transform: uppercase !important;
+}
+
+.u-smallCaps {
+    font-variant: small-caps !important;
+}
+
+.u-camelCase {
+    text-transform: capitalize !important;
+}
+
+.u-TextTransformNone {
+    text-transform: none !important;
+}
+
+.u-muted {
+    opacity: 0.3 !important;
+    filter: alpha(opacity = 30) !important;
+}
+
+// Line Height
+//
+// Utilities for changing line-height.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>   
+//     <th>Description</th>
+//   </tr>
+//   <tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>.u-lineHeight1</td>
+//     <td class="u-lineHeight1">Set the line-height to 1.</td>
+//   </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 2.7.4
+
+.u-lineHeight1 {
+    line-height: 1 !important;
+}
+
+/* Lead */
+//
+// The <em>u-lead</em> utility class lends a little more weight to a paragraph or other text element by increasing the size slightly.
+//
+// Markup: <p class="u-lead">Ut turpis ut sit quis lectus odio in penatibus lorem auctor integer mid dis diam habitasse. Purus tincidunt! Habitasse? Dapibus, augue in auctor dignissim, nunc, integer vel pid, velit vel lundium aliquet, enim et vel lorem nisi a hac, facilisis, vel nunc hac pid tincidunt, turpis placerat est eros phasellus et, et pulvinar porttitor aliquet facilisis, placerat et! Mus odio rhoncus tortor massa tempor in vel odio mauris turpis nisi porta porttitor, tempor lacus, augue.</p>
+//
+/* Styleguide 2.7.5 */
+
+/**
+ * The `.lead` class is used to make the introductory text (usually a paragraph)
+ * of a document slightly larger.
+ */
+.u-lead {
+    @include font-size($h3-size);
+}
+
+// Word and Line Breaking
+//
+// Align text to the left, center, or right of the container element.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>   
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>.u-textBreak</td>
+//     <td>Forces text to wrap within the container element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-textNoWrap</td>
+//     <td>Prevents text from wrapping. This will run over and outside the container element.</td>
+//   </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 2.7.6
+
+/**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+
+.u-textTruncate {
+    max-width: 100%; /* 1 */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important; /* 2 */
+}
+
+/**
+ * Word breaking
+ *
+ * Break strings when their length exceeds the width of their container.
+ */
+
+.u-textBreak {
+    word-wrap: break-word !important;
+}
+
+.u-textNoWrap {
+    white-space: nowrap !important;
+}
+
+// List style type
+//
+// Change the list style type of a list.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>   
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>.u-listStyleNone</td>
+//     <td>Remove all bullets.</td>
+//   </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 2.7.7
+
+.u-listStyleNone {
+    list-style-type: none !important;
+
+    li {
+        margin-left: 0 !important;
+    }
+}
+
+// Horizontal List
+//
+// Display a list horizontally without bullets.
+//
+// Markup: <ul class="u-hoiztonalList">
+//    <li>Item 1</li>
+//    <li>Item 2</li>
+//    <li>Item 3</li>
+//    <li>Item 4</li>
+//    <li>Item 5</li>
+//  </ul>
+//
+// Styleguide 2.7.7
+
+.u-horizontalList {
+    list-style-type: none;
+    font-size: 0;
+
+    li {
+        display: inline-block;
+        font-size: $base-font-size + px;
+        font-size: rem($base-font-size);
+        padding: 0 $half-spacing-unit + px;
+        padding: 0 rem($half-spacing-unit);
+
+        &:before,
+        a:before {
+            content: none;
+            padding: 0;
+        }
+    }
+}
+
+// Text Sizes
+//
+// Utility classes for very large and small classes.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>   
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>.u-giga</td>
+//     <td class="u-giga">Very large text. 48px</p></td>
+//   </tr>
+//   <tr>
+//     <td>.u-mega</td>
+//     <td class="u-mega">Larger text. 32px</td>
+//   </tr>
+//     <td>.u-kilo</td>
+//     <td class="u-kilo">Large text. 28px</td>
+//   </tr>
+//   </tr>
+//     <td>.u-centi</td>
+//     <td class="u-centi">Small text. 14.7px</td>
+//   </tr>
+//   </tr>
+//     <td>.u-milli</td>
+//     <td class="u-milli">Smaller text. This is always uppercase. 13.3px</td>
+//   </tr>
+//   </tr>
+//     <td>.u-micro</td>
+//     <td class="u-micro">Very small text. This is always uppercase. 12px</td>
+//   </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 2.1.1
+
+/**
+ * A series of classes for setting massive type; for use in heroes, mastheads,
+ * promos, etc.
+ */
+.u-giga {
+    @include font-size($giga-size, important);
+}
+.u-mega {
+    @include font-size($mega-size, important);
+}
+.u-kilo {
+    @include font-size($kilo-size, important);
+}
+
+/*------------------------------------*\
+    $SMALLPRINT
+\*------------------------------------*/
+/**
+ * A series of classes for setting tiny type; for use in smallprint etc.
+ */
+.u-smallPrint,
+.u-centi {
+    @include font-size($centi-size, important);
+}
+
+.u-milli {
+    @include font-size($milli-size, important);
+}
+
+.u-micro {
+    @include font-size($micro-size, important);
+}

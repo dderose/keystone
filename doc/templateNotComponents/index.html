@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 fed-wrapper" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js fed-wrapper" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Keystone Dental Style Guide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+    <!-- vvv DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+    <link rel="stylesheet" href="//cloud.typography.com/7508852/770622/css/fonts.css" />
+    <!-- ^^^ DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/style.css">
+
+  <!-- the FED -->
+  <link rel="stylesheet" href="../dist/fed.min.css">
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]--></head>
+<body>
+<nav id="kss-topnav" class="u-marginFlushEnds u-paddingSidesHalf">
+  <ul class="u-alpha u-weightSemiBold u-marginFlush u-listStyleNone">
+    <li class="u-inlineBlock u-marginFlush"><a href="index.html" class="u-block u-paddingSides u-paddingEndsHalf">Overview</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-1.html" class="u-block u-paddingSides u-paddingEndsHalf">Base</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-2.html" class="u-block u-paddingSides u-paddingEndsHalf">Utilities</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-3.html" class="u-block u-paddingSides u-paddingEndsHalf">Components</a></li>
+</ul>
+</nav>
+<header id="kss-main-header" class="u-paddingEnds u-paddingSidesDouble">
+  <h1 class="u-mega u-colorWhite u-weightSemiBold u-marginFlush u-paddingFlush">Keystone Dental Style Guide</h1>
+</header>
+
+<div class="u-table">
+    {{#if overview }}
+
+    {{else}}
+  <nav id="kss-nav" class="u-tableCell">
+    <ul class="u-paddingDouble u-weightSlightBold u-listStyleNone u-hide b2-u-show">
+      {{#eachSection rootNumber}}
+        {{#whenDepth 1}}
+          <li class="u-kilo u-paddingLeftFlush u-weightSemiBold"><a href="#{{ reference }}.0">{{ header }}</a></li>
+        {{else}}
+          <li class="u-beta u-paddingLeftFlush"><a href="#{{ reference }}"><span class="u-colorSecondary">{{ reference }} </span> {{ header }}</a></li>
+        {{/whenDepth}}
+      {{/eachSection}}
+    </ul>
+  </nav>
+  {{/if}}
+
+  <section class="u-tableCell u-sizeFillAlt u-paddingDouble">
+    {{#if overview}}
+      {{html overview}}
+    {{else}}
+
+      {{!
+        Find each section, in order.
+        If there's no markup or modifiers supplied, use a Markdown-only
+        layout instead.
+
+        The "root" element comes first in this loop, and can be detected using
+        the "#whenDepth 1" block as seen below.
+      }}
+
+      {{#eachSection rootNumber}}
+        {{#whenDepth 1}}
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="{{ reference }}.0"><span class="u-colorSectionHeading">{{ reference }}.0 ::</span> {{ header }}</h1>
+        {{else}}
+         <article class="kss-depth-{{ refDepth }} u-marginBottomDouble">
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="{{ reference }}"><span class="u-colorSectionHeading">{{ reference }} ::</span> {{ header }}</h1>
+        {{/whenDepth}}
+          {{#ifAny markup modifiers}}
+          <div class="kss-lead">{{html description}}</div>
+
+              {{modifierMarkup}}
+
+              {{#eachModifier}}
+              <div class="Grid u-marginEnds" style="background-color: #f6f8fa;">
+                <div class="Grid-item u-size1of4 u-weightSemiBold">
+                  <div class="kss-mod-name u-paddingHalf">
+                    {{name}}
+                  </div>
+                </div>
+
+                <div class="Grid-item u-size3of4">
+                  <div class="kss-mod-desc u-paddingHalf">
+                    {{html description}}
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                {{modifierMarkup}}
+              </div>
+
+              <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                <xmp class="prettyprint lang-html u-marginFlush u-beta">{{modifierMarkup}}</xmp>
+              </div>
+              {{/eachModifier}}
+
+              {{#unless modifiers}}
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">{{markup}}</pre>
+                </div>
+              {{/unless}}
+          {{else}}
+              {{#if description}}
+              <div class="u-lead">{{html description}}</div>
+              {{/if}}
+          {{/ifAny}}
+        {{#whenDepth 1}} {{else}}
+          </article>
+        {{/whenDepth}}
+      {{/eachSection}}
+    {{/if}}
+  </section>
+</div>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="public/moment.min.js"></script>
+<script src="../dist/fed.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    // Ensure code blocks are highlighted properly...
+    $('pre>code').addClass('prettyprint');
+    prettyPrint();
+
+    if ($('.js-dropdown').length) {
+      $('.js-dropdown').Dropdown();
+    }
+  });
+</script>
+</body>
+</html>

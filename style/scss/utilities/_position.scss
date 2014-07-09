@@ -1,0 +1,72 @@
+// Position Options
+//
+// A series of classes to change the position attribute of an element. These can also be used in breakpoints: <code>b3-u-relative</code>.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>   
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>.u-static</td>
+//     <td>Assigns a position of static to an element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-relative</td>
+//     <td>Assigns a position of relative to an element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-absolute</td>
+//     <td>Assigns a position of absolute to an element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-fixed</td>
+//     <td>Assigns a position of fixed to an element.</td>
+//   </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 2.3.0
+
+
+
+/* Create breakpoint utility classes for showing and hiding elements */
+@mixin position-setup($namespace: "") {
+	.#{$namespace}u-static {
+	    position: static !important;
+	}
+
+	.#{$namespace}u-relative {
+	    position: relative !important;
+	}
+
+	.#{$namespace}u-absolute {
+	    position: absolute !important;
+	}
+
+	.#{$namespace}u-fixed {
+	    position: fixed !important;
+	}
+}
+
+@include position-setup();
+
+@media only screen and (min-width:$breakpoint1) {
+    @include position-setup("b1-");
+}
+
+@media only screen and (min-width:$breakpoint2) {
+    @include position-setup("b2-");
+}
+
+@media only screen and (min-width:$breakpoint3) {
+    @include position-setup("b3-");
+}
+
+@media only screen and (min-width:$breakpoint4) {
+    @include position-setup("b4-");
+}
+

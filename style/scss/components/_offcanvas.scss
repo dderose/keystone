@@ -1,0 +1,43 @@
+// Offcanvas
+//
+// The offcanvas component is a menu that slides in from the side when a trigger is clicked.
+//
+// Styleguide 6.0.0
+
+.Offcanvas {
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 999999;
+    width: 260px;
+    overflow-x: none;
+    overflow-y: auto;
+    padding: rem(25) rem(20);
+    background: #333;
+
+    .sidr-inner {
+        padding: 0 0 15px;
+    }
+
+    &.right {
+        left: auto;
+        right: -260px;
+    }
+
+    &.left {
+        left: -260px;
+        right: auto;
+    }
+}
+    .Offcanvas-menu {
+        list-style: none;
+    }
+        .Offcanvas-menuItem {
+            padding: 0 0 rem(15);
+
+            > a {
+                color: #fff;
+            }
+        }

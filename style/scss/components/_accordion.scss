@@ -1,0 +1,36 @@
+.Accordion {
+	
+}
+	.Accordion-item {
+		width: 100%;
+		margin-bottom: 2px;
+		margin-bottom: rem(2);
+		padding: 10px 20px;
+		padding: rem(10) rem(20);
+		border: none;
+		background-color: #f7f9fb;
+		text-align: left;
+		font-weight: bold;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			background-color: darken(#f7f9fb,5%);
+		}
+
+		&.is-selected {
+			.Icon {
+				-webkit-transform: rotate(270deg);
+				transform: rotate(270deg);
+			}
+		}
+
+		&.is-collapsed {
+			.Icon {
+				-webkit-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+		}
+	}

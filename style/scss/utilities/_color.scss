@@ -1,0 +1,78 @@
+// Color
+//
+// Colors have been abstracted into a series of classes to allow us to easily apply a controlled set of brand colors while also giving the flexibility to make wholesale changes to coloring without having to dig into markup or cascades in the css.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr class="u-colorBlack">
+//     <td>.u-colorBlack</td>
+//     <td>Assign this color to an element. #000000</td>
+//   </tr>
+//   <tr class="u-colorWhite">
+//     <td>.u-colorWhite</td>
+//     <td>Assign this color to an element. #ffffff</td>
+//   </tr>
+//   <tr class="u-colorSectionHeading">
+//     <td class="u-textNoWrap">.u-colorSectionHeading</td>
+//     <td>Assign this color to an element. #88919a</td>
+//   </tr>
+//   <tr class="u-colorTitle">
+//     <td>.u-colorTitle</td>
+//     <td>Assign this color to an element. #1a5285</td>
+//   </tr>
+//   <tr class="u-colorLink">
+//     <td>.u-colorLink</td>
+//     <td>Assign this color to an element. #0078c1</td>
+//   </tr>
+//   <tr class="u-colorSecondary">
+//     <td>.u-colorSecondary</td>
+//     <td>Assign this color to an element. #606d78</td>
+//   </tr>
+//   <tr class="u-colorPrimary">
+//     <td>.u-colorPrimary</td>
+//     <td>Assign this color to an element. All unstyled text except for links elements will be this color by default. #394856</td>
+//   </tr>
+//   <tr class="u-colorHelper">
+//     <td>.u-colorHelper</td>
+//     <td>Assign this color to an element. #b0b6bb</td>
+//   </tr>
+//   <tr class="u-colorError">
+//     <td>.u-colorError,<br />.u-colorDraft</td>
+//     <td>Assign this color to an element. #f5463b</td>
+//   </tr>
+//   <tr class="u-colorActive">
+//     <td>.u-colorActive</td>
+//     <td>Assign this color to an element. #92d14f</td>
+//   </tr>
+//   <tr class="u-colorSent">
+//     <td>.u-colorDone,<br />.u-colorSent</td>
+//     <td>Assign this color to an element. #6cc9d0</td>
+//   </tr>
+//   <tr class="u-colorScheduled">
+//     <td>.u-colorScheduled</td>
+//     <td>Assign this color to an element. #fea802</td>
+//   </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 2.2.0
+
+.u-colorWhite              { color: #ffffff  !important; }
+.u-colorBlack              { color: #000000  !important; }
+.u-colorSectionHeading     { color: $color1  !important; }
+.u-colorTitle              { color: $color2  !important; }
+.u-colorLink               { color: $color3  !important; }
+.u-colorSecondary          { color: $color4  !important; }
+.u-colorPrimary            { color: $color5  !important; }
+.u-colorHelper             { color: $color6  !important; }
+.u-colorError              { color: $color7  !important; }
+.u-colorActive             { color: $color8  !important; }
+.u-colorDraft              { color: $color7  !important; }
+.u-colorDone, .u-colorSent { color: $color9  !important; }
+.u-colorScheduled          { color: $color10 !important; }

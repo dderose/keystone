@@ -1,0 +1,26 @@
+.List {}
+	.List-item-count {
+		padding-left: 4px;
+		padding-left: rem(4);
+		font-size: $milli-size +px;
+		font-size: rem($milli-size);
+		color: #aab6c0;
+	}
+.List--checkbox {
+	margin: $base-spacing-unit + px;
+	margin: rem($base-spacing-unit);
+	list-style: none;
+
+	.List--checkbox {
+		margin: $half-spacing-unit+px 0 $half-spacing-unit*-1+px 28px;
+		margin: rem($half-spacing-unit) 0 rem(-$half-spacing-unit) 28px;
+	}
+
+	.List-item {
+		margin: 0;
+		padding-bottom: $half-spacing-unit +px;
+		padding-bottom: rem($half-spacing-unit);
+		@include font-size($centi-size);
+		color: #4d6f95;
+	}
+}

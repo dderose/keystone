@@ -1,0 +1,85 @@
+// Category Unit
+//
+// The Category Unit
+//
+// Styleguide 8.0.0
+
+.Category {
+	padding: 50px 0 20px;
+	padding: rem(50) 0 rem(20);
+}
+	.Category-title {
+		margin-bottom: 40px;
+		margin-bottom: rem(40);
+		@include font-size($mega-size);
+		font-weight: normal;
+		color: $color6;
+		text-align: center;
+	}
+	.Category-section {
+		width: 100%;
+		max-width: 1000px;
+		max-width: rem(1000);
+		margin: 0 auto;
+		padding: 0 20px;
+		padding: 0 rem(20);
+
+		@include rwd-b5() {
+			padding: 0;
+		}
+	}
+	.Category-section--striped {
+		margin: 0 auto $double-spacing-unit + px;
+		margin: 0 auto rem($double-spacing-unit);
+		padding: $double-spacing-unit + px $double-spacing-unit + px $base-spacing-unit + px;
+		padding: rem($double-spacing-unit) rem($double-spacing-unit) rem($base-spacing-unit);
+		background-color: $bgcolorPrimary2;
+	}
+	.Category-sectionTitle {
+		@include font-size($h1-size);
+		margin-bottom: 0;
+		font-weight: normal;
+		color: $color4;
+
+		@include rwd-b2() {
+			margin-bottom: 20px;
+			margin-bottom: rem(20);
+		}
+	}
+	.Category-sectionSubTitle {
+		@include font-size($h3-size);
+		font-weight: normal;
+		color: $color4;
+	}
+	.Category-contentHeading {
+		margin-bottom: 0;
+		font-size: $base-font-size + px;
+		font-size: rem($base-font-size);
+		font-weight: 400;
+	}
+	.Category-image {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 20px 0;
+		padding: rem(20) 0;
+
+		@include rwd-b2() {
+			margin-top: -70px;
+			margin-top: rem(-70);
+		}
+	}
+	.Category-image--product {
+		margin-top: 0;
+		padding: 0;
+	}
+	.Category-caption {
+		font-size: $micro-size + px;
+		font-size: rem($micro-size);
+	}
+
+.Category--stripe {
+	background-color: $bgcolorPrimary2;
+	border-top: 1px solid $brdrColor;
+	border-top: rem(1) solid $brdrColor;
+}

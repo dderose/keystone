@@ -1,0 +1,425 @@
+// Spacing
+//
+// The framework comes with the convention of standard spacing units which are equal to multiples of the vertical rhythm. One base spacing unit is therefore equal to 21.3px and there are also half and double spacing units.
+//
+// These spacing units can be applied using the naming convention of u-{type}{Direction}{Size}. For example, to add double base spacing unit around an element using padding the class is <em>u-paddingDouble</em>.
+//
+// Additionally, margin and padding can be cleared by using <em>Flush</em> for the size.
+//
+// Finally, all spacing utilites have responsive versions of format {breakpoint}-u-{type}{Direction}{Size}. For example, <em>b2-u-marginTopDouble</em> and <em>b1-u-marginTopFlush</em>.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>u-margin</td>
+//     <td><div class="u-margin" style="border:1px solid #000;">A margin of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginDouble</td>
+//     <td><div class="u-marginDouble" style="border:1px solid #000;">A margin of a double base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginHalf</td>
+//     <td><div class="u-marginHalf" style="border:1px solid #000;">A margin of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginOneAndHalf</td>
+//     <td><div class="u-marginOneAndHalf" style="border:1px solid #000;">A margin of one and a half base spacing units.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginTop</td>
+//     <td><div class="u-marginTop" style="border:1px solid #000;">A top margin of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginTopDouble</td>
+//     <td><div class="u-marginTopDouble" style="border:1px solid #000;">A top margin of a double base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginTopHalf</td>
+//     <td><div class="u-marginTopHalf" style="border:1px solid #000;">A top margin of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginTopOneAndHalf</td>
+//     <td><div class="u-marginTopOneAndHalf" style="border:1px solid #000;">A top margin of one and a half base spacing units.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginRight</td>
+//     <td><div class="u-marginRight" style="border:1px solid #000;">A right margin of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginRightDouble</td>
+//     <td><div class="u-marginRightDouble" style="border:1px solid #000;">A right margin of a double base spacing unit.</div></td>
+//  </tr>
+//   <tr>
+//     <td>u-marginRightHalf</td>
+//     <td><div class="u-marginRightHalf" style="border:1px solid #000;">A right margin of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginRightOneAndHalf</td>
+//     <td><div class="u-marginRightOneAndHalf" style="border:1px solid #000;">A right margin of one and a half base spacing units.</div></td>
+//  </tr>
+//   <tr>
+//     <td>u-marginBottom</td>
+//     <td><div class="u-marginBottom" style="border:1px solid #000;">A bottom margin of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginBottomDouble</td>
+//     <td><div class="u-marginBottomDouble" style="border:1px solid #000;">A bottom margin of a double base spacing unit.</div></td>
+//  </tr>
+//   <tr>
+//     <td>u-marginBottomHalf</td>
+//     <td><div class="u-marginBottomHalf" style="border:1px solid #000;">A bottom margin of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginBottomOneAndHalf</td>
+//     <td><div class="u-marginBottomOneAndHalf" style="border:1px solid #000;">A bottom margin of one and a half base spacing units.</div></td>
+//  </tr>
+//   <tr>
+//     <td>u-marginLeft</td>
+//     <td><div class="u-marginLeft" style="border:1px solid #000;">A left margin of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginLeftDouble</td>
+//     <td><div class="u-marginLeftDouble" style="border:1px solid #000;">A left margin of a double base spacing unit.</div></td>
+//  </tr>
+//   <tr>
+//     <td>u-marginLeftHalf</td>
+//     <td><div class="u-marginLeftHalf" style="border:1px solid #000;">A left margin of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginLeftOneAndHalf</td>
+//     <td><div class="u-marginLeftOneAndHalf" style="border:1px solid #000;">A left margin of one and a half base spacing units.</div></td>
+//  </tr>
+//   <tr>
+//     <td>u-marginEnds</td>
+//     <td><div class="u-marginEnds" style="border:1px solid #000;">A top and bottom margin of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginEndsDouble</td>
+//     <td><div class="u-marginEndsDouble" style="border:1px solid #000;">A top and bottom margin of a double base spacing unit.</div></td>
+//  </tr>
+//   <tr>
+//     <td>u-marginEndsHalf</td>
+//     <td><div class="u-marginEndsHalf" style="border:1px solid #000;">A top and bottom margin of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginEndsOneAndHalf</td>
+//     <td><div class="u-marginEndsOneAndHalf" style="border:1px solid #000;">A top and bottom margin of one and a half base spacing units.</div></td>
+//  </tr>
+//   <tr>
+//     <td>u-marginSides</td>
+//     <td><div class="u-marginSides" style="border:1px solid #000;">A left and right margin of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginSidesDouble</td>
+//     <td><div class="u-marginSidesDouble" style="border:1px solid #000;">A left and right margin of a double base spacing unit.</div></td>
+//  </tr>
+//   <tr>
+//     <td>u-marginSidesHalf</td>
+//     <td><div class="u-marginSidesHalf" style="border:1px solid #000;">A left and right margin of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginSidesOneAndHalf</td>
+//     <td><div class="u-marginSidesOneAndHalf" style="border:1px solid #000;">A left and right margin of one and a half base spacing units.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginFlush</td>
+//     <td><div class="u-marginFlush" style="border:1px solid #000;">No margin all sides</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginTopFlush</td>
+//     <td><div class="u-marginTopFlush" style="border:1px solid #000;">No margin top</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginRightFlush</td>
+//     <td><div class="u-marginRightFlush" style="border:1px solid #000;">No margin right</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginBottomFlush</td>
+//     <td><div class="u-marginBottomFlush" style="border:1px solid #000;">No margin bottom</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginLeftFlush</td>
+//     <td><div class="u-marginLeftFlush" style="border:1px solid #000;">No margin left</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginSidesFlush</td>
+//     <td><div class="u-marginSidesFlush" style="border:1px solid #000;">No margin left and right</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-marginEndsFlush</td>
+//     <td><div class="u-marginEndsFlush" style="border:1px solid #000;">No margin top and bottom</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-padding</td>
+//     <td><div class="u-padding u-inlineBlock" style="border:1px solid #000;">A padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingDouble</td>
+//     <td><div class="u-paddingDouble u-inlineBlock" style="border:1px solid #000;">A padding of a double spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingHalf</td>
+//     <td><div class="u-paddingHalf u-inlineBlock" style="border:1px solid #000;">A padding of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingOneAndHalf</td>
+//     <td><div class="u-paddingOneAndHalf u-inlineBlock" style="border:1px solid #000;">A padding of one  and a half base spacing units.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingTop</td>
+//     <td><div class="u-paddingTop u-inlineBlock" style="border:1px solid #000;">A top padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingTopDouble</td>
+//     <td><div class="u-paddingTopDouble u-inlineBlock" style="border:1px solid #000;">A top padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingTopHalf</td>
+//     <td><div class="u-paddingTopHalf u-inlineBlock" style="border:1px solid #000;">A top padding of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingTopOneAndHalf</td>
+//     <td><div class="u-paddingTopOneAndHalf u-inlineBlock" style="border:1px solid #000;">A top padding of one  and a half base spacing units.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingRight</td>
+//     <td><div class="u-paddingRight u-inlineBlock" style="border:1px solid #000;">A right padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingRightDouble</td>
+//     <td><div class="u-paddingRightDouble u-inlineBlock" style="border:1px solid #000;">A right padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingRightHalf</td>
+//     <td><div class="u-paddingRightHalf u-inlineBlock" style="border:1px solid #000;">A right padding of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingRightOneAndHalf</td>
+//     <td><div class="u-paddingRightOneAndHalf u-inlineBlock" style="border:1px solid #000;">A right padding of one  and a half base spacing units.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingBottom</td>
+//     <td><div class="u-paddingBottom u-inlineBlock" style="border:1px solid #000;">A bottom padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingBottomDouble</td>
+//     <td><div class="u-paddingBottomDouble u-inlineBlock" style="border:1px solid #000;">A bottom padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingBottomHalf</td>
+//     <td><div class="u-paddingBottomHalf u-inlineBlock" style="border:1px solid #000;">A bottom padding of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingBottomOneAndHalf</td>
+//     <td><div class="u-paddingBottomOneAndHalf u-inlineBlock" style="border:1px solid #000;">A bottompadding of one  and a half base spacing units.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingLeft</td>
+//     <td><div class="u-paddingLeft u-inlineBlock" style="border:1px solid #000;">A left padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingLeftDouble</td>
+//     <td><div class="u-paddingLeftDouble u-inlineBlock" style="border:1px solid #000;">A left padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingLeftHalf</td>
+//     <td><div class="u-paddingLeftHalf u-inlineBlock" style="border:1px solid #000;">A left padding of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingLeftOneAndHalf</td>
+//     <td><div class="u-paddingLeftOneAndHalf u-inlineBlock" style="border:1px solid #000;">A left padding of one  and a half base spacing units.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingEnds</td>
+//     <td><div class="u-paddingEnds u-inlineBlock" style="border:1px solid #000;">A top and bottom padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingEndsDouble</td>
+//     <td><div class="u-paddingEndsDouble u-inlineBlock" style="border:1px solid #000;">A top and bottom padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingEndsHalf</td>
+//     <td><div class="u-paddingEndsHalf u-inlineBlock" style="border:1px solid #000;">A top and bottom padding of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingEndsOneAndHalf</td>
+//     <td><div class="u-paddingEndsOneAndHalf u-inlineBlock" style="border:1px solid #000;">A top and bottom padding of one  and a half base spacing units.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingSides</td>
+//     <td><div class="u-paddingSides u-inlineBlock" style="border:1px solid #000;">A left and right padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingSidesDouble</td>
+//     <td><div class="u-paddingSidesDouble u-inlineBlock" style="border:1px solid #000;">A left and right padding of one base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingSidesHalf</td>
+//     <td><div class="u-paddingSidesHalf u-inlineBlock" style="border:1px solid #000;">A left and right padding of a half base spacing unit.</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingSidesOneAndHalf</td>
+//     <td><div class="u-paddingSidesOneAndHalf u-inlineBlock" style="border:1px solid #000;">A left and right padding of one  and a half base spacing units.</div></td>
+//  </tr>
+//     <td>u-paddingFlush</td>
+//     <td><div class="u-paddingFlush" style="border:1px solid #000;">No padding all sides</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingTopFlush</td>
+//     <td><div class="u-paddingTopFlush" style="border:1px solid #000;">No padding top</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingRightFlush</td>
+//     <td><div class="u-paddingRightFlush" style="border:1px solid #000;">No padding right</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingBottomFlush</td>
+//     <td><div class="u-paddingBottomFlush" style="border:1px solid #000;">No padding bottom</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingLeftFlush</td>
+//     <td><div class="u-paddingLeftFlush" style="border:1px solid #000;">No padding left</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingSidesFlush</td>
+//     <td><div class="u-paddingSidesFlush" style="border:1px solid #000;">No padding left and right</div></td>
+//  </tr>
+//  <tr>
+//     <td>u-paddingEndsFlush</td>
+//     <td><div class="u-paddingEndsFlush" style="border:1px solid #000;">No padding top and bottom</div></td>
+//  </tr>
+// <tbody>
+// </table>
+//
+// Styleguide 2.8.0
+
+@mixin spacing-setup($namespace: "") {
+
+	 // Add/remove margins
+
+	.#{$namespace}u-margin        { margin:        $base-spacing-unit + px !important; margin: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-marginTop     { margin-top:    $base-spacing-unit + px !important; margin-top: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-marginRight   { margin-right:  $base-spacing-unit + px !important; margin-right: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-marginBottom  { margin-bottom: $base-spacing-unit + px !important; margin-bottom: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-marginLeft    { margin-left:   $base-spacing-unit + px !important; margin-left: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-marginEnds    { margin-top:    $base-spacing-unit + px !important; margin-top: rem($base-spacing-unit) !important; margin-bottom: $base-spacing-unit + px !important; margin-bottom: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-marginSides   { margin-right:  $base-spacing-unit + px!important; margin-right:  rem($base-spacing-unit)!important; margin-left:  $base-spacing-unit + px !important; margin-left: rem($base-spacing-unit) !important; }
+
+	.#{$namespace}u-marginHalf          { margin:        $half-spacing-unit + px !important; margin: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-marginTopHalf       { margin-top:    $half-spacing-unit + px !important; margin-top: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-marginRightHalf     { margin-right:  $half-spacing-unit + px !important; margin-right: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-marginBottomHalf    { margin-bottom: $half-spacing-unit + px !important; margin-bottom: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-marginLeftHalf      { margin-left:   $half-spacing-unit + px !important; margin-left: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-marginEndsHalf      { margin-top:    $half-spacing-unit + px !important; margin-top: rem($half-spacing-unit) !important; margin-bottom: $half-spacing-unit + px !important; margin-bottom: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-marginSidesHalf     { margin-right: $half-spacing-unit + px!important; margin-right: rem($half-spacing-unit)!important; margin-left: $half-spacing-unit + px !important; margin-left: rem($half-spacing-unit) !important; }
+
+	.#{$namespace}u-marginOneAndHalf          { margin:        $one-and-half-spacing-unit + px !important; margin: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-marginTopOneAndHalf       { margin-top:    $one-and-half-spacing-unit + px !important; margin-top: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-marginRightOneAndHalf     { margin-right:  $one-and-half-spacing-unit + px !important; margin-right: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-marginBottomOneAndHalf    { margin-bottom: $one-and-half-spacing-unit + px !important; margin-bottom: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-marginLeftOneAndHalf      { margin-left:   $one-and-half-spacing-unit + px !important; margin-left: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-marginEndsOneAndHalf      { margin-top:    $one-and-half-spacing-unit + px !important; margin-top: rem($one-and-half-spacing-unit) !important; margin-bottom: $one-and-half-spacing-unit + px !important; margin-bottom: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-marginSidesOneAndHalf     { margin-right: $one-and-half-spacing-unit + px !important; margin-right: rem($one-and-half-spacing-unit)!important; margin-left: $one-and-half-spacing-unit + px !important; margin-left: rem($one-and-half-spacing-unit) !important; }
+
+	.#{$namespace}u-marginDouble        { margin:        $double-spacing-unit + px !important; margin: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-marginTopDouble     { margin-top:    $double-spacing-unit + px !important; margin-top: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-marginRightDouble   { margin-right:  $double-spacing-unit + px !important; margin-right: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-marginBottomDouble  { margin-bottom: $double-spacing-unit + px !important; margin-bottom: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-marginLeftDouble    { margin-left:   $double-spacing-unit + px !important; margin-left: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-marginEndsDouble    { margin-top:    $double-spacing-unit + px !important; margin-top: rem($double-spacing-unit) !important; margin-bottom: $double-spacing-unit + px !important; margin-bottom: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-marginSidesDouble   { margin-right: $double-spacing-unit + px !important; margin-right: rem($double-spacing-unit)!important; margin-left: $double-spacing-unit + px !important; margin-left: rem($double-spacing-unit) !important; }
+
+	.#{$namespace}u-marginFlush         { margin:        0 !important; }
+	.#{$namespace}u-marginTopFlush      { margin-top:    0 !important; }
+	.#{$namespace}u-marginRightFlush    { margin-right:  0 !important; }
+	.#{$namespace}u-marginBottomFlush   { margin-bottom: 0 !important; }
+	.#{$namespace}u-marginLeftFlush     { margin-left:   0 !important; }
+	.#{$namespace}u-marginEndsFlush     { margin-top:    0 !important; margin-bottom: 0 !important; }
+	.#{$namespace}u-marginSidesFlush    { margin-right:  0 !important; margin-left:   0 !important; }
+
+
+
+	 // Add/remove paddings
+
+	.#{$namespace}u-padding        { padding:        $base-spacing-unit + px !important; padding: em($base-spacing-unit) !important; }
+	.#{$namespace}u-paddingTop     { padding-top:    $base-spacing-unit + px !important; padding-top: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-paddingRight   { padding-right:  $base-spacing-unit + px !important; padding-right: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-paddingBottom  { padding-bottom: $base-spacing-unit + px !important; padding-bottom: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-paddingLeft    { padding-left:   $base-spacing-unit + px !important; padding-left: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-paddingEnds    { padding-top:    $base-spacing-unit + px !important; padding-top: rem($base-spacing-unit) !important; padding-bottom:$base-spacing-unit + px !important; padding-bottom: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-paddingSides   { padding-right: $base-spacing-unit + px !important; padding-right: rem($base-spacing-unit)!important; padding-left:  $base-spacing-unit + px !important; padding-left: rem($base-spacing-unit) !important; }
+
+	.#{$namespace}u-paddingHalf          { padding:        $half-spacing-unit + px !important; padding: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-paddingTopHalf       { padding-top:    $half-spacing-unit + px !important; padding-top: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-paddingRightHalf     { padding-right:  $half-spacing-unit + px !important; padding-right: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-paddingBottomHalf    { padding-bottom: $half-spacing-unit + px !important; padding-bottom: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-paddingLeftHalf      { padding-left:   $half-spacing-unit + px !important; padding-left: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-paddingEndsHalf      { padding-top:    $half-spacing-unit + px !important; padding-top: rem($half-spacing-unit) !important; padding-bottom:$half-spacing-unit + px !important; padding-bottom: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-paddingSidesHalf     { padding-right: $half-spacing-unit + px !important; padding-right: rem($half-spacing-unit)!important; padding-left:  $half-spacing-unit + px !important; padding-left: rem($half-spacing-unit) !important; }
+
+	.#{$namespace}u-paddingOneAndHalf          { padding:        $one-and-half-spacing-unit + px !important; padding: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-paddingTopOneAndHalf       { padding-top:    $one-and-half-spacing-unit + px !important; padding-top: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-paddingRightOneAndHalf     { padding-right:  $one-and-half-spacing-unit + px !important; padding-right: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-paddingBottomOneAndHalf    { padding-bottom: $one-and-half-spacing-unit + px !important; padding-bottom: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-paddingLeftOneAndHalf      { padding-left:   $one-and-half-spacing-unit + px !important; padding-left: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-paddingEndsOneAndHalf      { padding-top:    $one-and-half-spacing-unit + px !important; padding-top: rem($one-and-half-spacing-unit) !important; padding-bottom: $one-and-half-spacing-unit + px !important; padding-bottom: rem($one-and-half-spacing-unit) !important; }
+	.#{$namespace}u-paddingSidesOneAndHalf     { padding-right: $one-and-half-spacing-unit + px !important; padding-right: rem($one-and-half-spacing-unit)!important; padding-left: $one-and-half-spacing-unit + px !important; padding-left: rem($one-and-half-spacing-unit) !important; }
+
+	.#{$namespace}u-paddingDouble        { padding:        $double-spacing-unit + px !important; padding: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-paddingTopDouble     { padding-top:    $double-spacing-unit + px !important; padding-top: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-paddingRightDouble   { padding-right:  $double-spacing-unit + px !important; padding-right: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-paddingBottomDouble  { padding-bottom: $double-spacing-unit + px !important; padding-bottom: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-paddingLeftDouble    { padding-left:   $double-spacing-unit + px !important; padding-left: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-paddingEndsDouble    { padding-top:    $double-spacing-unit + px !important; padding-top: rem($double-spacing-unit) !important; padding-bottom: $double-spacing-unit + px !important; padding-bottom: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-paddingSidesDouble   { padding-right: $double-spacing-unit + px !important; padding-right: rem($double-spacing-unit)!important; padding-left: $double-spacing-unit + px !important; padding-left: rem($double-spacing-unit) !important; }
+
+	.#{$namespace}u-paddingFlush        { padding:        0 !important; }
+	.#{$namespace}u-paddingTopFlush     { padding-top:    0 !important; }
+	.#{$namespace}u-paddingRightFlush   { padding-right:  0 !important; }
+	.#{$namespace}u-paddingBottomFlush  { padding-bottom: 0 !important; }
+	.#{$namespace}u-paddingLeftFlush    { padding-left:   0 !important; }
+	.#{$namespace}u-paddingEndsFlush    { padding-top:    0 !important; padding-bottom: 0 !important; }
+	.#{$namespace}u-paddingSidesFlush   { padding-right:  0 !important; padding-left:   0! important; }
+
+
+	  // Add/remove border-spacing
+
+	.#{$namespace}u-borderSpacing            { border-spacing: $base-spacing-unit + px !important; border-spacing: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-borderSpacingEnds        { border-spacing: 0 $base-spacing-unit + px !important; border-spacing: rem($base-spacing-unit) !important; }
+	.#{$namespace}u-borderSpacingSides       { border-spacing: $base-spacing-unit + px 0 !important; border-spacing: rem($base-spacing-unit) 0 !important; }
+
+	.#{$namespace}u-borderSpacingHalf        { border-spacing: $half-spacing-unit + px !important; border-spacing: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-borderSpacingEndsHalf    { border-spacing: 0 $half-spacing-unit + px !important; border-spacing: rem($half-spacing-unit) !important; }
+	.#{$namespace}u-borderSpacingSidesHalf   { border-spacing: $half-spacing-unit + px 0 !important; border-spacing: rem($half-spacing-unit) 0 !important; }
+
+	.#{$namespace}u-borderSpacingDouble      { border-spacing: $double-spacing-unit + px !important; border-spacing: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-borderSpacingEndsDouble  { border-spacing: 0 $double-spacing-unit + px !important; border-spacing: rem($double-spacing-unit) !important; }
+	.#{$namespace}u-borderSpacingSidesDouble { border-spacing: $double-spacing-unit + px 0 !important; border-spacing: rem($double-spacing-unit) 0 !important; }
+
+	.#{$namespace}u-borderSpacingFlush       { border-spacing:        0 !important; }
+}
+
+@include spacing-setup();
+
+@media only screen and (min-width:$breakpoint1) {
+    @include spacing-setup("b1-");
+}
+
+@media only screen and (min-width:$breakpoint2) {
+    @include spacing-setup("b2-");
+}
+
+@media only screen and (min-width:$breakpoint3) {
+    @include spacing-setup("b3-");
+}
+
+@media only screen and (min-width:$breakpoint4) {
+    @include spacing-setup("b4-");
+}

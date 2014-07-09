@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 fed-wrapper" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js fed-wrapper" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>CTCT Style Guide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+    <!-- vvv DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+    <link rel="stylesheet" href="//cloud.typography.com/7508852/770622/css/fonts.css" />
+    <!-- ^^^ DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/style.css">
+
+  <!-- the FED -->
+  <link rel="stylesheet" href="../dist/fed.min.css">
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="kss-topnav" class="u-marginFlushEnds u-paddingSidesHalf">
+  <div id="versionDropdown" class="Dropdown Dropdown--plain is-closed js-dropdown u-clearfix u-paddingSides u-paddingEndsHalf u-floatRight">
+    <button type="button" class="Dropdown-toggle js-dropdownTrigger u-alpha u-lineHeight1">
+      <span data-currentversion>v0.0.14</span>
+      <i class="Icon--roundedCaret"></i>
+    </button>
+    <ul class="Dropdown-menu js-dropdownMenu">
+        <li class="Dropdown-menu-item"><a href="/history/0.0.6">v0.0.6</a></li>
+        <li class="Dropdown-menu-item"><a href="/history/0.0.8">v0.0.8</a></li>
+        <li class="Dropdown-menu-item"><a href="/history/0.0.9">v0.0.9</a></li>
+        <li class="Dropdown-menu-item"><a href="/history/0.0.10">v0.0.10</a></li>
+	<li class="Dropdown-menu-item"><a href="/history/0.0.12">v0.0.12</a></li>
+	<li class="Dropdown-menu-item"><a href="/history/0.0.13">v0.0.13</a></li>
+	<li class="Dropdown-menu-item"><a href="/history/0.0.14">v0.0.14</a></li>
+    </ul>
+  </div>
+
+  <ul class="u-alpha u-weightSemiBold u-marginFlush u-listStyleNone">
+    <li class="u-inlineBlock u-paddingFlush"><a href="../index.html" class="u-block u-paddingSides u-paddingEndsHalf">Overview</a></li>
+    <li class="u-inlineBlock u-paddingFlush"><a href="section-1.html" class="u-block u-paddingSides u-paddingEndsHalf">Base</a></li>
+    <li class="u-inlineBlock u-paddingFlush"><a href="section-2.html" class="u-block u-paddingSides u-paddingEndsHalf">Utilities</a></li>
+    <li class="u-inlineBlock u-paddingFlush">
+      <div class="Dropdown Dropdown--plain is-closed js-dropdown u-clearfix u-paddingSides u-paddingEndsHalf">
+        <button type="button" class="Dropdown-toggle js-dropdownTrigger u-alpha u-lineHeight1">
+          <span>Components</span>
+          <i class="Icon--roundedCaret"></i>
+        </button>
+        <ul class="Dropdown-menu js-dropdownMenu">
+          
+            <li class="Dropdown-menu-item"><a href="section-3.html">Buttons</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-4.html">Buttons Groups</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-5.html">Forms</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-6.html">Grid</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-7.html">Icons</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-8.html">Tables</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-9.html">Lists</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-10.html">Dividers</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-11.html">Dropdowns</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-12.html">Campaign Unit</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-13.html">Tagline</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-14.html">Stat</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-15.html">Contact Widget</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-16.html">Tooltip</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-17.html">Popover</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-18.html">Messaging</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-19.html">Galileo Toolbar</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-20.html">Modals</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-21.html">Date Pickers</a></li>
+          
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+<header id="kss-main-header" class="u-paddingEnds u-paddingSidesDouble">
+  <h1 class="u-mega u-colorWhite u-weightSemiBold u-marginFlush u-paddingFlush">Constant Contact Style Guide</h1>
+</header>
+
+<div class="u-table">
+<!-- <div class="Grid u-clearfix"> -->
+  <nav id="kss-nav" class="u-tableCell">
+  <!-- <nav id="kss-nav" class="Grid-item u-sizeShrinkWrapLeft"> -->
+    <ul class="u-paddingDouble u-textNoWrap u-listStyleNone u-hide b2-u-show">
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-3.html">Buttons</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-4.html">Buttons Groups</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-5.html">Forms</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-6.html">Grid</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-7.html">Icons</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-8.html">Tables</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-9.html">Lists</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-10.html">Dividers</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-11.html">Dropdowns</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-12.html">Campaign Unit</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-13.html">Tagline</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-14.html">Stat</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-15.html">Contact Widget</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-16.html">Tooltip</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-17.html">Popover</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-18.html">Messaging</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-19.html">Galileo Toolbar</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-20.html">Modals</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-21.html">Date Pickers</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+    </ul>
+  </nav>
+
+  <section class="u-tableCell u-paddingDouble u-sizeFillAlt">
+  <!-- <section class="Grid-item u-sizeFill u-paddingDouble"> -->
+    
+
+      
+
+      
+        
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="21.0"><span class="u-colorSectionHeading">21.0 ::</span> Date Pickers</h1>
+        
+          
+              
+              <div class="u-lead"><p>A date picker used to select a single date or a date range.
+
+</p>
+<p><h2>USAGE:</h2>
+<code>$(&apos;.js-date-picker&apos;).daterangepicker({options});</code>
+
+</p>
+<p>Original docs: <a href="https://github.com/dangrossman/bootstrap-daterangepicker">https://github.com/dangrossman/bootstrap-daterangepicker</a>
+
+</p>
+<p><h2>OPTIONS:</h2>
+</p>
+<p>The date range picker is configurable by passing options objects and callback functions. A full list of options can be found at <a href="https://github.com/dangrossman/bootstrap-daterangepicker#options">https://github.com/dangrossman/bootstrap-daterangepicker#options</a> </p>
+
+<table class="Table Table--border Table--striped u-centi u-marginTop">
+<thead class="Table-head">
+   <tr>
+     <th>Option</th>
+     <th>Description</th>
+     <th>Value</th>
+     <th style="width:350px">Example</th>
+  </tr>
+</thead>
+<tbody>
+   <tr>
+     <td>Single Date Picker</td>
+     <td>Renders a single calendar to select a single date</td>
+     <td>Boolean</td>
+     <td>$(&apos;#js-date-picker&apos;).daterangepicker({singleDatePicker:true<br>});</td>
+   </tr>
+   <tr>
+     <td>Opens</td>
+     <td>Whether the picker appears aligned to the left or to the right of the HTML element it&apos;s attached to.</td>
+     <td>String(&apos;left&apos;/&apos;right&apos;)</td>
+     <td>$(&apos;#js-date-picker&apos;).daterangepicker({opens:&apos;left&apos;<br>});</td>
+   </tr>
+   <tr>
+     <td>Min Date</td>
+     <td>The earliest date a user may select.</td>
+     <td>Date object, moment.js object or string</td>
+     <td>$(&apos;#js-date-picker&apos;).daterangepicker({opens:&apos;left&apos;<br>});</td>
+   </tr>
+   <tr>
+     <td>Max Date</td>
+     <td>The latest date a user may select.</td>
+     <td>Date object, moment.js object or string</td>
+     <td>$(&apos;#js-date-picker&apos;).daterangepicker({opens:&apos;left&apos;<br>});</td>
+   </tr>
+</tbody>
+</table></div>
+              
+          
+         
+      
+        
+         <article class="kss-depth-2 u-marginBottomDouble">
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="21.1"><span class="u-colorSectionHeading">21.1 ::</span> Data Picker</h1>
+        
+          
+          <div class="kss-lead"><p>Date picker</p>
+</div>
+
+              <div class="DatePicker Form">
+   <div class="Form-inputGroup">
+     <input type="text" class="js-date-picker" placeholder="_ _ /_ _ /_ _ _ _" />
+     <span class="Form-inputAddOn Icon--calendar"></span>
+   </div>
+</div>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;div class=&quot;DatePicker Form&quot;&gt;
+   &lt;div class=&quot;Form-inputGroup&quot;&gt;
+     &lt;input type=&quot;text&quot; class=&quot;js-date-picker&quot; placeholder=&quot;_ _ /_ _ /_ _ _ _&quot; /&gt;
+     &lt;span class=&quot;Form-inputAddOn Icon--calendar&quot;&gt;&lt;/span&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+              
+          
+        
+          </article>
+        
+      
+        
+         <article class="kss-depth-2 u-marginBottomDouble">
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="21.2"><span class="u-colorSectionHeading">21.2 ::</span> Date Range Picker</h1>
+        
+          
+          <div class="kss-lead"><p>Date range picker</p>
+</div>
+
+              <div class="DatePicker Form">
+   <div class="Form-inputGroup">
+     <input type="text" class="js-date-range-picker" placeholder="_ _ /_ _ /_ _ _ _" />
+     <span class="Form-inputAddOn Icon--calendar"></span>
+   </div>
+</div>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;div class=&quot;DatePicker Form&quot;&gt;
+   &lt;div class=&quot;Form-inputGroup&quot;&gt;
+     &lt;input type=&quot;text&quot; class=&quot;js-date-range-picker&quot; placeholder=&quot;_ _ /_ _ /_ _ _ _&quot; /&gt;
+     &lt;span class=&quot;Form-inputAddOn Icon--calendar&quot;&gt;&lt;/span&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+              
+          
+        
+          </article>
+        
+      
+    
+  </section>
+</div>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="public/moment.min.js"></script>
+<script src="../dist/fed.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Ensure code blocks are highlighted properly...
+    $('pre>code').addClass('prettyprint');
+    prettyPrint();
+
+    if ($('.js-popover').length) {
+      $('.js-popover').popover({
+        container: 'body',
+        html: true,
+        content: function () {
+          return $(this).next('.Popover-content').html();
+        }
+      });
+    }
+
+    if ($('.js-tooltip').length) {
+      $('.js-tooltip').tooltip({
+        container: 'body'
+      });
+    }
+
+    if ($('.js-dropdown').length) {
+      $('.js-dropdown').Dropdown();
+    }
+
+    if ($('.js-modal').length) {
+      $('.js-modal').magnificPopup({
+        type:'inline',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-modal-ajax').length) {
+      $('.js-modal-ajax').magnificPopup({
+        type:'ajax',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-date-picker').length) {
+      $('.js-date-picker').daterangepicker({singleDatePicker:true});
+    }
+
+    if ($('.js-date-range-picker').length) {
+      $('.js-date-range-picker').daterangepicker();
+    }
+
+  });
+</script>
+</body>
+</html>

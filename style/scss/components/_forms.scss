@@ -1,0 +1,43 @@
+.Form {}
+	.Form-checkbox {
+		border: none;
+
+		+ label {
+			display: inline-block;
+			vertical-align: middle;
+			padding-left: 6px;
+		}
+
+		// Wrapping this in a media query will hide it from IE8 which doesn't understand the :checked psuedo selector
+		@media all and (color) {
+			display: none;
+
+			+ label {
+				position: relative;
+				min-width: 18px;
+				min-width: rem(18);
+				height: 18px;
+				height: rem(18);
+				line-height: 1.25;
+				padding-left: 28px;
+				padding-left: rem(28);
+
+				&:before {
+					content: " ";
+					position: absolute;
+					border: 1px solid #c3cbd2;
+					width: 18px;
+					width: rem(18);
+					height: 18px;
+					height: rem(18);
+					left: 0;
+					margin: 0;
+				}
+			}
+
+			&:checked + label {
+				background: url(../svg/icon-check-pink.svg) no-repeat 3px;
+				background-size: 12px 10px;
+			}
+		}
+	}

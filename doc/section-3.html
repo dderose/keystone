@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 fed-wrapper" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js fed-wrapper" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Keystone Dental Style Guide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+    <!-- vvv DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+    <link rel="stylesheet" href="//cloud.typography.com/7508852/770622/css/fonts.css" />
+    <!-- ^^^ DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/style.css">
+
+  <!-- the FED -->
+  <link rel="stylesheet" href="../dist/fed.min.css">
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="kss-topnav" class="u-marginFlushEnds u-paddingSidesHalf">
+  <ul class="u-alpha u-weightSemiBold u-marginFlush u-listStyleNone">
+    <li class="u-inlineBlock u-marginFlush"><a href="../index.html" class="u-block u-paddingSides u-paddingEndsHalf">Overview</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-1.html" class="u-block u-paddingSides u-paddingEndsHalf">Base</a></li>
+    <li class="u-inlineBlock u-marginFlush"><a href="section-2.html" class="u-block u-paddingSides u-paddingEndsHalf">Utilities</a></li>
+    <li class="u-inlineBlock u-marginFlush">
+      <div class="Dropdown Dropdown--plain is-closed js-dropdown u-clearfix u-paddingSides u-paddingEndsHalf">
+        <button type="button" class="Dropdown-toggle js-dropdownTrigger u-alpha u-lineHeight1">
+          <span>Components</span>
+        </button>
+        <ul class="Dropdown-menu js-dropdownMenu">
+          
+            <li class="Dropdown-menu-item"><a href="section-3.html">Grid</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-4.html">Dropdowns</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-5.html">Modals</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-6.html">Offcanvas</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-7.html">Hero Unit</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-8.html">Category Unit</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-9.html">Carousel</a></li>
+          
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+<header id="kss-main-header" class="u-paddingEnds u-paddingSidesDouble">
+  <h1 class="u-mega u-colorWhite u-weightSemiBold u-marginFlush u-paddingFlush">Keystone Style Guide</h1>
+</header>
+
+<div class="u-table">
+<!-- <div class="Grid u-clearfix"> -->
+  <nav id="kss-nav" class="u-tableCell">
+  <!-- <nav id="kss-nav" class="Grid-item u-sizeShrinkWrapLeft"> -->
+    <ul class="u-paddingDouble u-textNoWrap u-listStyleNone u-hide b2-u-show">
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-3.html">Grid</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-4.html">Dropdowns</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-5.html">Modals</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-6.html">Offcanvas</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-7.html">Hero Unit</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-8.html">Category Unit</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-9.html">Carousel</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+    </ul>
+  </nav>
+
+  <section class="u-tableCell u-paddingDouble u-sizeFillAlt">
+  <!-- <section class="Grid-item u-sizeFill u-paddingDouble"> -->
+    
+
+      
+
+      
+        
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="3.0"><span class="u-colorSectionHeading">3.0 ::</span> Grid</h1>
+        
+          
+          <div class="kss-lead"><p>The grid system is used to create the blueprint of your page. The FED grid is fluid, percentage-based, and utilizes utility classes to specify cell width, offsets, and source order (push/pull). All grid related and sizing related classes are breakpoint enabled.
+
+</p>
+<p>Additionally, there are modifier classes to apply both horizontal and vertical gutters.</p>
+</div>
+
+              <div class="Grid {$modifiers}">
+    <div class="Grid-item u-size1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One third Grid (u-size1of3)</p>
+    </div>
+    <div class="Grid-item u-size2of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">Two thirds Grid (u-size2of3)</p>
+    </div>
+    <div class="Grid-item u-size1of2">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One half Grid (size1of2)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+</div>
+
+
+
+              
+              <h2 class="u-mega u-weightSlightBold u-marginTopDouble"><code>.Grid--gutter</code></h2>
+
+              <p>Add a base spacing unit fixed-width padding to the sides of cells</p>
+
+
+              <div>
+                <div class="Grid Grid--gutter">
+    <div class="Grid-item u-size1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One third Grid (u-size1of3)</p>
+    </div>
+    <div class="Grid-item u-size2of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">Two thirds Grid (u-size2of3)</p>
+    </div>
+    <div class="Grid-item u-size1of2">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One half Grid (size1of2)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+</div>
+              </div>
+
+              <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                <xmp class="prettyprint lang-html u-marginbottom"><div class="Grid Grid--gutter">
+    <div class="Grid-item u-size1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One third Grid (u-size1of3)</p>
+    </div>
+    <div class="Grid-item u-size2of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">Two thirds Grid (u-size2of3)</p>
+    </div>
+    <div class="Grid-item u-size1of2">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One half Grid (size1of2)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+</div></xmp>
+              </div>
+              
+              <h2 class="u-mega u-weightSlightBold u-marginTopDouble"><code>.Grid--gutterDouble</code></h2>
+
+              <p>Add a double base spacing unit fixed-width padding to the sides of  cells</p>
+
+
+              <div>
+                <div class="Grid Grid--gutterDouble">
+    <div class="Grid-item u-size1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One third Grid (u-size1of3)</p>
+    </div>
+    <div class="Grid-item u-size2of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">Two thirds Grid (u-size2of3)</p>
+    </div>
+    <div class="Grid-item u-size1of2">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One half Grid (size1of2)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+</div>
+              </div>
+
+              <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                <xmp class="prettyprint lang-html u-marginbottom"><div class="Grid Grid--gutterDouble">
+    <div class="Grid-item u-size1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One third Grid (u-size1of3)</p>
+    </div>
+    <div class="Grid-item u-size2of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">Two thirds Grid (u-size2of3)</p>
+    </div>
+    <div class="Grid-item u-size1of2">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One half Grid (size1of2)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+</div></xmp>
+              </div>
+              
+              <h2 class="u-mega u-weightSlightBold u-marginTopDouble"><code>.Grid--verticalGutter</code></h2>
+
+              <p>Add a base spacing unit fixed-width padding to the bottom of cells</p>
+
+
+              <div>
+                <div class="Grid Grid--verticalGutter">
+    <div class="Grid-item u-size1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One third Grid (u-size1of3)</p>
+    </div>
+    <div class="Grid-item u-size2of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">Two thirds Grid (u-size2of3)</p>
+    </div>
+    <div class="Grid-item u-size1of2">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One half Grid (size1of2)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+</div>
+              </div>
+
+              <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                <xmp class="prettyprint lang-html u-marginbottom"><div class="Grid Grid--verticalGutter">
+    <div class="Grid-item u-size1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One third Grid (u-size1of3)</p>
+    </div>
+    <div class="Grid-item u-size2of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">Two thirds Grid (u-size2of3)</p>
+    </div>
+    <div class="Grid-item u-size1of2">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One half Grid (size1of2)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+</div></xmp>
+              </div>
+              
+              <h2 class="u-mega u-weightSlightBold u-marginTopDouble"><code>.Grid--verticalGutterDouble</code></h2>
+
+              <p>Add a double base spacing unit fixed-width padding to the bottom of cells</p>
+
+
+              <div>
+                <div class="Grid Grid--verticalGutterDouble">
+    <div class="Grid-item u-size1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One third Grid (u-size1of3)</p>
+    </div>
+    <div class="Grid-item u-size2of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">Two thirds Grid (u-size2of3)</p>
+    </div>
+    <div class="Grid-item u-size1of2">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One half Grid (size1of2)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+</div>
+              </div>
+
+              <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                <xmp class="prettyprint lang-html u-marginbottom"><div class="Grid Grid--verticalGutterDouble">
+    <div class="Grid-item u-size1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One third Grid (u-size1of3)</p>
+    </div>
+    <div class="Grid-item u-size2of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">Two thirds Grid (u-size2of3)</p>
+    </div>
+    <div class="Grid-item u-size1of2">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One half Grid (size1of2)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+    <div class="Grid-item u-size1of4">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+    </div>
+</div></xmp>
+              </div>
+              
+
+              
+          
+         
+      
+        
+         <article class="kss-depth-2 u-marginBottomDouble">
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="3.1"><span class="u-colorSectionHeading">3.1 ::</span> Grid Offsets</h1>
+        
+          
+          <div class="kss-lead"><p>You add additional space between grid cells by using offsets</p>
+</div>
+
+              <div class="Grid {$modifiers}">
+    <div class="Grid-item u-size1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">u-size1of3</p>
+    </div>
+    <div class="Grid-item u-size1of3 u-before1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">u-size1of3  u-before1of3</p>
+    </div>
+</div>
+<div class="Grid Grid--gutter {$modifiers}">
+    <div class="Grid-item u-size1of3 u-before1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">u-size1of3 u-before1of3</p>
+    </div>
+    <div class="Grid-item u-size1of3">
+        <p class="u-padding u-marginFlush" style="border:1px solid #666;">u-size1of3</p>
+    </div>
+</div>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;div class=&quot;Grid {$modifiers}&quot;&gt;
+    &lt;div class=&quot;Grid-item u-size1of3&quot;&gt;
+        &lt;p class=&quot;u-padding u-marginFlush&quot; style=&quot;border:1px solid #666;&quot;&gt;u-size1of3&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Grid-item u-size1of3 u-before1of3&quot;&gt;
+        &lt;p class=&quot;u-padding u-marginFlush&quot; style=&quot;border:1px solid #666;&quot;&gt;u-size1of3  u-before1of3&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;Grid Grid--gutter {$modifiers}&quot;&gt;
+    &lt;div class=&quot;Grid-item u-size1of3 u-before1of3&quot;&gt;
+        &lt;p class=&quot;u-padding u-marginFlush&quot; style=&quot;border:1px solid #666;&quot;&gt;u-size1of3 u-before1of3&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Grid-item u-size1of3&quot;&gt;
+        &lt;p class=&quot;u-padding u-marginFlush&quot; style=&quot;border:1px solid #666;&quot;&gt;u-size1of3&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+              
+          
+        
+          </article>
+        
+      
+        
+         <article class="kss-depth-2 u-marginBottomDouble">
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="3.2"><span class="u-colorSectionHeading">3.2 ::</span> Rearange Source Order (push/pull)</h1>
+        
+          
+          <div class="kss-lead"><p>You can rearrange the order in which grid items display on a page with push/pull utilities</p>
+</div>
+
+              <div class="Grid Grid--gutter {$modifiers}">
+    <div class="Grid-item u-size1of3 u-push2of3">
+        <p class="u-padding" style="border:1px solid #666;"><b>FIRST:</b> u-size1of3 u-push2of3</p>
+    </div>
+    <div class="Grid-item u-size2of3 u-pull1of3">
+        <p class="u-padding" style="border:1px solid #666;"><b>SECOND:</b> u-size2of3 u-pull1of3</p>
+    </div>
+</div>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;div class=&quot;Grid Grid--gutter {$modifiers}&quot;&gt;
+    &lt;div class=&quot;Grid-item u-size1of3 u-push2of3&quot;&gt;
+        &lt;p class=&quot;u-padding&quot; style=&quot;border:1px solid #666;&quot;&gt;&lt;b&gt;FIRST:&lt;/b&gt; u-size1of3 u-push2of3&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Grid-item u-size2of3 u-pull1of3&quot;&gt;
+        &lt;p class=&quot;u-padding&quot; style=&quot;border:1px solid #666;&quot;&gt;&lt;b&gt;SECOND:&lt;/b&gt; u-size2of3 u-pull1of3&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+              
+          
+        
+          </article>
+        
+      
+        
+         <article class="kss-depth-2 u-marginBottomDouble">
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="3.3"><span class="u-colorSectionHeading">3.3 ::</span> Combined Fixed/Fluid Column Grids</h1>
+        
+          
+          <div class="kss-lead"><p>Certain designs may require one or more cells to be fixed width and the remaining cell to expand and contract fluidly to occupy the remaining width. To accomplish this three things need to be done: add <code>u-sizeFill</code> to the fluid cell, add <code>u-sizeShrinkWrapLeft</code> or <code>u-sizeShrinkWrapRight</code> to the fixed width cell (depending on which side it&apos;s on), and add <code>u-clearFix</code> to the <code>Grid</code> container.
+
+</p>
+<p>Notice that there are no sizing classes on fixed width cells. The cell will expand to fit the content within but will not be fluid. Explicit widths (width: 4rem; for example) can be added if desired/needed.
+
+</p>
+<p>Additionally, as many fixed width cells can be added as desired. Only one fluid width cell may be added. If a design calls for multiple fluid width cells simply nest a new grid inside the one fluid width cell.
+
+</p>
+<p>Note: The <code>u-sizeFill</code> cannot be floated or it will no longer be fluid.</p>
+</div>
+
+              <div class="Grid Grid--gutter u-clearfix">
+    <div class="Grid-item u-sizeShrinkWrapLeft">
+        <p class="u-padding" style="border:1px solid #666;">u-sizeShrinkWrapLeft</p>
+    </div>
+    <div class="Grid-item u-sizeShrinkWrapRight">
+        <p class="u-padding" style="border:1px solid #666;">u-sizeShrinkWrapRight</p>
+    </div>
+    <div class="Grid-item u-sizeFill">
+        <p class="u-padding" style="border:1px solid #666;">u-sizeFill</p>
+    </div>
+</div>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;div class=&quot;Grid Grid--gutter u-clearfix&quot;&gt;
+    &lt;div class=&quot;Grid-item u-sizeShrinkWrapLeft&quot;&gt;
+        &lt;p class=&quot;u-padding&quot; style=&quot;border:1px solid #666;&quot;&gt;u-sizeShrinkWrapLeft&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Grid-item u-sizeShrinkWrapRight&quot;&gt;
+        &lt;p class=&quot;u-padding&quot; style=&quot;border:1px solid #666;&quot;&gt;u-sizeShrinkWrapRight&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Grid-item u-sizeFill&quot;&gt;
+        &lt;p class=&quot;u-padding&quot; style=&quot;border:1px solid #666;&quot;&gt;u-sizeFill&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+              
+          
+        
+          </article>
+        
+      
+    
+  </section>
+</div>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="public/moment.min.js"></script>
+<script src="../dist/fed.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Ensure code blocks are highlighted properly...
+    $('pre>code').addClass('prettyprint');
+    prettyPrint();
+
+    if ($('.js-popover').length) {
+      $('.js-popover').popover({
+        container: 'body',
+        html: true,
+        content: function () {
+          return $(this).next('.Popover-content').html();
+        }
+      });
+    }
+
+    if ($('.js-tooltip').length) {
+      $('.js-tooltip').tooltip({
+        container: 'body'
+      });
+    }
+
+    if ($('.js-dropdown').length) {
+      $('.js-dropdown').Dropdown();
+    }
+
+    if ($('.js-modal').length) {
+      $('.js-modal').magnificPopup({
+        type:'inline',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-modal-ajax').length) {
+      $('.js-modal-ajax').magnificPopup({
+        type:'ajax',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-date-picker').length) {
+      $('.js-date-picker').daterangepicker({singleDatePicker:true});
+    }
+
+    if ($('.js-date-range-picker').length) {
+      $('.js-date-range-picker').daterangepicker();
+    }
+
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="EN" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Keystone Dental</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/fed.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+</head>
+<body>
+    <header class="PageHeader">
+        <div class="PageHeader-inner">
+            <div class="PageHeader-column">
+                <a href="#slideOutNav" class="js-offCanvas Topnav-menuButton">Menu</a>
+            </div>
+            <div class="PageHeader-column PageHeader-column--logo">
+                <h1 class="PageHeader-logo"><span>Keystone Dental</span></h1>
+            </div>
+            <div class="PageHeader-column">
+                <nav class="Topnav" data-spy="affix" data-offset-top="150">
+                    <ul class="u-horizontalList u-marginFlush">
+                        <li class="Topnav-item u-hide b2-u-showInlineBlock"><a href="#">Contact</a></li>
+                        <li class="Topnav-item">
+                            <a href="#"><svg class="Icon">
+                                <use xlink:href="svg/icons.svg#Icon--magnifier"></use>
+                            </svg></a>
+                        </li>
+                        <li class="Topnav-item b2-u-hide">
+                            <a href="#"><svg class="Icon">
+                                <use xlink:href="svg/icons.svg#Icon--phone"></use>
+                            </svg></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <nav class="MainNav">
+        <div class="MainNav-inner">
+            <div class="Grid u-marginFlush u-clearfix">
+                <div class="Grid-item b4-u-sizeShrinkWrapLeft">
+                    <h1 class="PageHeader-logo"><span>Keystone Dental</span></h1>
+                </div>
+                
+                <div class="Grid-item b4-u-sizeFill">
+                    <ul class="MainNav-list u-horizontalList">
+                        <li class="MainNav-listItem"><a href="#Nav-implant-systems" class="is-selected js-slideDown">Implant Systems</a> <span class="Divider"></span></li>
+                        <li class="MainNav-listItem"><a href="#Nav-biomaterials" class="js-slideDown">Biomaterials</a></li>
+                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="#">Events</a></li>
+                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="#">Literature</a></li>
+                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="#">Resources</a></li>
+                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="#">Company</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="SubNav SlideDown u-visuallyHidden" data-state="closed">
+            <div class="SubNav-inner">
+                <nav id="Nav-implant-systems" class="u-visuallyHidden js-slideDownMenu" role="navigation" aria-label="Implant Systems">
+                    <ul class="u-horizontalList u-marginFlush">
+                        <li class="u-marginBottomFlush"><a href="#">MAX</a></li>
+                        <li class="u-marginBottomFlush"><a href="#">CoAxis</a></li>
+                        <li class="u-marginBottomFlush"><a href="#">Genesis</a></li>
+                        <li class="u-marginBottomFlush"><a href="#">Prima</a></li>
+                        <li class="u-marginBottomFlush"><a href="#">TriNex</a></li>
+                        <li class="u-marginBottomFlush"><a href="#">OCT</a></li>
+                        <li class="u-marginBottomFlush"><a href="#">Restore</a></li>
+                    </ul>
+                </nav>
+
+                <nav id="Nav-biomaterials" class="u-visuallyHidden js-slideDownMenu" role="navigation" aria-label="BioMaterials">
+                    <ul class="u-horizontalList u-marginFlush">
+                        <li class="u-marginBottomFlush"><a href="#">MAX</a></li>
+                        <li class="u-marginBottomFlush"><a href="#">CoAxis</a></li>
+                        <li class="u-marginBottomFlush"><a href="#">Genesis</a></li>
+                        <li class="u-marginBottomFlush"><a href="#">Prima</a></li>
+                        <li class="u-marginBottomFlush"><a href="#">TriNex</a></li>
+                        <li class="u-marginBottomFlush"><a href="#">OCT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </nav>
+
+    <div id="slideOutNav" class="Offcanvas">
+        <div class="scrollableArea">
+            <ul class="Offcanvas-menu">
+                <li class="Offcanvas-menuItem"><a href="#">Implant Systems</a></li>
+                <li class="Offcanvas-menuItem"><a href="#">Biomaterials</a></li>
+                <li class="Offcanvas-menuItem"><a href="#">Events</a></li>
+                <li class="Offcanvas-menuItem"><a href="#">Literature</a></li>
+                <li class="Offcanvas-menuItem"><a href="#">Resources</a></li>
+                <li class="Offcanvas-menuItem"><a href="#">Company</a></li>
+                <li class="Offcanvas-menuItem"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="PageSection">
+        <div class="PageSection-inner">
+            <a href="#resourceSlideOut" class="js-offCanvas Resources-menuButton b3-u-hide u-floatRight">Filter</a>
+
+            <h1 class="PageSection-heading">Resources</h1>
+
+            <div class="Grid Grid--gutterDouble">
+                <div class="Grid-item b3-u-size1of3 u-hide b3-u-showInlineBlock" id="Blargh">
+                    <button class="Accordion-item is-collapsed collapse in" data-toggle="collapse" data-target="#product">Product <svg class="Icon Icon--large u-floatRight"><use xlink:href="svg/icons.svg#Icon--caretDown"></use></svg></button>
+
+                    <div id="product" class="collapse">
+                        <ul class="List--checkbox">
+                            <li class="List-item">
+                                <input type="checkbox" class="Form-checkbox" id="implant-systems" /> <label for="implant-systems">Implant Systems <span class="List-item-count">(324)</span></label>
+
+                                <ul class="List--checkbox">
+                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="MAX" /> <label for="MAX">MAX <span class="List-item-count">(12)</span></label></li>
+                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Co-Axis" /> <label for="Co-Axis">Co-Axis <span class="List-item-count">(75)</span></label></li>
+                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Genesis" /> <label for="Genesis">Genesis <span class="List-item-count">(34)</span></label></li>
+                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Prima" /> <label for="Prima">Prima <span class="List-item-count">(26)</span></label></li>
+                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="External Hex" /> <label for="External Hex">External Hex <span class="List-item-count">(14)</span></label></li>
+                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Restore" /> <label for="Restore">Restore <span class="List-item-count">(53)</span></label></li>
+                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Zygomatic" /> <label for="Zygomatic">Zygomatic <span class="List-item-count">(6)</span></label></li>
+                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Surface-Roughening" /> <label for="Surface-Roughening">Surface Roughening <span class="List-item-count">(12)</span></label></li>
+                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Other" /> <label for="Other">Other <span class="List-item-count">(17)</span></label></li>
+                                </ul>
+                            </li>
+                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="bone-grafting" /> <label for="bone-grafting">Bone Grafting <span class="List-item-count">(57)</span></label></li>
+                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="membranes" /> <label for="membranes">Membranes <span class="List-item-count">(76)</span></label></li>
+                        </ul>
+                    </div>
+
+                    <button class="Accordion-item is-collapsed" data-toggle="collapse" data-target="#type">Type <svg class="Icon Icon--large u-floatRight"><use xlink:href="svg/icons.svg#Icon--caretDown"></use></svg></button>
+
+                    <div id="type" class="collapse">
+                        <ul class="List--checkbox">
+                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Clinical-Articles" /> <label for="Clinical-Articles">Clinical Articles <span class="List-item-count">(18)</span></label></li>
+                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Powerpoint" /> <label for="Powerpoint">Powerpoint <span class="List-item-count">(12)</span></label></li>
+                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Video" /> <label for="Video">Video <span class="List-item-count">(75)</span></label></li>
+                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Webinars" /> <label for="Webinars">Webinars <span class="List-item-count">(34)</span></label></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="Grid-item b3-u-size2of3">
+                    <article class="Article Article--summary">
+                        <header>
+                            <h1 class="Article-heading"><a href="#">An Investigation of the Long-Term Bioactivity of Endogenous Growth Factor in OASIS Wound Matrix</a></h1>
+
+                            <p class="Article-byline">Keystone Dental Tech Insight. 2010 May  |  Hodde JP, Ernst DM, Hiles MC.</p>
+                        </header>
+                    </article>
+
+                    <article class="Article Article--summary">
+                        <header>
+                            <h1 class="Article-heading"><a href="#">Decreased Bacterial Adhesion to Surface-Treated Titanium.</a></h1>
+
+                            <p class="Article-byline">Int J Artif Organs. 2005 Jul;28(7):718-30.   |   Del Curto B, Brunella MF, Giordano C, Pedeferri MP, Valtulina V, Visai L, Cigada A.</p>
+                        </header>
+
+                        <p><strong>This web broadcast seminar with Dr. Michael J. Will is intended for implant specialists and restorative dentists to gain insights on innovations for immediate implant placement.</strong></p>
+                    </article>
+
+                    <article class="Article Article--summary">
+                        <header>
+                            <h1 class="Article-heading"><a href="#">Biofilm on Dental Implants: A Review of the Literature.</a></h1>
+                        </header>
+
+                        <p><strong>This web broadcast seminar with Dr. Michael J. Will is intended for implant specialists and restorative dentists to gain insights on innovations for immediate implant placement.</strong></p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="resourceSlideOut" class="Offcanvas">
+        <div class="scrollableArea">
+            Filters
+        </div>
+    </div>
+
+    <footer class="PageFooter">
+        <div class="Grid Grid--gutter">
+            <div class="Grid-item b3-u-size1of5">
+                <h2 class="PageFooter-heading">Implant Systems</h2>
+
+                <ul class="PageFooter-list">
+                    <li class="PageFooter-listItem"><a href="#">Max</a></li>
+                    <li class="PageFooter-listItem"><a href="#">CoAxis</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Genesis</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Prima</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Tri-Nex</a></li>
+                    <li class="PageFooter-listItem"><a href="#">OCT</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Restore</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Stage-1</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Keystone 360</a></li>
+                    <li class="PageFooter-listItem"><a href="#">ExHex</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Renova</a></li>
+                </ul>
+            </div>
+
+            <div class="Grid-item b3-u-size1of5">
+                <h2 class="PageFooter-heading">Bone Grafting</h2>
+
+                <ul class="PageFooter-list">
+                    <li class="PageFooter-listItem"><a href="#">DynaBlast</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Accell Connexus</a></li>
+                    <li class="PageFooter-listItem"><a href="#">DynaGraft-D</a></li>
+                    <li class="PageFooter-listItem"><a href="#">DynaCore</a></li>
+                    <li class="PageFooter-listItem"><a href="#">OCS-B</a></li>
+                    <li class="PageFooter-listItem"><a href="#">MBCP</a></li>
+                    <li class="PageFooter-listItem"><a href="#">In-Oss</a></li>
+                </ul>
+            </div>
+
+            <div class="Grid-item b3-u-size1of5">
+                <h2 class="PageFooter-heading">Membrane</h2>
+                
+                <ul class="PageFooter-list">
+                    <li class="PageFooter-listItem"><a href="#">DynaMatrix</a></li>
+                    <li class="PageFooter-listItem"><a href="#">DynaMatrix Plus</a></li>
+                    <li class="PageFooter-listItem"><a href="#">CytoPlast TI</a></li>
+                    <li class="PageFooter-listItem"><a href="#">CytoPlast RTM</a></li>
+                    <li class="PageFooter-listItem"><a href="#">CytoPlast PTFE</a></li>
+                </ul>
+            </div>
+
+            <div class="Grid-item b3-u-size1of5 b4-u-borderRight">
+                <h2 class="PageFooter-heading">Resources</h2>
+                
+                <ul class="PageFooter-list">
+                    <li class="PageFooter-listItem"><a href="#">Events</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Literature</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Resources</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Company</a></li>
+                    <li class="PageFooter-listItem"><a href="#">Order</a></li>
+                </ul>
+            </div>
+
+            <div class="Grid-item b3-u-size1of5">
+                <h2 class="PageFooter-heading">Contact</h2>
+
+                <p class="PageFooter-contact">Keystone Dental, Inc.<br />
+                144 Middlesex Turnpike<br />
+                Burlington, MA 01803 USA</p>
+
+                <p class="PageFooter-contact">Toll Free: 1-866-902-9272<br />
+                Phone: 781-328-3600<br />
+                Fax: 781-328-3790<br />
+                <a href="mailto:customersupport@keystonedental.com">customersupport@keystonedental.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/ie-svg.js"></script>
+    <script src="js/sidr.js"></script>
+    <script src="js/slidedown.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            if($('.js-slideDown').length) {
+                $('.js-slideDown').Slidedown();
+            }
+
+            $('.Topnav-menuButton').sidr({
+                name: 'slideOutNav',
+                side: 'left'
+            });
+            $('.Resources-menuButton').sidr({
+                name: 'resourceSlideOut',
+                side: 'right'
+            });
+        });
+    </script>
+</body>
+</html>

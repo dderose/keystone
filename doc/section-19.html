@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 fed-wrapper" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js fed-wrapper" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>CTCT Style Guide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+    <!-- vvv DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+    <link rel="stylesheet" href="//cloud.typography.com/7508852/770622/css/fonts.css" />
+    <!-- ^^^ DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/style.css">
+
+  <!-- the FED -->
+  <link rel="stylesheet" href="../dist/fed.min.css">
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="kss-topnav" class="u-marginFlushEnds u-paddingSidesHalf">
+  <div id="versionDropdown" class="Dropdown Dropdown--plain is-closed js-dropdown u-clearfix u-paddingSides u-paddingEndsHalf u-floatRight">
+    <button type="button" class="Dropdown-toggle js-dropdownTrigger u-alpha u-lineHeight1">
+      <span data-currentversion>v0.0.14</span>
+      <i class="Icon--roundedCaret"></i>
+    </button>
+    <ul class="Dropdown-menu js-dropdownMenu">
+        <li class="Dropdown-menu-item"><a href="/history/0.0.6">v0.0.6</a></li>
+        <li class="Dropdown-menu-item"><a href="/history/0.0.8">v0.0.8</a></li>
+        <li class="Dropdown-menu-item"><a href="/history/0.0.9">v0.0.9</a></li>
+        <li class="Dropdown-menu-item"><a href="/history/0.0.10">v0.0.10</a></li>
+	<li class="Dropdown-menu-item"><a href="/history/0.0.12">v0.0.12</a></li>
+	<li class="Dropdown-menu-item"><a href="/history/0.0.13">v0.0.13</a></li>
+	<li class="Dropdown-menu-item"><a href="/history/0.0.14">v0.0.14</a></li>
+    </ul>
+  </div>
+
+  <ul class="u-alpha u-weightSemiBold u-marginFlush u-listStyleNone">
+    <li class="u-inlineBlock u-paddingFlush"><a href="../index.html" class="u-block u-paddingSides u-paddingEndsHalf">Overview</a></li>
+    <li class="u-inlineBlock u-paddingFlush"><a href="section-1.html" class="u-block u-paddingSides u-paddingEndsHalf">Base</a></li>
+    <li class="u-inlineBlock u-paddingFlush"><a href="section-2.html" class="u-block u-paddingSides u-paddingEndsHalf">Utilities</a></li>
+    <li class="u-inlineBlock u-paddingFlush">
+      <div class="Dropdown Dropdown--plain is-closed js-dropdown u-clearfix u-paddingSides u-paddingEndsHalf">
+        <button type="button" class="Dropdown-toggle js-dropdownTrigger u-alpha u-lineHeight1">
+          <span>Components</span>
+          <i class="Icon--roundedCaret"></i>
+        </button>
+        <ul class="Dropdown-menu js-dropdownMenu">
+          
+            <li class="Dropdown-menu-item"><a href="section-3.html">Buttons</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-4.html">Buttons Groups</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-5.html">Forms</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-6.html">Grid</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-7.html">Icons</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-8.html">Tables</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-9.html">Lists</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-10.html">Dividers</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-11.html">Dropdowns</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-12.html">Campaign Unit</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-13.html">Tagline</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-14.html">Stat</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-15.html">Contact Widget</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-16.html">Tooltip</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-17.html">Popover</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-18.html">Messaging</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-19.html">Galileo Toolbar</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-20.html">Modals</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-21.html">Date Pickers</a></li>
+          
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+<header id="kss-main-header" class="u-paddingEnds u-paddingSidesDouble">
+  <h1 class="u-mega u-colorWhite u-weightSemiBold u-marginFlush u-paddingFlush">Constant Contact Style Guide</h1>
+</header>
+
+<div class="u-table">
+<!-- <div class="Grid u-clearfix"> -->
+  <nav id="kss-nav" class="u-tableCell">
+  <!-- <nav id="kss-nav" class="Grid-item u-sizeShrinkWrapLeft"> -->
+    <ul class="u-paddingDouble u-textNoWrap u-listStyleNone u-hide b2-u-show">
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-3.html">Buttons</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-4.html">Buttons Groups</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-5.html">Forms</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-6.html">Grid</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-7.html">Icons</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-8.html">Tables</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-9.html">Lists</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-10.html">Dividers</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-11.html">Dropdowns</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-12.html">Campaign Unit</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-13.html">Tagline</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-14.html">Stat</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-15.html">Contact Widget</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-16.html">Tooltip</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-17.html">Popover</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-18.html">Messaging</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-19.html">Galileo Toolbar</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-20.html">Modals</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-21.html">Date Pickers</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+    </ul>
+  </nav>
+
+  <section class="u-tableCell u-paddingDouble u-sizeFillAlt">
+  <!-- <section class="Grid-item u-sizeFill u-paddingDouble"> -->
+    
+
+      
+
+      
+        
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="19.0"><span class="u-colorSectionHeading">19.0 ::</span> Galileo Toolbar</h1>
+        
+          
+          <div class="kss-lead"><p>The Galileo toolbar is used in the editing experience for the new editing experience. The undo and redo links are disabled to start and will be dynamically enabled once the undo stack becomes populated.</p>
+</div>
+
+              <div class="GalileoToolbar">
+    <div class="GalileoToolbar-title b3-u-tableCell b3-u-paddingTopFlush b3-u-paddingRight">
+        <h1 class="GalileoToolbar-heading" data-qe-id="{{toolbar.title}}">This is a reltively long title for a campaign</h1>
+    </div>
+    <div class="b3-u-tableCell u-valignMiddle">
+        <div class="u-table b3-u-marginEndsHalf">
+            <menu class="u-tableCell u-textNoWrap u-paddingFlush">
+                <ul class="GalileoToolbar-menu">
+                    <li class="GalileoToolbar-menuItem">
+                        <a title="New" href="#" class="u-linkComplex trackable" data-qe-id="{{toolbar.new}}">
+                            <span class="Icon--wireframe"></span>
+                            <span class="u-linkComplex-target" aria-hidden="true">New</span>
+                        </a>
+                    </li>
+                  <li class="GalileoToolbar-menuItem">
+                      <a title="Save" href="#" class="u-linkComplex trackable" data-qe-id="{{toolbar.save}}">
+                          <span class="Icon--disk"></span>
+                          <span class="u-linkComplex-target" aria-hidden="true">Save</span>
+                      </a>
+                  </li>
+                  <li class="GalileoToolbar-menuItem">
+                      <a title="Undo" href="#" class="u-linkComplex u-linkDisabled" data-qe-id="{{toolbar.undo}}">
+                          <span class="Icon--undo"></span>
+                          <span class="u-linkComplex-target" aria-hidden="true">Undo</span>
+                      </a>
+                  </li>
+                  <li class="GalileoToolbar-menuItem">
+                      <a title="Redo" href="#" class="u-linkComplex u-linkDisabled" data-qe-id="{{toolbar.redo}}">
+                          <span class="Icon--redo"></span>
+                          <span class="u-linkComplex-target" aria-hidden="true">Redo</span>
+                      </a>
+                  </li>
+                </ul>
+            </menu>
+            <div class="u-tableCell u-textNoWrap u-textRight u-paddingLeft">
+                <ul class="GalileoToolbar-menu">
+                  <li class="GalileoToolbar-menuItem">
+                      <a title="Preview" href="#" class="u-linkComplex" data-qe-id="{{toolbar.preview}}">
+                          <span class="Icon--eye"></span>
+                          <span class="u-linkComplex-target" aria-hidden="true">Preview</span>
+                      </a>
+                  </li>
+                  <li class="GalileoToolbar-menuItem">
+                    <button type="button" title="Choose recipients and schedule when to send" class="Button Button--primary" data-qe-id="{{toolbar.schedule}}">Prepare to Send</button>
+                  </li>
+               </ul>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;div class=&quot;GalileoToolbar&quot;&gt;
+    &lt;div class=&quot;GalileoToolbar-title b3-u-tableCell b3-u-paddingTopFlush b3-u-paddingRight&quot;&gt;
+        &lt;h1 class=&quot;GalileoToolbar-heading&quot; data-qe-id=&quot;{{toolbar.title}}&quot;&gt;This is a reltively long title for a campaign&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;b3-u-tableCell u-valignMiddle&quot;&gt;
+        &lt;div class=&quot;u-table b3-u-marginEndsHalf&quot;&gt;
+            &lt;menu class=&quot;u-tableCell u-textNoWrap u-paddingFlush&quot;&gt;
+                &lt;ul class=&quot;GalileoToolbar-menu&quot;&gt;
+                    &lt;li class=&quot;GalileoToolbar-menuItem&quot;&gt;
+                        &lt;a title=&quot;New&quot; href=&quot;#&quot; class=&quot;u-linkComplex trackable&quot; data-qe-id=&quot;{{toolbar.new}}&quot;&gt;
+                            &lt;span class=&quot;Icon--wireframe&quot;&gt;&lt;/span&gt;
+                            &lt;span class=&quot;u-linkComplex-target&quot; aria-hidden=&quot;true&quot;&gt;New&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                  &lt;li class=&quot;GalileoToolbar-menuItem&quot;&gt;
+                      &lt;a title=&quot;Save&quot; href=&quot;#&quot; class=&quot;u-linkComplex trackable&quot; data-qe-id=&quot;{{toolbar.save}}&quot;&gt;
+                          &lt;span class=&quot;Icon--disk&quot;&gt;&lt;/span&gt;
+                          &lt;span class=&quot;u-linkComplex-target&quot; aria-hidden=&quot;true&quot;&gt;Save&lt;/span&gt;
+                      &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;GalileoToolbar-menuItem&quot;&gt;
+                      &lt;a title=&quot;Undo&quot; href=&quot;#&quot; class=&quot;u-linkComplex u-linkDisabled&quot; data-qe-id=&quot;{{toolbar.undo}}&quot;&gt;
+                          &lt;span class=&quot;Icon--undo&quot;&gt;&lt;/span&gt;
+                          &lt;span class=&quot;u-linkComplex-target&quot; aria-hidden=&quot;true&quot;&gt;Undo&lt;/span&gt;
+                      &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;GalileoToolbar-menuItem&quot;&gt;
+                      &lt;a title=&quot;Redo&quot; href=&quot;#&quot; class=&quot;u-linkComplex u-linkDisabled&quot; data-qe-id=&quot;{{toolbar.redo}}&quot;&gt;
+                          &lt;span class=&quot;Icon--redo&quot;&gt;&lt;/span&gt;
+                          &lt;span class=&quot;u-linkComplex-target&quot; aria-hidden=&quot;true&quot;&gt;Redo&lt;/span&gt;
+                      &lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/menu&gt;
+            &lt;div class=&quot;u-tableCell u-textNoWrap u-textRight u-paddingLeft&quot;&gt;
+                &lt;ul class=&quot;GalileoToolbar-menu&quot;&gt;
+                  &lt;li class=&quot;GalileoToolbar-menuItem&quot;&gt;
+                      &lt;a title=&quot;Preview&quot; href=&quot;#&quot; class=&quot;u-linkComplex&quot; data-qe-id=&quot;{{toolbar.preview}}&quot;&gt;
+                          &lt;span class=&quot;Icon--eye&quot;&gt;&lt;/span&gt;
+                          &lt;span class=&quot;u-linkComplex-target&quot; aria-hidden=&quot;true&quot;&gt;Preview&lt;/span&gt;
+                      &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;GalileoToolbar-menuItem&quot;&gt;
+                    &lt;button type=&quot;button&quot; title=&quot;Choose recipients and schedule when to send&quot; class=&quot;Button Button--primary&quot; data-qe-id=&quot;{{toolbar.schedule}}&quot;&gt;Prepare to Send&lt;/button&gt;
+                  &lt;/li&gt;
+               &lt;/ul&gt;
+           &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+              
+          
+         
+      
+    
+  </section>
+</div>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="public/moment.min.js"></script>
+<script src="../dist/fed.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Ensure code blocks are highlighted properly...
+    $('pre>code').addClass('prettyprint');
+    prettyPrint();
+
+    if ($('.js-popover').length) {
+      $('.js-popover').popover({
+        container: 'body',
+        html: true,
+        content: function () {
+          return $(this).next('.Popover-content').html();
+        }
+      });
+    }
+
+    if ($('.js-tooltip').length) {
+      $('.js-tooltip').tooltip({
+        container: 'body'
+      });
+    }
+
+    if ($('.js-dropdown').length) {
+      $('.js-dropdown').Dropdown();
+    }
+
+    if ($('.js-modal').length) {
+      $('.js-modal').magnificPopup({
+        type:'inline',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-modal-ajax').length) {
+      $('.js-modal-ajax').magnificPopup({
+        type:'ajax',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-date-picker').length) {
+      $('.js-date-picker').daterangepicker({singleDatePicker:true});
+    }
+
+    if ($('.js-date-range-picker').length) {
+      $('.js-date-range-picker').daterangepicker();
+    }
+
+  });
+</script>
+</body>
+</html>

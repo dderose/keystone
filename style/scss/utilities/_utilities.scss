@@ -1,0 +1,160 @@
+// Utilities
+//
+// Utility classes are isolated and targeted styles that allow us to easily modify any element from a centralized repository that avoids cascade complexity and specificty nightmares. Utility classes are meant to be sledgehammers that always take precedence and thus utilize !important.
+//
+// Styleguide 2.0.0
+
+
+
+@import "border";
+// @import "color";
+@import "display";
+@import "heading";
+@import "layout";
+// @import "link";
+@import "space";
+@import "state";
+@import "text";
+@import "dimension";
+@import "offset";
+@import "position";
+@import "push";
+@import "pull";
+
+
+// Responsive Utilities
+//
+// The framework has 3 breakpoints built in. Each of those breakpoints has a variety of utilities that are only active within its specified dimensions.
+//
+// The naming format for responsive utilites is: {breakpoint prefix}-u-{utility name}
+//
+// Since the framework uses a mobile first approach the base utility should be used as the smallest screen size and then breakpoints should be used to target progressively larger screen sizes. For example: <code>&lt;div class="Grid-item b1-u-size1of2 b3-u-size1of4">Grid item&lt;/div></code>.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Breakpoint Prefix</th>
+//     <th>Dimensions</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>"b1-"</td>
+//     <td>> 481px</td>
+//  </tr>
+//   <tr>
+//     <td>"b2-"</td>
+//     <td>> 769px</td>
+//  </tr>
+//   <tr>
+//     <td>"b3-"</td>
+//     <td>> 1000px</td>
+//  </tr>
+//   <tr>
+//     <td>"b4-"</td>
+//     <td>> 1280px</td>
+//  </tr>
+// <tbody>
+// </table>
+//
+// The utilities that are responsive enabled are listed below
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Eligible Utility Types</th>
+//     <th>Example Classes</th>
+//   </tr>
+// </thead>
+// <tbody>
+//  <tr>
+//     <td>Border</td>
+//     <td>b3-u-border</td>
+//  </tr>
+//  <tr>
+//     <td>Dimensions</td>
+//     <td>b1-u-size1of3</td>
+//  </tr>
+//  <tr>
+//     <td>Offsets</td>
+//     <td>b2-u-before1of2</td>
+//  </tr>
+//  <tr>
+//     <td>Position</td>
+//     <td>b1-u-absolute,<br />b2-u-relative</td>
+//  </tr>
+//  <tr>
+//     <td>Pull</td>
+//     <td>b3-u-pull1of4</td>
+//  </tr>
+//  <tr>
+//     <td>Push</td>
+//     <td>b1-u-push1of8</td>
+//  </tr>
+//  <tr>
+//     <td>Spacing</td>
+//     <td>b4-u-paddingDouble</td>
+//  </tr>
+//  <tr>
+//     <td>Show/hide</td>
+//     <td>b1-u-show,<br />b2-u-hide</td>
+//  </tr>
+// <tbody>
+// </table>
+// 
+// Additionally, the following mixins are available for use within scss when creating components. Simply call the mixin from within a css selector. For example, the following code would center align text until the screen reaches a width of 769px after which it would left align the text.
+// 
+// <code>.ComponentName { text-align: center; @include rwd-b2() { text-align: left; } }</code>.
+// 
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Mixin</th>
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//  <tr>
+//     <td>@include rwd-b1() {}</td>
+//     <td>Displays the css attributes when the screen size is greater than 481px.</td>
+//  </tr>
+//  <tr>
+//     <td>@include rwd-b2() {}</td>
+//     <td>Displays the css attributes when the screen size is greater than 769px.</td>
+//  </tr>
+//  <tr>
+//     <td>@include rwd-b3() {}</td>
+//     <td>Displays the css attributes when the screen size is greater than 1000px.</td>
+//  </tr>
+//  <tr>
+//     <td>@include rwd-b4() {}</td>
+//     <td>Displays the css attributes when the screen size is greater than 1280px.</td>
+//  </tr>
+//  <tr>
+//     <td>@include rwd-b1tob2() {}</td>
+//     <td>Displays the css attributes when the screen size is between 481px and 769px.</td>
+//  </tr>
+//  <tr>
+//     <td>@include rwd-b1tob3() {}</td>
+//     <td>Displays the css attributes when the screen size is between 481px and 1000px.</td>
+//  </tr>
+//  <tr>
+//     <td>@include rwd-b1tob4() {}</td>
+//     <td>Displays the css attributes when the screen size is between 481px and 1280px.</td>
+//  </tr>
+//  <tr>
+//     <td>@include rwd-b2tob3() {}</td>
+//     <td>Displays the css attributes when the screen size is between 769px and 1000px.</td>
+//  </tr>
+//  <tr>
+//     <td>@include rwd-b2tob4() {}</td>
+//     <td>Displays the css attributes when the screen size is between 769px and 1280px.</td>
+//  </tr>
+//  <tr>
+//     <td>@include rwd-b3tob4() {}</td>
+//     <td>Displays the css attributes when the screen size is between 1000px and 1280px.</td>
+//  </tr>
+// <tbody>
+// </table>
+//
+// Styleguide 2.11.0

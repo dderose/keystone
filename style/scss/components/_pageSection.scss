@@ -1,0 +1,19 @@
+.PageSection {
+	
+}
+	.PageSection-inner {
+		max-width: 1200px;
+		max-width: rem(1200);
+		margin: 20px auto 0;
+		margin: rem(20) auto 0;
+		padding: 0 20px;
+
+		@include rwd-b5() {
+			padding: 0;
+		}
+	}
+	.PageSection-heading {
+		@include font-size($h1-size);
+		font-weight: normal;
+		color: $color3;
+	}

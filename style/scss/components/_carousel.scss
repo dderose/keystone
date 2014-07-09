@@ -1,0 +1,127 @@
+// Carousel
+//
+// The Carousel
+//
+// Styleguide 9.0.0
+
+.Slider {
+	width: 100%;
+	max-width: rem(1200);
+	overflow-x: scroll;
+	margin: rem(24) auto;
+	text-align: center;
+
+	@include rwd-b2() {
+		white-space: nowrap;
+	}
+
+	@include rwd-b3() {
+		margin: 0 auto;
+	}
+}
+	.Slider-item {
+		display: inline-block;
+		width: rem(100);
+		height: rem(100);
+		background: #bbb;
+		margin: 0 rem($half-spacing-unit) rem($base-spacing-unit);
+	}
+
+
+
+
+	/* Slider */
+.slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: none; touch-action: none; -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	margin: 0;padding: 0;
+
+	&:focus {
+		outline: none;
+	}
+
+	&.dragging {
+		cursor: pointer; cursor: hand;
+	}
+}
+
+.slick-loading {
+	.slick-list {
+		// background: white url(./ajax-loader.gif) center center no-repeat;
+	}
+
+	.slick-track {
+		visibility: hidden;
+	}
+
+	.slick-slide {
+		visibility: hidden;
+	}
+}
+
+.slick-slider .slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide img {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+	position: relative;
+	left: 0;
+	top: 0;
+	display: block;
+	zoom: 1;
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.slick-slide {
+	float: left;
+	height: 100%;
+	min-height: 1px;
+	display: none;
+	outline: 1px solid #000;
+
+	img {
+		display: block;
+	}
+
+	&.slick-loading img {
+		display: none;
+	}
+
+	&.dragging img {
+		pointer-events: none;
+	}
+}
+
+.slick-initialized .slick-slide { display: block; }
+
+
+// .slick-prev, .slick-next { position: absolute; display: block; height: 20px; width: 20px; line-height: 0; font-size: 0; cursor: pointer; background: transparent; color: transparent; top: 50%; margin-top: -10px; padding: 0; border: none; outline: none; }
+// .slick-prev:focus, .slick-next:focus { outline: none; }
+// .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before { opacity: 0.25; }
+
+// .slick-prev:before, .slick-next:before { font-family: "slick"; font-size: 20px; line-height: 1; color: white; opacity: 0.85; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.slick-prev { position: absolute; top: 0; left: 0 }
+.slick-prev:before { content: "\2190"; }
+
+.slick-next { position: absolute; top: 0; right: 0 }
+.slick-next:before { content: "\2192"; }

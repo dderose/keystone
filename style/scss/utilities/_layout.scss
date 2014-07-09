@@ -1,0 +1,220 @@
+// Layout Utilities
+//
+// A series of classes to change the positioning of an element.
+//
+// <table class="Table Table--border Table--striped">
+// <colgroup>
+//   <col class="u-textNoWrap"></col>
+// </colgroup>
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>.u-centerBlock</td>
+//     <td>Centers a block element horizontally in the containing area.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-verticalCenter</td>
+//     <td>Creates a container element to vertically align a child element within.</td>
+//   </tr>
+//   <tr>
+//     <td class="u-textNoWrap">.u-verticalCenter-element</td>
+//     <td>Centers a block element vertically in the containing area. Must be used within <code>.u-verticalCenter</code>. This will vertically center the element within a parent container with the class <code>.u-verticalCenter</code> regardless of whether we know the height of either element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-valignTop</td>
+//     <td>Aligns an inline-block or table cell to the top of the container.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-valignMiddle</td>
+//     <td>Aligns an inline-block or table cell to the middle of the container.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-valignBaseline</td>
+//     <td>Aligns an inline-block or table cell to the text baseline of the container.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-valignBottom</td>
+//     <td>Aligns an inline-block or table cell to the bottom of the container.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-fixedTop</td>
+//     <td>Affix an element to the top of the viewport and expand to 100% width.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-fixedBottom</td>
+//     <td>Affix an element to the bottom of the viewport and expand to 100% width.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-clearfix</td>
+//     <td>Clear all floats inside of the container this class is applied to.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-floatRight</td>
+//     <td>Float an element to the right.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-floatLeft</td>
+//     <td>Float an element to the left.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-floatNone</td>
+//     <td>Remove a float from an element.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-overflowHidden</td>
+//     <td>Sets overflow to hidden.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-overflowVisible</td>
+//     <td>Sets overflow to visible.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-overflowScroll</td>
+//     <td>Sets overflow to scroll.</td>
+//   </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 2.5.0
+
+.u-centerBlock  {
+    margin: 0 auto !important;
+}
+
+.u-verticalCenter  {
+
+    &:before {
+        content: '' !important;
+        display: inline-block !important;
+        height: 100% !important;
+        vertical-align: middle !important;
+    }
+}
+    .u-verticalCenter-element  {
+        display: inline-block !important;
+        vertical-align: middle !important;
+    }
+
+/**
+ * Vertical alignment utilities
+ * Depends on an appropriate `display` value.
+ */
+
+.u-valignTop {
+    vertical-align: top !important;
+}
+
+.u-valignMiddle {
+    vertical-align: middle !important;
+}
+
+.u-valignBaseline {
+    vertical-align: baseline !important;
+}
+
+.u-valignBottom {
+    vertical-align: bottom !important;
+}
+
+/**
+ * Fixed alignment utilities
+ * Depends on an appropriate `position` value.
+ */
+
+.u-fixedTop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.u-fixedBottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/**
+ * Contain floats
+ *
+ * Make an element expand to contain floated children.
+ * Uses pseudo-elements (micro clearfix).
+ *
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of the
+ *    element.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.u-clearfix:before,
+.u-clearfix:after {
+    content: " "; //1
+    display: table; //2
+}
+
+.u-clearfix:after {
+    clear: both;
+}
+
+/**
+ * Floats
+ */
+
+@mixin float-setup($namespace: "") {
+    .#{$namespace}u-floatRight   { float: right !important; }
+    .#{$namespace}u-floatLeft    { float: left  !important; }
+    .#{$namespace}u-floatNone    { float: none  !important; }
+}
+
+@include float-setup();
+
+@media only screen and (min-width:$breakpoint1) {
+    @include float-setup("b1-");
+}
+
+@media only screen and (min-width:$breakpoint2) {
+    @include float-setup("b2-");
+}
+
+@media only screen and (min-width:$breakpoint3) {
+    @include float-setup("b3-");
+}
+
+@media only screen and (min-width:$breakpoint4) {
+    @include float-setup("b4-");
+}
+
+
+/**
+ * Border-collapse
+ */
+
+ .u-borderCollapse { border-collapse: collapse; }
+ .u-borderSeparate { border-collapse: separate; }
+
+ /**
+ * Table-layout
+ */
+
+.u-tableFixed {
+    table-layout: fixed !important;
+}
+
+.u-overflowHidden {
+    overflow: hidden !important;
+}
+
+.u-overflowVisible {
+    overflow: visible !important;
+}
+
+.u-overflowSCroll {
+    overflow: scroll !important;
+}

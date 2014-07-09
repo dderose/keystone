@@ -1,0 +1,196 @@
+// Links
+//
+// Placeholder
+// 
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>   
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>.u-linkClean</td>
+//     <td>Removes all text-decoration such as underline from a <a href="#" class="u-linkClean">link</a>.</td>
+//   </tr>
+//   <tr>
+//     <td class="u-textNoWrap">.u-linkComplex, <br />.u-linkComplex-target</td>
+//     <td>Creates a multi-part link, such as a link with an icon, that allows us to underline the text on hover without while not underlining the rest. <a href="#" class="u-linkComplex"><span class="Icon--edit"></span> <span class="u-linkComplex-target">Complex Link</span></a>.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-linkBlock</td>
+//     <td>Removes all text-decoration such as underline from a link and changes the display to block. <a href="#" class="u-linkBlock">Example</a></td>
+//   </tr>
+//   <tr>
+//     <td>.u-linkPseudo</td>
+//     <td>Style another element, such as a button, to look like a link. Removes padding, margin, border, background-color, and changes display to inline-block. <button class="u-linkPseudo">Button as a link</button>.</td>
+//   </tr>
+//   <tr>
+//     <td>.u-linkDisabled</td>
+//     <td>Mark a link as disbled by graying out the link and removing the link poiner and hover underline. <a href="#" class="u-linkDisabled">Disabled link</a>.</td>
+//   </tr>
+// </tbody>
+// </table>
+// 
+// Styleguide 2.6.0
+
+/**
+ * Clean link
+ *
+ * A link without any text-decoration at all.
+ */
+
+.u-linkClean,
+.u-linkClean:hover,
+.u-linkClean:focus,
+.u-linkClean:active {
+    text-decoration: none !important;
+}
+
+/**
+ * Link complex
+ *
+ * A common pattern is to have a link with several pieces of text and/or an
+ * icon, where only one piece of text should display the underline when the
+ * link is the subject of user interaction.
+ *
+ * Example HTML:
+ *
+ * <a class="u-linkComplex" href="#">
+ *     Link complex
+ *     <span class="u-linkComplex-target">target</span>
+ * </a>
+ */
+
+.u-linkComplex,
+.u-linkComplex:hover,
+.u-linkComplex:focus,
+.u-linkComplex:active {
+    text-decoration: none !important;
+}
+
+.u-linkComplex:hover .u-linkComplex-target,
+.u-linkComplex:focus .u-linkComplex-target,
+.u-linkComplex:active .u-linkComplex-target {
+    text-decoration: underline !important;
+}
+
+.u-linkComplex:hover [class^="Icon--"],
+.u-linkComplex:hover [class*=" Icon--"] {
+    color: $color3;
+}
+
+.u-linkComplex [class^="Icon--"],
+.u-linkComplex [class*=" Icon--"] {
+    color: $color1;
+}
+
+.u-linkDisabled.u-linkComplex [class^="Icon--"],
+.u-linkDisabled.u-linkComplex [class*=" Icon--"] {
+    color: $color6;
+}
+
+.u-linkComplex:hover [class^="Icon--"],
+.u-linkComplex:hover [class*=" Icon--"] {
+    color: $color11;
+}
+
+.u-linkDisabled.u-linkComplex:hover [class^="Icon--"],
+.u-linkDisabled.u-linkComplex:hover [class*=" Icon--"] {
+    color: $color6;
+}
+
+.u-linkComplex-target + [class^="Icon--"],
+.u-linkComplex-target + [class*=" Icon--"] {
+    color: $color3;
+}
+
+.u-linkComplex:hover .u-linkComplex-target + [class^="Icon--"],
+.u-linkComplex:hover .u-linkComplex-target + [class*=" Icon--"] {
+    color: $color11;
+}
+
+
+/**
+ * Block-level link
+ *
+ * Combination of traits commonly used in vertical navigation lists.
+ */
+
+.u-linkBlock,
+.u-linkBlock:hover,
+.u-linkBlock:focus,
+.u-linkBlock:active {
+    display: block !important;
+    text-decoration: none !important;
+}
+
+/**
+ * Pseudo-link
+ *
+ * Another interactive element, e.g., `button`, styled to look like an anchor.
+ * Relies on the utility selector being added to the link base styles rule.
+ *
+ * `!important` is not used liberally because the root element, like normal
+ * links, is likely to be modified by components.
+ *
+ * Example base CSS:
+ *
+ * a,
+ * .u-linkPseudo {
+ *     color: lightblue;
+ * }
+ *
+ * a:hover,
+ * a:focus,
+ * a:active,
+ * .u-linkPseudo:hover,
+ * .u-linkPseudo:focus,
+ * .u-linkPseudo:active {
+ *     color: blue;
+ * }
+ *
+ * Example HTML:
+ *
+ * <button class="u-linkPseudo" type="button">
+ *     <a role="presentation">Button content</a>
+ * </button>
+ */
+
+.u-linkPseudo {
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: transparent;
+    color: $color3;
+    cursor: pointer !important;
+    font: inherit;
+}
+
+.u-linkPseudo:hover,
+.u-linkPseudo:focus,
+.u-linkPseudo:active {
+    background: transparent;
+}
+
+.u-linkPseudo:hover {
+    text-decoration: underline;
+}
+
+.u-linkDisabled {
+    cursor: default !important;
+    text-decoration: none !important;
+    color: $color6 !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+
+        .u-linkComplex-target {
+            text-decoration: none !important;
+        }
+    }
+}
+

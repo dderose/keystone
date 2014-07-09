@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 fed-wrapper" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 fed-wrapper" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js fed-wrapper" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>CTCT Style Guide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+    <!-- vvv DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+    <link rel="stylesheet" href="//cloud.typography.com/7508852/770622/css/fonts.css" />
+    <!-- ^^^ DO NOT EVER CHANGE HOW FONT FILES ARE REFERENCED UNTIL WE NO LONGER USE WHITNEY IT BREAKS OUR LICENSE -->
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/style.css">
+
+  <!-- the FED -->
+  <link rel="stylesheet" href="../dist/fed.min.css">
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="kss-topnav" class="u-marginFlushEnds u-paddingSidesHalf">
+  <div id="versionDropdown" class="Dropdown Dropdown--plain is-closed js-dropdown u-clearfix u-paddingSides u-paddingEndsHalf u-floatRight">
+    <button type="button" class="Dropdown-toggle js-dropdownTrigger u-alpha u-lineHeight1">
+      <span data-currentversion>v0.0.14</span>
+      <i class="Icon--roundedCaret"></i>
+    </button>
+    <ul class="Dropdown-menu js-dropdownMenu">
+        <li class="Dropdown-menu-item"><a href="/history/0.0.6">v0.0.6</a></li>
+        <li class="Dropdown-menu-item"><a href="/history/0.0.8">v0.0.8</a></li>
+        <li class="Dropdown-menu-item"><a href="/history/0.0.9">v0.0.9</a></li>
+        <li class="Dropdown-menu-item"><a href="/history/0.0.10">v0.0.10</a></li>
+	<li class="Dropdown-menu-item"><a href="/history/0.0.12">v0.0.12</a></li>
+	<li class="Dropdown-menu-item"><a href="/history/0.0.13">v0.0.13</a></li>
+	<li class="Dropdown-menu-item"><a href="/history/0.0.14">v0.0.14</a></li>
+    </ul>
+  </div>
+
+  <ul class="u-alpha u-weightSemiBold u-marginFlush u-listStyleNone">
+    <li class="u-inlineBlock u-paddingFlush"><a href="../index.html" class="u-block u-paddingSides u-paddingEndsHalf">Overview</a></li>
+    <li class="u-inlineBlock u-paddingFlush"><a href="section-1.html" class="u-block u-paddingSides u-paddingEndsHalf">Base</a></li>
+    <li class="u-inlineBlock u-paddingFlush"><a href="section-2.html" class="u-block u-paddingSides u-paddingEndsHalf">Utilities</a></li>
+    <li class="u-inlineBlock u-paddingFlush">
+      <div class="Dropdown Dropdown--plain is-closed js-dropdown u-clearfix u-paddingSides u-paddingEndsHalf">
+        <button type="button" class="Dropdown-toggle js-dropdownTrigger u-alpha u-lineHeight1">
+          <span>Components</span>
+          <i class="Icon--roundedCaret"></i>
+        </button>
+        <ul class="Dropdown-menu js-dropdownMenu">
+          
+            <li class="Dropdown-menu-item"><a href="section-3.html">Buttons</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-4.html">Buttons Groups</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-5.html">Forms</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-6.html">Grid</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-7.html">Icons</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-8.html">Tables</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-9.html">Lists</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-10.html">Dividers</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-11.html">Dropdowns</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-12.html">Campaign Unit</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-13.html">Tagline</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-14.html">Stat</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-15.html">Contact Widget</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-16.html">Tooltip</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-17.html">Popover</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-18.html">Messaging</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-19.html">Galileo Toolbar</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-20.html">Modals</a></li>
+          
+            <li class="Dropdown-menu-item"><a href="section-21.html">Date Pickers</a></li>
+          
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+<header id="kss-main-header" class="u-paddingEnds u-paddingSidesDouble">
+  <h1 class="u-mega u-colorWhite u-weightSemiBold u-marginFlush u-paddingFlush">Constant Contact Style Guide</h1>
+</header>
+
+<div class="u-table">
+<!-- <div class="Grid u-clearfix"> -->
+  <nav id="kss-nav" class="u-tableCell">
+  <!-- <nav id="kss-nav" class="Grid-item u-sizeShrinkWrapLeft"> -->
+    <ul class="u-paddingDouble u-textNoWrap u-listStyleNone u-hide b2-u-show">
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-3.html">Buttons</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-4.html">Buttons Groups</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-5.html">Forms</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-6.html">Grid</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-7.html">Icons</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-8.html">Tables</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-9.html">Lists</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-10.html">Dividers</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-11.html">Dropdowns</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-12.html">Campaign Unit</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-13.html">Tagline</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-14.html">Stat</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-15.html">Contact Widget</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-16.html">Tooltip</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-17.html">Popover</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-18.html">Messaging</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-19.html">Galileo Toolbar</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-20.html">Modals</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+          <li class="u-beta u-paddingFlush">
+            <a href="section-21.html">Date Pickers</a>
+            <ul>
+              
+            </ul>
+          </li>
+      
+    </ul>
+  </nav>
+
+  <section class="u-tableCell u-paddingDouble u-sizeFillAlt">
+  <!-- <section class="Grid-item u-sizeFill u-paddingDouble"> -->
+    
+
+      
+
+      
+        
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="12.0"><span class="u-colorSectionHeading">12.0 ::</span> Campaign Unit</h1>
+        
+          
+          <div class="kss-lead"><p>The Campaign Unit represents a summary of a campaign and is generally used on the Toolkit dashboard and Tookkit campaigns pages. There are two variations: a hero unit and a more collapse summary unit which is the default.
+
+</p>
+<p>By default, this component is responsive. Under 481px it collapse to two rows with the title on top and the stats and actions dropdown in the second row.
+
+</p>
+<p>From 481px to 768px the unit will shift to be side by side. By convention only two stats, at most, should be visible at this breakpoint. Use the classes <code>b1-u-hide</code> and <code>b2-u-showTableCell</code> as indicated below to hide columns. Each stat column with be expand to take up the amount of space the content inside of it needs and the title column will expand to consume to remaining space. Additionally, the dropdown shall lose the label and collapse to only show a caret.
+
+</p>
+<p>From 769px and up all stats will be shown. Additionally, the stats columns will be converted to a minimum width to ensure that stats line up vertically on the page between each unit.
+
+</p>
+<p>Note that the first (leftmost) stats column requires the classes <code>u-paddingLeftFlush</code> and <code>b1-u-paddingLeft</code> at all times.</p>
+</div>
+
+              <article class="CampaignUnit">
+    <div class="CampaignUnit-column CampaignUnit-column--title" data-qe-id="campaignunit">
+        <h1 class="CampaignUnit-title"><a href="#" data-qe-id="campaignunit-title-{{campaign.name}}">My Awesome Email</a></h1>
+        <h2 class="Tagline" data-qe-id="campaignunit-tagline-{{campaign.name}}">
+            <span class="Tagline-status u-colorDraft"><i class="Icon--edit"></i><span data-qe-id="campaignunit-state-{{campaign.name}}"> Draft</span></span>
+            <span class="Tagline-type" data-qe-id="campaignunit-type-{{campaign.name}}">Newsletter</span>, created on <span data-qe-id="campaignunit-create-date-{{campaign.name}}">4/2/13, 7:43PM</span>
+        </h2>
+    </div>
+    <div class="CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Opens</span></p>
+    </div>
+    <div class="CampaignUnit-column">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Clicks</span></p>
+    </div>
+    <div class="CampaignUnit-column b1-u-hide b3-u-showTableCell">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">25</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Sends</span></p>
+    </div>
+    <div class="CampaignUnit-column u-textRight">
+        <div class="Dropdown js-dropdown u-clearfix is-closed" data-hposition="right" data-qe-id="verbdropdown-{{campaign.name}}-{{is.hero}}">
+            <button type="button" class="Dropdown-toggle js-dropdownTrigger u-textNoWrap" data-qe-id="link-gear-{{campaign.name}}-{{is.hero}}">
+                <span class="u-hide b2-u-showInlineBlock">Actions</span>
+	               <i class="Icon--roundedCaret"></i>
+            </button>
+            <ul class="Dropdown-menu u-textLeft">
+		           <li class="Dropdown-menu-item" data-value="One" data-qe-id="action-{{action.id}}"><span>Copy</span></li>
+		           <li class="Dropdown-menu-item" data-value="Two" data-qe-id="action-{{action.id}}"><span>Delete</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Edit</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Preview</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Schedule</span></li>
+	           </ul>
+        </div>
+    </div>
+</article>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;article class=&quot;CampaignUnit&quot;&gt;
+    &lt;div class=&quot;CampaignUnit-column CampaignUnit-column--title&quot; data-qe-id=&quot;campaignunit&quot;&gt;
+        &lt;h1 class=&quot;CampaignUnit-title&quot;&gt;&lt;a href=&quot;#&quot; data-qe-id=&quot;campaignunit-title-{{campaign.name}}&quot;&gt;My Awesome Email&lt;/a&gt;&lt;/h1&gt;
+        &lt;h2 class=&quot;Tagline&quot; data-qe-id=&quot;campaignunit-tagline-{{campaign.name}}&quot;&gt;
+            &lt;span class=&quot;Tagline-status u-colorDraft&quot;&gt;&lt;i class=&quot;Icon--edit&quot;&gt;&lt;/i&gt;&lt;span data-qe-id=&quot;campaignunit-state-{{campaign.name}}&quot;&gt; Draft&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;Tagline-type&quot; data-qe-id=&quot;campaignunit-type-{{campaign.name}}&quot;&gt;Newsletter&lt;/span&gt;, created on &lt;span data-qe-id=&quot;campaignunit-create-date-{{campaign.name}}&quot;&gt;4/2/13, 7:43PM&lt;/span&gt;
+        &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Opens&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Clicks&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column b1-u-hide b3-u-showTableCell&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;25&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Sends&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-textRight&quot;&gt;
+        &lt;div class=&quot;Dropdown js-dropdown u-clearfix is-closed&quot; data-hposition=&quot;right&quot; data-qe-id=&quot;verbdropdown-{{campaign.name}}-{{is.hero}}&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;Dropdown-toggle js-dropdownTrigger u-textNoWrap&quot; data-qe-id=&quot;link-gear-{{campaign.name}}-{{is.hero}}&quot;&gt;
+                &lt;span class=&quot;u-hide b2-u-showInlineBlock&quot;&gt;Actions&lt;/span&gt;
+	               &lt;i class=&quot;Icon--roundedCaret&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+            &lt;ul class=&quot;Dropdown-menu u-textLeft&quot;&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;One&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Copy&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Two&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Delete&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Edit&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Preview&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Schedule&lt;/span&gt;&lt;/li&gt;
+	           &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</pre>
+                </div>
+              
+          
+         
+      
+        
+         <article class="kss-depth-3 u-marginBottomDouble">
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="12.0.1"><span class="u-colorSectionHeading">12.0.1 ::</span> Scheduled campaign</h1>
+        
+          
+          <div class="kss-lead"><p>A scheduled campaign module.</p>
+</div>
+
+              <article class="CampaignUnit">
+    <div class="CampaignUnit-column CampaignUnit-column--title" data-qe-id="campaignunit">
+        <h1 class="CampaignUnit-title"><a href="#" data-qe-id="campaignunit-title-{{campaign.name}}">My Awesome Email</a></h1>
+        <h2 class="Tagline" data-qe-id="campaignunit-tagline-{{campaign.name}}">
+            <span class="Tagline-status u-colorScheduled"><i class="Icon--statusScheduled"></i><span data-qe-id="campaignunit-state-{{campaign.name}}"> Scheduled</span></span>
+            <span class="Tagline-type" data-qe-id="campaignunit-type-{{campaign.name}}">Newsletter</span>, created on <span data-qe-id="campaignunit-create-date-{{campaign.name}}">4/2/13, 7:43PM</span>
+        </h2>
+    </div>
+    <div class="CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Opens</span></p>
+    </div>
+    <div class="CampaignUnit-column">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Clicks</span></p>
+    </div>
+    <div class="CampaignUnit-column b1-u-hide b3-u-showTableCell">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">25</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Sends</span></p>
+    </div>
+    <div class="CampaignUnit-column u-textRight">
+        <div class="Dropdown js-dropdown u-clearfix is-closed" data-hposition="right" data-qe-id="verbdropdown-{{campaign.name}}-{{is.hero}}">
+            <button type="button" class="Dropdown-toggle js-dropdownTrigger u-textNoWrap" data-qe-id="link-gear-{{campaign.name}}-{{is.hero}}">
+                <span class="u-hide b2-u-showInlineBlock">Actions</span>
+	               <i class="Icon--roundedCaret"></i>
+            </button>
+            <ul class="Dropdown-menu u-textLeft">
+		           <li class="Dropdown-menu-item" data-value="One" data-qe-id="action-{{action.id}}"><span>Copy</span></li>
+		           <li class="Dropdown-menu-item" data-value="Two" data-qe-id="action-{{action.id}}"><span>Delete</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Edit</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Preview</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Schedule</span></li>
+	           </ul>
+        </div>
+    </div>
+</article>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;article class=&quot;CampaignUnit&quot;&gt;
+    &lt;div class=&quot;CampaignUnit-column CampaignUnit-column--title&quot; data-qe-id=&quot;campaignunit&quot;&gt;
+        &lt;h1 class=&quot;CampaignUnit-title&quot;&gt;&lt;a href=&quot;#&quot; data-qe-id=&quot;campaignunit-title-{{campaign.name}}&quot;&gt;My Awesome Email&lt;/a&gt;&lt;/h1&gt;
+        &lt;h2 class=&quot;Tagline&quot; data-qe-id=&quot;campaignunit-tagline-{{campaign.name}}&quot;&gt;
+            &lt;span class=&quot;Tagline-status u-colorScheduled&quot;&gt;&lt;i class=&quot;Icon--statusScheduled&quot;&gt;&lt;/i&gt;&lt;span data-qe-id=&quot;campaignunit-state-{{campaign.name}}&quot;&gt; Scheduled&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;Tagline-type&quot; data-qe-id=&quot;campaignunit-type-{{campaign.name}}&quot;&gt;Newsletter&lt;/span&gt;, created on &lt;span data-qe-id=&quot;campaignunit-create-date-{{campaign.name}}&quot;&gt;4/2/13, 7:43PM&lt;/span&gt;
+        &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Opens&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Clicks&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column b1-u-hide b3-u-showTableCell&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;25&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Sends&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-textRight&quot;&gt;
+        &lt;div class=&quot;Dropdown js-dropdown u-clearfix is-closed&quot; data-hposition=&quot;right&quot; data-qe-id=&quot;verbdropdown-{{campaign.name}}-{{is.hero}}&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;Dropdown-toggle js-dropdownTrigger u-textNoWrap&quot; data-qe-id=&quot;link-gear-{{campaign.name}}-{{is.hero}}&quot;&gt;
+                &lt;span class=&quot;u-hide b2-u-showInlineBlock&quot;&gt;Actions&lt;/span&gt;
+	               &lt;i class=&quot;Icon--roundedCaret&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+            &lt;ul class=&quot;Dropdown-menu u-textLeft&quot;&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;One&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Copy&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Two&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Delete&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Edit&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Preview&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Schedule&lt;/span&gt;&lt;/li&gt;
+	           &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</pre>
+                </div>
+              
+          
+        
+          </article>
+        
+      
+        
+         <article class="kss-depth-3 u-marginBottomDouble">
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="12.0.2"><span class="u-colorSectionHeading">12.0.2 ::</span> Active campaign</h1>
+        
+          
+          <div class="kss-lead"><p>An active campaign module.</p>
+</div>
+
+              <article class="CampaignUnit">
+    <div class="CampaignUnit-column CampaignUnit-column--title" data-qe-id="campaignunit">
+        <h1 class="CampaignUnit-title"><a href="#" data-qe-id="campaignunit-title-{{campaign.name}}">My Awesome Email</a></h1>
+        <h2 class="Tagline" data-qe-id="campaignunit-tagline-{{campaign.name}}">
+            <span class="Tagline-status u-colorActive"><i class="Icon--statusActive"></i><span data-qe-id="campaignunit-state-{{campaign.name}}"> Active</span></span>
+            <span class="Tagline-type" data-qe-id="campaignunit-type-{{campaign.name}}">Newsletter</span>, created on <span data-qe-id="campaignunit-create-date-{{campaign.name}}">4/2/13, 7:43PM</span>
+        </h2>
+    </div>
+    <div class="CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Opens</span></p>
+    </div>
+    <div class="CampaignUnit-column">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Clicks</span></p>
+    </div>
+    <div class="CampaignUnit-column b1-u-hide b3-u-showTableCell">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">25</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Sends</span></p>
+    </div>
+    <div class="CampaignUnit-column u-textRight">
+        <div class="Dropdown js-dropdown u-clearfix is-closed" data-hposition="right" data-qe-id="verbdropdown-{{campaign.name}}-{{is.hero}}">
+            <button type="button" class="Dropdown-toggle js-dropdownTrigger u-textNoWrap" data-qe-id="link-gear-{{campaign.name}}-{{is.hero}}">
+                <span class="u-hide b2-u-showInlineBlock">Actions</span>
+	               <i class="Icon--roundedCaret"></i>
+            </button>
+            <ul class="Dropdown-menu u-textLeft">
+		           <li class="Dropdown-menu-item" data-value="One" data-qe-id="action-{{action.id}}"><span>Copy</span></li>
+		           <li class="Dropdown-menu-item" data-value="Two" data-qe-id="action-{{action.id}}"><span>Delete</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Edit</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Preview</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Schedule</span></li>
+	           </ul>
+        </div>
+    </div>
+</article>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;article class=&quot;CampaignUnit&quot;&gt;
+    &lt;div class=&quot;CampaignUnit-column CampaignUnit-column--title&quot; data-qe-id=&quot;campaignunit&quot;&gt;
+        &lt;h1 class=&quot;CampaignUnit-title&quot;&gt;&lt;a href=&quot;#&quot; data-qe-id=&quot;campaignunit-title-{{campaign.name}}&quot;&gt;My Awesome Email&lt;/a&gt;&lt;/h1&gt;
+        &lt;h2 class=&quot;Tagline&quot; data-qe-id=&quot;campaignunit-tagline-{{campaign.name}}&quot;&gt;
+            &lt;span class=&quot;Tagline-status u-colorActive&quot;&gt;&lt;i class=&quot;Icon--statusActive&quot;&gt;&lt;/i&gt;&lt;span data-qe-id=&quot;campaignunit-state-{{campaign.name}}&quot;&gt; Active&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;Tagline-type&quot; data-qe-id=&quot;campaignunit-type-{{campaign.name}}&quot;&gt;Newsletter&lt;/span&gt;, created on &lt;span data-qe-id=&quot;campaignunit-create-date-{{campaign.name}}&quot;&gt;4/2/13, 7:43PM&lt;/span&gt;
+        &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Opens&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Clicks&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column b1-u-hide b3-u-showTableCell&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;25&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Sends&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-textRight&quot;&gt;
+        &lt;div class=&quot;Dropdown js-dropdown u-clearfix is-closed&quot; data-hposition=&quot;right&quot; data-qe-id=&quot;verbdropdown-{{campaign.name}}-{{is.hero}}&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;Dropdown-toggle js-dropdownTrigger u-textNoWrap&quot; data-qe-id=&quot;link-gear-{{campaign.name}}-{{is.hero}}&quot;&gt;
+                &lt;span class=&quot;u-hide b2-u-showInlineBlock&quot;&gt;Actions&lt;/span&gt;
+	               &lt;i class=&quot;Icon--roundedCaret&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+            &lt;ul class=&quot;Dropdown-menu u-textLeft&quot;&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;One&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Copy&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Two&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Delete&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Edit&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Preview&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Schedule&lt;/span&gt;&lt;/li&gt;
+	           &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</pre>
+                </div>
+              
+          
+        
+          </article>
+        
+      
+        
+         <article class="kss-depth-3 u-marginBottomDouble">
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="12.0.3"><span class="u-colorSectionHeading">12.0.3 ::</span> Sent/Done campaign</h1>
+        
+          
+          <div class="kss-lead"><p>A sent or done campaign module.</p>
+</div>
+
+              <article class="CampaignUnit">
+    <div class="CampaignUnit-column CampaignUnit-column--title" data-qe-id="campaignunit">
+        <h1 class="CampaignUnit-title"><a href="#" data-qe-id="campaignunit-title-{{campaign.name}}">My Awesome Email</a></h1>
+        <h2 class="Tagline" data-qe-id="campaignunit-tagline-{{campaign.name}}">
+            <span class="Tagline-status u-colorDone"><i class="Icon--success"></i><span data-qe-id="campaignunit-state-{{campaign.name}}"> Done</span></span>
+            <span class="Tagline-type" data-qe-id="campaignunit-type-{{campaign.name}}">Newsletter</span>, created on <span data-qe-id="campaignunit-create-date-{{campaign.name}}">4/2/13, 7:43PM</span>
+        </h2>
+    </div>
+    <div class="CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Opens</span></p>
+    </div>
+    <div class="CampaignUnit-column">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Clicks</span></p>
+    </div>
+    <div class="CampaignUnit-column b1-u-hide b3-u-showTableCell">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">25</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Sends</span></p>
+    </div>
+    <div class="CampaignUnit-column u-textRight">
+        <div class="Dropdown js-dropdown u-clearfix is-closed" data-hposition="right" data-qe-id="verbdropdown-{{campaign.name}}-{{is.hero}}">
+            <button type="button" class="Dropdown-toggle js-dropdownTrigger u-textNoWrap" data-qe-id="link-gear-{{campaign.name}}-{{is.hero}}">
+                <span class="u-hide b2-u-showInlineBlock">Actions</span>
+	               <i class="Icon--roundedCaret"></i>
+            </button>
+            <ul class="Dropdown-menu u-textLeft">
+		           <li class="Dropdown-menu-item" data-value="One" data-qe-id="action-{{action.id}}"><span>Copy</span></li>
+		           <li class="Dropdown-menu-item" data-value="Two" data-qe-id="action-{{action.id}}"><span>Delete</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Edit</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Preview</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Schedule</span></li>
+	           </ul>
+        </div>
+    </div>
+</article>
+<article class="CampaignUnit">
+    <div class="CampaignUnit-column CampaignUnit-column--title" data-qe-id="campaignunit">
+        <h1 class="CampaignUnit-title"><a href="#" data-qe-id="campaignunit-title-{{campaign.name}}">My Awesome Email</a></h1>
+        <h2 class="Tagline" data-qe-id="campaignunit-tagline-{{campaign.name}}">
+            <span class="Tagline-status u-colorSent"><i class="Icon--statusSent"></i><span data-qe-id="campaignunit-state-{{campaign.name}}"> Sent</span></span>
+            <span class="Tagline-type" data-qe-id="campaignunit-type-{{campaign.name}}">Newsletter</span>, created on <span data-qe-id="campaignunit-create-date-{{campaign.name}}">4/2/13, 7:43PM</span>
+        </h2>
+    </div>
+    <div class="CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Opens</span></p>
+    </div>
+    <div class="CampaignUnit-column">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Clicks</span></p>
+    </div>
+    <div class="CampaignUnit-column b1-u-hide b3-u-showTableCell">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">25</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Sends</span></p>
+    </div>
+    <div class="CampaignUnit-column u-textRight">
+        <div class="Dropdown js-dropdown u-clearfix is-closed" data-hposition="right" data-qe-id="verbdropdown-{{campaign.name}}-{{is.hero}}">
+            <button type="button" class="Dropdown-toggle js-dropdownTrigger u-textNoWrap" data-qe-id="link-gear-{{campaign.name}}-{{is.hero}}">
+                <span class="u-hide b2-u-showInlineBlock">Actions</span>
+	               <i class="Icon--roundedCaret"></i>
+            </button>
+            <ul class="Dropdown-menu u-textLeft">
+		           <li class="Dropdown-menu-item" data-value="One" data-qe-id="action-{{action.id}}"><span>Copy</span></li>
+		           <li class="Dropdown-menu-item" data-value="Two" data-qe-id="action-{{action.id}}"><span>Delete</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Edit</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Preview</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Schedule</span></li>
+	           </ul>
+        </div>
+    </div>
+</article>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;article class=&quot;CampaignUnit&quot;&gt;
+    &lt;div class=&quot;CampaignUnit-column CampaignUnit-column--title&quot; data-qe-id=&quot;campaignunit&quot;&gt;
+        &lt;h1 class=&quot;CampaignUnit-title&quot;&gt;&lt;a href=&quot;#&quot; data-qe-id=&quot;campaignunit-title-{{campaign.name}}&quot;&gt;My Awesome Email&lt;/a&gt;&lt;/h1&gt;
+        &lt;h2 class=&quot;Tagline&quot; data-qe-id=&quot;campaignunit-tagline-{{campaign.name}}&quot;&gt;
+            &lt;span class=&quot;Tagline-status u-colorDone&quot;&gt;&lt;i class=&quot;Icon--success&quot;&gt;&lt;/i&gt;&lt;span data-qe-id=&quot;campaignunit-state-{{campaign.name}}&quot;&gt; Done&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;Tagline-type&quot; data-qe-id=&quot;campaignunit-type-{{campaign.name}}&quot;&gt;Newsletter&lt;/span&gt;, created on &lt;span data-qe-id=&quot;campaignunit-create-date-{{campaign.name}}&quot;&gt;4/2/13, 7:43PM&lt;/span&gt;
+        &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Opens&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Clicks&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column b1-u-hide b3-u-showTableCell&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;25&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Sends&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-textRight&quot;&gt;
+        &lt;div class=&quot;Dropdown js-dropdown u-clearfix is-closed&quot; data-hposition=&quot;right&quot; data-qe-id=&quot;verbdropdown-{{campaign.name}}-{{is.hero}}&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;Dropdown-toggle js-dropdownTrigger u-textNoWrap&quot; data-qe-id=&quot;link-gear-{{campaign.name}}-{{is.hero}}&quot;&gt;
+                &lt;span class=&quot;u-hide b2-u-showInlineBlock&quot;&gt;Actions&lt;/span&gt;
+	               &lt;i class=&quot;Icon--roundedCaret&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+            &lt;ul class=&quot;Dropdown-menu u-textLeft&quot;&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;One&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Copy&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Two&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Delete&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Edit&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Preview&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Schedule&lt;/span&gt;&lt;/li&gt;
+	           &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+&lt;article class=&quot;CampaignUnit&quot;&gt;
+    &lt;div class=&quot;CampaignUnit-column CampaignUnit-column--title&quot; data-qe-id=&quot;campaignunit&quot;&gt;
+        &lt;h1 class=&quot;CampaignUnit-title&quot;&gt;&lt;a href=&quot;#&quot; data-qe-id=&quot;campaignunit-title-{{campaign.name}}&quot;&gt;My Awesome Email&lt;/a&gt;&lt;/h1&gt;
+        &lt;h2 class=&quot;Tagline&quot; data-qe-id=&quot;campaignunit-tagline-{{campaign.name}}&quot;&gt;
+            &lt;span class=&quot;Tagline-status u-colorSent&quot;&gt;&lt;i class=&quot;Icon--statusSent&quot;&gt;&lt;/i&gt;&lt;span data-qe-id=&quot;campaignunit-state-{{campaign.name}}&quot;&gt; Sent&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;Tagline-type&quot; data-qe-id=&quot;campaignunit-type-{{campaign.name}}&quot;&gt;Newsletter&lt;/span&gt;, created on &lt;span data-qe-id=&quot;campaignunit-create-date-{{campaign.name}}&quot;&gt;4/2/13, 7:43PM&lt;/span&gt;
+        &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Opens&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Clicks&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column b1-u-hide b3-u-showTableCell&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;25&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Sends&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-textRight&quot;&gt;
+        &lt;div class=&quot;Dropdown js-dropdown u-clearfix is-closed&quot; data-hposition=&quot;right&quot; data-qe-id=&quot;verbdropdown-{{campaign.name}}-{{is.hero}}&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;Dropdown-toggle js-dropdownTrigger u-textNoWrap&quot; data-qe-id=&quot;link-gear-{{campaign.name}}-{{is.hero}}&quot;&gt;
+                &lt;span class=&quot;u-hide b2-u-showInlineBlock&quot;&gt;Actions&lt;/span&gt;
+	               &lt;i class=&quot;Icon--roundedCaret&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+            &lt;ul class=&quot;Dropdown-menu u-textLeft&quot;&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;One&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Copy&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Two&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Delete&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Edit&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Preview&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Schedule&lt;/span&gt;&lt;/li&gt;
+	           &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</pre>
+                </div>
+              
+          
+        
+          </article>
+        
+      
+        
+         <article class="kss-depth-3 u-marginBottomDouble">
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="12.0.4"><span class="u-colorSectionHeading">12.0.4 ::</span> Deleted campaign</h1>
+        
+          
+          <div class="kss-lead"><p>A deleted campaign module.</p>
+</div>
+
+              <article class="CampaignUnit">
+    <div class="CampaignUnit-column CampaignUnit-column--title" data-qe-id="campaignunit">
+        <h1 class="CampaignUnit-title"><a href="#" data-qe-id="campaignunit-title-{{campaign.name}}">My Awesome Email</a></h1>
+        <h2 class="Tagline" data-qe-id="campaignunit-tagline-{{campaign.name}}">
+            <span class="Tagline-status u-colorSecondary"><i class="Icon--trash"></i><span data-qe-id="campaignunit-state-{{campaign.name}}"> Deleted</span></span>
+            <span class="Tagline-type" data-qe-id="campaignunit-type-{{campaign.name}}">Newsletter</span>, created on <span data-qe-id="campaignunit-create-date-{{campaign.name}}">4/2/13, 7:43PM</span>
+        </h2>
+    </div>
+    <div class="CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Opens</span></p>
+    </div>
+    <div class="CampaignUnit-column">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">12</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Clicks</span></p>
+    </div>
+    <div class="CampaignUnit-column b1-u-hide b3-u-showTableCell">
+        <p class="Stat Stat--fixedWidth Stat--rwd"><a href="#" class="Stat-data" data-qe-id="reportnumber-{{stat.name}}-{{campaign.name}}">25</a><span data-qe-id="reportstate-{{stat.name}}-{{campaign.name}}">Sends</span></p>
+    </div>
+    <div class="CampaignUnit-column u-textRight">
+        <div class="Dropdown js-dropdown u-clearfix is-closed" data-hposition="right" data-qe-id="verbdropdown-{{campaign.name}}-{{is.hero}}">
+            <button type="button" class="Dropdown-toggle js-dropdownTrigger u-textNoWrap" data-qe-id="link-gear-{{campaign.name}}-{{is.hero}}">
+                <span class="u-hide b2-u-showInlineBlock">Actions</span>
+	               <i class="Icon--roundedCaret"></i>
+            </button>
+            <ul class="Dropdown-menu u-textLeft">
+		           <li class="Dropdown-menu-item" data-value="One" data-qe-id="action-{{action.id}}"><span>Copy</span></li>
+		           <li class="Dropdown-menu-item" data-value="Two" data-qe-id="action-{{action.id}}"><span>Delete</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Edit</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Preview</span></li>
+		           <li class="Dropdown-menu-item" data-value="Three" data-qe-id="action-{{action.id}}"><span>Schedule</span></li>
+	           </ul>
+        </div>
+    </div>
+</article>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;article class=&quot;CampaignUnit&quot;&gt;
+    &lt;div class=&quot;CampaignUnit-column CampaignUnit-column--title&quot; data-qe-id=&quot;campaignunit&quot;&gt;
+        &lt;h1 class=&quot;CampaignUnit-title&quot;&gt;&lt;a href=&quot;#&quot; data-qe-id=&quot;campaignunit-title-{{campaign.name}}&quot;&gt;My Awesome Email&lt;/a&gt;&lt;/h1&gt;
+        &lt;h2 class=&quot;Tagline&quot; data-qe-id=&quot;campaignunit-tagline-{{campaign.name}}&quot;&gt;
+            &lt;span class=&quot;Tagline-status u-colorSecondary&quot;&gt;&lt;i class=&quot;Icon--trash&quot;&gt;&lt;/i&gt;&lt;span data-qe-id=&quot;campaignunit-state-{{campaign.name}}&quot;&gt; Deleted&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;Tagline-type&quot; data-qe-id=&quot;campaignunit-type-{{campaign.name}}&quot;&gt;Newsletter&lt;/span&gt;, created on &lt;span data-qe-id=&quot;campaignunit-create-date-{{campaign.name}}&quot;&gt;4/2/13, 7:43PM&lt;/span&gt;
+        &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-paddingLeftFlush b1-u-paddingLeft&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Opens&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;12&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Clicks&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column b1-u-hide b3-u-showTableCell&quot;&gt;
+        &lt;p class=&quot;Stat Stat--fixedWidth Stat--rwd&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot; data-qe-id=&quot;reportnumber-{{stat.name}}-{{campaign.name}}&quot;&gt;25&lt;/a&gt;&lt;span data-qe-id=&quot;reportstate-{{stat.name}}-{{campaign.name}}&quot;&gt;Sends&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;CampaignUnit-column u-textRight&quot;&gt;
+        &lt;div class=&quot;Dropdown js-dropdown u-clearfix is-closed&quot; data-hposition=&quot;right&quot; data-qe-id=&quot;verbdropdown-{{campaign.name}}-{{is.hero}}&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;Dropdown-toggle js-dropdownTrigger u-textNoWrap&quot; data-qe-id=&quot;link-gear-{{campaign.name}}-{{is.hero}}&quot;&gt;
+                &lt;span class=&quot;u-hide b2-u-showInlineBlock&quot;&gt;Actions&lt;/span&gt;
+	               &lt;i class=&quot;Icon--roundedCaret&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+            &lt;ul class=&quot;Dropdown-menu u-textLeft&quot;&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;One&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Copy&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Two&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Delete&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Edit&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Preview&lt;/span&gt;&lt;/li&gt;
+		           &lt;li class=&quot;Dropdown-menu-item&quot; data-value=&quot;Three&quot; data-qe-id=&quot;action-{{action.id}}&quot;&gt;&lt;span&gt;Schedule&lt;/span&gt;&lt;/li&gt;
+	           &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</pre>
+                </div>
+              
+          
+        
+          </article>
+        
+      
+        
+         <article class="kss-depth-2 u-marginBottomDouble">
+          <h1 class="u-kilo u-weightSlightBold u-textUnderlineBorder u-paddingBottomHalf" id="12.1"><span class="u-colorSectionHeading">12.1 ::</span> Hero Unit</h1>
+        
+          
+          <div class="kss-lead"><p>The modifier <em>CampaignUnit--hero</em> can be used to show the Hero Unit which has expanded data.</p>
+</div>
+
+              <article class="CampaignUnit CampaignUnit--hero">
+    <div class="u-marginBottom">
+        <h1 class="CampaignUnit-title"><a href="#">Newsletter Created on April 28, 2013</a></h1>
+        <h2 class="Tagline">
+            <span class="Tagline-status u-colorActive"><i class="Icon--statusActive"></i> Active</span>
+            <span class="Tagline-type">Newsletter</span>, created on 4/2/13, 7:43PM
+        </h2>
+    </div>
+    <div class="u-table">
+        <div class="u-tableCell u-size1of2 b2-u-size1of3 u-textCenter">
+            <div class="u-tableInline u-marginRight">
+                <div class="b1-u-tableCell u-valignMiddle u-paddingRightHalf">
+                    <p class="Stat Stat--large u-textCenter u-marginBottomHalf b1-marginBottomFlush"><a href="#" class="Stat-data">98</a> opens</p>
+                </div>
+                <div class="b1-u-tableCell u-valignMiddle">
+                    <img src="images/demo-opens.png" class="u-sizeFull" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="u-tableCell u-size1of2 b2-u-size1of3 b2-u-borderRight b2-u-borderDashed b2-u-borderDark">
+            <div class="u-tableInline u-marginRight">
+                <div class="b1-u-tableCell u-valignMiddle u-paddingRightHalf">
+                    <p class="Stat Stat--large u-textCenter u-marginBottomHalf b1-marginBottomFlush"><a href="#" class="Stat-data">27</a> Clicks</p>
+                </div>
+                <div class="b1-u-tableCell u-valignMiddle">
+                    <img src="images/demo-opens.png" class="u-sizeFull" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="u-tableCell u-size1of3 u-hide b2-u-showTableCell u-valignMiddle">
+            <p class="Stat Stat--large u-textCenter"><span class="Stat-data u-colorSectionHeading">150</span> Total Sends</p>
+        </div>
+    </div>
+</article>
+
+
+
+              
+
+              
+                <div class="kss-markup u-paddingDouble u-marginTop u-marginBottomDouble">
+                  <pre class="prettyprint lang-html u-marginBottomFlush">&lt;article class=&quot;CampaignUnit CampaignUnit--hero&quot;&gt;
+    &lt;div class=&quot;u-marginBottom&quot;&gt;
+        &lt;h1 class=&quot;CampaignUnit-title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Newsletter Created on April 28, 2013&lt;/a&gt;&lt;/h1&gt;
+        &lt;h2 class=&quot;Tagline&quot;&gt;
+            &lt;span class=&quot;Tagline-status u-colorActive&quot;&gt;&lt;i class=&quot;Icon--statusActive&quot;&gt;&lt;/i&gt; Active&lt;/span&gt;
+            &lt;span class=&quot;Tagline-type&quot;&gt;Newsletter&lt;/span&gt;, created on 4/2/13, 7:43PM
+        &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;u-table&quot;&gt;
+        &lt;div class=&quot;u-tableCell u-size1of2 b2-u-size1of3 u-textCenter&quot;&gt;
+            &lt;div class=&quot;u-tableInline u-marginRight&quot;&gt;
+                &lt;div class=&quot;b1-u-tableCell u-valignMiddle u-paddingRightHalf&quot;&gt;
+                    &lt;p class=&quot;Stat Stat--large u-textCenter u-marginBottomHalf b1-marginBottomFlush&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot;&gt;98&lt;/a&gt; opens&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;b1-u-tableCell u-valignMiddle&quot;&gt;
+                    &lt;img src=&quot;images/demo-opens.png&quot; class=&quot;u-sizeFull&quot; alt=&quot;&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;u-tableCell u-size1of2 b2-u-size1of3 b2-u-borderRight b2-u-borderDashed b2-u-borderDark&quot;&gt;
+            &lt;div class=&quot;u-tableInline u-marginRight&quot;&gt;
+                &lt;div class=&quot;b1-u-tableCell u-valignMiddle u-paddingRightHalf&quot;&gt;
+                    &lt;p class=&quot;Stat Stat--large u-textCenter u-marginBottomHalf b1-marginBottomFlush&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Stat-data&quot;&gt;27&lt;/a&gt; Clicks&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;b1-u-tableCell u-valignMiddle&quot;&gt;
+                    &lt;img src=&quot;images/demo-opens.png&quot; class=&quot;u-sizeFull&quot; alt=&quot;&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;u-tableCell u-size1of3 u-hide b2-u-showTableCell u-valignMiddle&quot;&gt;
+            &lt;p class=&quot;Stat Stat--large u-textCenter&quot;&gt;&lt;span class=&quot;Stat-data u-colorSectionHeading&quot;&gt;150&lt;/span&gt; Total Sends&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</pre>
+                </div>
+              
+          
+        
+          </article>
+        
+      
+    
+  </section>
+</div>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="public/moment.min.js"></script>
+<script src="../dist/fed.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Ensure code blocks are highlighted properly...
+    $('pre>code').addClass('prettyprint');
+    prettyPrint();
+
+    if ($('.js-popover').length) {
+      $('.js-popover').popover({
+        container: 'body',
+        html: true,
+        content: function () {
+          return $(this).next('.Popover-content').html();
+        }
+      });
+    }
+
+    if ($('.js-tooltip').length) {
+      $('.js-tooltip').tooltip({
+        container: 'body'
+      });
+    }
+
+    if ($('.js-dropdown').length) {
+      $('.js-dropdown').Dropdown();
+    }
+
+    if ($('.js-modal').length) {
+      $('.js-modal').magnificPopup({
+        type:'inline',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-modal-ajax').length) {
+      $('.js-modal-ajax').magnificPopup({
+        type:'ajax',
+        disableOn: 481
+      });
+    }
+
+    if ($('.js-date-picker').length) {
+      $('.js-date-picker').daterangepicker({singleDatePicker:true});
+    }
+
+    if ($('.js-date-range-picker').length) {
+      $('.js-date-range-picker').daterangepicker();
+    }
+
+  });
+</script>
+</body>
+</html>

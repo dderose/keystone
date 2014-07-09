@@ -1,0 +1,252 @@
+// Dimension
+//
+// Dimension utilities can be applied to any element, but are usually used with Grid-item elements.
+//
+// There are responsive variations of each of the u-sizeXofX utilites to enable dynamic, responsive layouts.
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-head">
+//   <tr>
+//     <th>Class Name</th>
+//     <th>Description</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>u-sizeFill</td>
+//     <td>Creates a new <a href="http://stackoverflow.com/questions/6196725/how-does-the-css-block-formatting-context-work">block formatting context</a> with overflow hidden</td>
+//  </tr>
+//  <tr>
+//     <td>u-sizeFillAlt</td>
+//     <td>Creates a new <a href="http://stackoverflow.com/questions/6196725/how-does-the-css-block-formatting-context-work">block formatting context</a> with display table-cell</td>
+//  </tr>
+//  <tr>
+//     <td>u-sizeShrinkWrapLeft</td>
+//     <td>Creates a left aligned, fixed width, cell that sizes to fit the content inside. Optionally, an explicit size (px/em/rem) can be set.</td>
+//  </tr>
+//  <tr>
+//     <td>u-sizeShrinkWrapRight</td>
+//     <td>Creates a right aligned, fixed width, cell that sizes to fit the content inside. Optionally, an explicit size (px/em/rem) can be set.</td>
+//  </tr>
+//   <tr>
+//     <td>u-sizeFull</td>
+//     <td>Display block with 100% width</td>
+//  </tr>
+//   <tr>
+//     <td>u-sizeAuto</td>
+//     <td>Width auto</td>
+//  </tr>
+//  <tr>
+//     <td>u-sizeXof12</td>
+//     <td>Percentage width based on 12ths. &apos;x&apos; can be 5 or 7</td>
+//  </tr>
+//  <tr>
+//     <td>u-sizeXof10</td>
+//     <td>Percentage width based on 10ths. &apos;x&apos; can be 1, 3, 7 or 9</td>
+//  </tr>
+//  <tr>
+//     <td>u-sizeXof8</td>
+//     <td>Percentage width based on 8ths. &apos;x&apos; can be 1, 3, 5 or 7</td>
+//  </tr>
+//  <tr>
+//     <td>u-sizeXof7</td>
+//     <td>Percentage width based on 7ths. &apos;x&apos; can be 1, 2, 3, 4, 5, 6</td>
+//  </tr>
+//  <tr>
+//     <td>u-sizeXof6</td>
+//     <td>Percentage width based on 6ths. &apos;x&apos; can be 1 or 5</td>
+//  </tr>
+//  <tr>
+//     <td>u-sizeXof5</td>
+//     <td>Percentage width based on 5ths. &apos;x&apos; can be 1, 2, 3 or 4</td>
+//  </tr>
+//  <tr>
+//     <td>u-sizeXof4</td>
+//     <td>Percentage width based on 4ths. &apos;x&apos; can be 1 or 3</td>
+//  </tr>
+//  <tr>
+//     <td>u-sizeXof3</td>
+//     <td>Percentage width based on 3rds. &apos;x&apos; can be 1 or 2</td>
+//  </tr>
+//  <tr>
+//     <td>u-size1of2</td>
+//     <td>Percentage width based on halves.</td>
+//  </tr>
+// <tbody>
+// </table>
+//
+// Styleguide 2.10.0
+
+// Proportional widths
+
+@mixin width-setup($namespace: "") {
+     // Make an element fill the remaining space.
+     // N.B. This will hide overflow.
+
+    .#{$namespace}u-sizeFill {
+        display: block !important;
+        overflow: hidden !important;
+        width: auto !important;
+    }
+
+    .#{$namespace}u-sizeFillAlt {
+        display: table-cell !important;
+        width: rem(10000);
+        vertical-align: top;
+    }
+
+    // Make an element expand to contain content while creating a nbfc/
+
+    .#{$namespace}u-sizeShrinkWrapLeft {
+        float: left !important;
+        width: auto !important;
+    }
+
+    .#{$namespace}u-sizeShrinkWrapRight {
+        float: right !important;
+        width: auto !important;
+    }
+
+     // Make an element the width of its parent.
+
+    .#{$namespace}u-sizeFull {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .#{$namespace}u-widthAuto {
+        width: auto !important;
+    }
+
+    .#{$namespace}u-size1of10 {
+        width: 10% !important;
+    }
+
+    .#{$namespace}u-size1of8 {
+        width: 12.5% !important;
+    }
+
+    .#{$namespace}u-size1of7 {
+        width: 14.286% !important;
+    }
+
+    .#{$namespace}u-size1of6 {
+        width: 16.667% !important;
+    }
+
+    .#{$namespace}u-size1of5 {
+        width: 20% !important;
+    }
+
+    .#{$namespace}u-size1of4 {
+        width: 25% !important;
+    }
+
+    .#{$namespace}u-size2of7 {
+        width: 28.571% !important;
+    }
+
+    .#{$namespace}u-size3of10 {
+        width: 30% !important;
+    }
+
+    .#{$namespace}u-size1of3 {
+        width: 33.333% !important;
+    }
+
+    .#{$namespace}u-size3of8 {
+        width: 37.5% !important;
+    }
+
+    .#{$namespace}u-size2of5 {
+        width: 40% !important;
+    }
+
+    .#{$namespace}u-size5of12 {
+        width: 41.667% !important;
+    }
+
+    .#{$namespace}u-size3of7 {
+        width: 42.857% !important;
+    }
+
+    .#{$namespace}u-size1of2 {
+        width: 50% !important;
+    }
+
+    .#{$namespace}u-size4of7 {
+        width: 57.143% !important;
+    }
+
+    .#{$namespace}u-size7of12 {
+        width: 58.333% !important;
+    }
+
+    .#{$namespace}u-size3of5 {
+        width: 60% !important;
+    }
+
+    .#{$namespace}u-size5of8 {
+        width: 62.5% !important;
+    }
+
+    .#{$namespace}u-size2of3 {
+        width: 66.667% !important;
+    }
+
+    .#{$namespace}u-size7of10 {
+        width: 70% !important;
+    }
+
+    .#{$namespace}u-size5of7 {
+        width: 71.429% !important;
+    }
+
+    .#{$namespace}u-size3of4 {
+        width: 75% !important;
+    }
+
+    .#{$namespace}u-size4of5 {
+        width: 80% !important;
+    }
+
+    .#{$namespace}u-size5of6 {
+        width: 83.333% !important;
+    }
+
+    .#{$namespace}u-size6of7 {
+        width: 85.714% !important;
+    }
+
+    .#{$namespace}u-size7of8 {
+        width: 87.5% !important;
+    }
+
+    .#{$namespace}u-size9of10 {
+        width: 90% !important;
+    }
+}
+
+@include width-setup();
+
+ // You can define at which breakpoint you’d like an element to be a certain size, e.g.:
+ //
+ // `<div class="Grid-item b1-u-size1of2 b2-u-size1of2 b3-u-size1of4"> ... </div>`
+ //
+ // Since we are using a mobile first approach we use the base class for small screens and work our way up. The above example would be 100% below a width 481px, 50% from 481px - 1000px, and 25% over 1000px.
+
+@media only screen and (min-width:$breakpoint1) {
+    @include width-setup("b1-");
+}
+
+@media only screen and (min-width:$breakpoint2) {
+    @include width-setup("b2-");
+}
+
+@media only screen and (min-width:$breakpoint3) {
+    @include width-setup("b3-");
+}
+
+@media only screen and (min-width:$breakpoint4) {
+    @include width-setup("b4-");
+}

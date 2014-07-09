@@ -1,0 +1,163 @@
+// Grid
+//
+// The grid system is used to create the blueprint of your page. The FED grid is fluid, percentage-based, and utilizes utility classes to specify cell width, offsets, and source order (push/pull). All grid related and sizing related classes are breakpoint enabled.
+//
+// Additionally, there are modifier classes to apply both horizontal and vertical gutters.
+//
+// Markup: <div class="Grid {$modifiers}">
+//     <div class="Grid-item u-size1of3">
+//         <p class="u-padding u-marginFlush" style="border:1px solid #666;">One third Grid (u-size1of3)</p>
+//     </div>
+//     <div class="Grid-item u-size2of3">
+//         <p class="u-padding u-marginFlush" style="border:1px solid #666;">Two thirds Grid (u-size2of3)</p>
+//     </div>
+//     <div class="Grid-item u-size1of2">
+//         <p class="u-padding u-marginFlush" style="border:1px solid #666;">One half Grid (size1of2)</p>
+//     </div>
+//     <div class="Grid-item u-size1of4">
+//         <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+//     </div>
+//     <div class="Grid-item u-size1of4">
+//         <p class="u-padding u-marginFlush" style="border:1px solid #666;">One quarter Grid (u-size1of4)</p>
+//     </div>
+// </div>
+//
+// .Grid--gutter - Add a base spacing unit fixed-width padding to the sides of cells
+// .Grid--gutterDouble - Add a double base spacing unit fixed-width padding to the sides of  cells
+// .Grid--verticalGutter - Add a base spacing unit fixed-width padding to the bottom of cells
+// .Grid--verticalGutterDouble - Add a double base spacing unit fixed-width padding to the bottom of cells
+//
+// Styleguide 3.0.0
+
+/**
+ * Grid wrapper
+ */
+.Grid {
+    list-style: none;
+    margin-bottom: $base-spacing-unit + px;
+    margin-bottom: rem($base-spacing-unit);
+    font-size: 0;
+
+    /**
+    * Very infrequently occuring Grid wrappers as children of Grid wrappers.
+    */
+    > .Grid {
+    	margin-left: 0;
+    }
+}
+
+.Grid--gutter {
+    margin-left: -$base-spacing-unit + px;
+    margin-left: rem(-$base-spacing-unit);
+
+    > .Grid-item {
+        padding-left: $base-spacing-unit + px;
+        padding-left: rem($base-spacing-unit);
+    }
+}
+
+.Grid--gutterDouble {
+    margin-left: -$double-spacing-unit + px;
+    margin-left: rem(-$double-spacing-unit);
+
+    > .Grid-item {
+        padding-left: $double-spacing-unit + px;
+        padding-left: rem($double-spacing-unit);
+    }
+}
+
+.Grid--verticalGutter {
+    margin-bottom: 0;
+
+    > .Grid-item {
+        padding-bottom: $base-spacing-unit + px;
+        padding-bottom: rem($base-spacing-unit);
+    }
+}
+
+.Grid--verticalGutterDouble {
+    margin-bottom: 0;
+
+    > .Grid-item {
+        padding-bottom: $double-spacing-unit + px;
+        padding-bottom: rem($double-spacing-unit);
+    }
+}
+
+    /**
+     * Grid cell
+     */
+    .Grid-item {
+    	position: relative;
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+        font-size: $base-font-size + px;
+        font-size: rem($base-font-size);
+    }
+
+
+
+
+//Grid Offsets
+//
+// You add additional space between grid cells by using offsets
+//
+// Markup: <div class="Grid {$modifiers}">
+//     <div class="Grid-item u-size1of3">
+//         <p class="u-padding u-marginFlush" style="border:1px solid #666;">u-size1of3</p>
+//     </div>
+//     <div class="Grid-item u-size1of3 u-before1of3">
+//         <p class="u-padding u-marginFlush" style="border:1px solid #666;">u-size1of3  u-before1of3</p>
+//     </div>
+// </div>
+// <div class="Grid Grid--gutter {$modifiers}">
+//     <div class="Grid-item u-size1of3 u-before1of3">
+//         <p class="u-padding u-marginFlush" style="border:1px solid #666;">u-size1of3 u-before1of3</p>
+//     </div>
+//     <div class="Grid-item u-size1of3">
+//         <p class="u-padding u-marginFlush" style="border:1px solid #666;">u-size1of3</p>
+//     </div>
+// </div>
+//
+// Styleguide 3.1.0
+
+
+// Rearange Source Order (push/pull)
+//
+// You can rearrange the order in which grid items display on a page with push/pull utilities
+//
+// Markup: <div class="Grid Grid--gutter {$modifiers}">
+//     <div class="Grid-item u-size1of3 u-push2of3">
+//         <p class="u-padding" style="border:1px solid #666;"><b>FIRST:</b> u-size1of3 u-push2of3</p>
+//     </div>
+//     <div class="Grid-item u-size2of3 u-pull1of3">
+//         <p class="u-padding" style="border:1px solid #666;"><b>SECOND:</b> u-size2of3 u-pull1of3</p>
+//     </div>
+// </div>
+//
+// Styleguide 3.2.0
+
+// Combined Fixed/Fluid Column Grids
+//
+// Certain designs may require one or more cells to be fixed width and the remaining cell to expand and contract fluidly to occupy the remaining width. To accomplish this three things need to be done: add <code>u-sizeFill</code> to the fluid cell, add <code>u-sizeShrinkWrapLeft</code> or <code>u-sizeShrinkWrapRight</code> to the fixed width cell (depending on which side it's on), and add <code>u-clearFix</code> to the <code>Grid</code> container.
+//
+// Notice that there are no sizing classes on fixed width cells. The cell will expand to fit the content within but will not be fluid. Explicit widths (width: 4rem; for example) can be added if desired/needed.
+//
+// Additionally, as many fixed width cells can be added as desired. Only one fluid width cell may be added. If a design calls for multiple fluid width cells simply nest a new grid inside the one fluid width cell.
+//
+// Note: The <code>u-sizeFill</code> cannot be floated or it will no longer be fluid.
+//
+// Markup: <div class="Grid Grid--gutter u-clearfix">
+//     <div class="Grid-item u-sizeShrinkWrapLeft">
+//         <p class="u-padding" style="border:1px solid #666;">u-sizeShrinkWrapLeft</p>
+//     </div>
+//     <div class="Grid-item u-sizeShrinkWrapRight">
+//         <p class="u-padding" style="border:1px solid #666;">u-sizeShrinkWrapRight</p>
+//     </div>
+//     <div class="Grid-item u-sizeFill">
+//         <p class="u-padding" style="border:1px solid #666;">u-sizeFill</p>
+//     </div>
+// </div>
+//
+// Styleguide 3.3.0

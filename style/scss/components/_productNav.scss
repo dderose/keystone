@@ -1,0 +1,46 @@
+.ProductNav {
+	border-bottom: 5px solid #f9c7cd;
+}
+	.ProductNav-inner {
+		max-width: 1000px;
+		max-width: rem(1000);
+		margin: 0 auto;
+	}
+	.ProductNav-item {
+		position: relative;
+		display: inline-block;
+		padding: $half-spacing-unit + px $base-spacing-unit + px;
+		padding: rem($half-spacing-unit) rem($base-spacing-unit);	
+		font-size: $h4-size + px;
+		font-size: rem($h4-size);
+		font-weight: 400;
+		color: $color4;
+
+		@include rwd-b3() {
+			margin-right: 100px;
+			margin-right: rem(100);
+			font-size: $h3-size + px;
+			font-size: rem($h3-size);
+		}
+
+		&.is-selected {
+
+			&:after {
+				content: " ";
+				position: absolute;
+				bottom: -25px;
+				bottom: -rem(-25);
+				left: 50%;
+				height: 20px;
+				height: rem(20);
+				width: 20px;
+				width: rem(20);
+				margin-left: -10px;
+				margin-left: rem(-10);
+				border: 10px solid transparent;
+				border: rem(10) solid transparent;
+				border-top: 10px solid #f9c7cd;
+				border-top: rem(10) solid #f9c7cd;
+			}
+		}
+	}

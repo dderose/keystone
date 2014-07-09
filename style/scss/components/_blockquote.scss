@@ -1,0 +1,19 @@
+.Blockquote {
+	padding: $double-spacing-unit + px;
+	padding: rem($double-spacing-unit);
+	background-color: $bgcolorPrimary3;
+	@include font-size($h4-size);
+	font-style: italic;
+	font-weight: 300;
+	line-height: 2;
+	text-align: justify;
+}
+	.Blockquote-attribution {
+		display: block;
+		margin: $half-spacing-unit+px 0 0;
+		margin: rem($half-spacing-unit) 0 0;
+		@include font-size($centi-size);
+		text-align: right;
+		font-style: normal;
+		font-weight: normal;
+	}
