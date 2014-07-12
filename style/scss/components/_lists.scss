@@ -24,3 +24,31 @@
 		color: #4d6f95;
 	}
 }
+
+.List--menu {
+	list-style: none;
+
+	.List-item {
+		margin: 0;
+
+		> a {
+			display: block;
+			padding: $half-spacing-unit + px;
+			padding: rem($half-spacing-unit);
+			color: $color3;
+			font-weight: bold;
+		}
+
+		&.is-selected {
+
+			> a {
+				background-color: $bgcolorPrimary2;
+				cursor: default;
+				
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

@@ -1,4 +1,28 @@
 .Form {}
+	input[type=text],
+	input[type=email],
+	input[type=number],
+	input[type=password],
+	input[type=search],
+	input[type=url],
+	textarea {
+		width: 100%;
+		padding: $half-spacing-unit + px;
+		padding: rem($half-spacing-unit);
+		border: 1px solid $formColorBrdr;
+		border-radius: rem($brand-round);
+	}
+
+	textarea {
+		height: 150px;
+		height: rem(150);
+	}
+
+	label {
+		display: block;
+		font-weight: normal;
+	}
+
 	.Form-checkbox {
 		border: none;
 

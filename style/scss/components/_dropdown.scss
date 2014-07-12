@@ -200,7 +200,7 @@
     padding: rem(12) rem(15);
     border: 1px solid $dropdownColor4;
     border: rem(1) solid $dropdownColor4;
-    background-color: #edeff0;
+    background-color: #f7f9fb;
     color: $dropdownColor2;
     font-size: $centi-size + px;
     font-size: rem($centi-size);
@@ -265,6 +265,7 @@
 
 .Dropdown-menu-header {
     color: $dropdownColor2;
+    margin: 0;
     padding: 8px 15px;
     padding: rem(8) rem(15);
     font-weight: 600;
@@ -280,6 +281,7 @@
 
 .Dropdown-menu-item {
     padding: 0;
+    margin: 0;
 
     > span,
     > a {
@@ -333,7 +335,7 @@
         width: 100%;
         text-align:left;
 
-        .Icon--roundedCaret {
+        .Icon {
             float: right;
             margin-top: 2px;
             margin-top: rem(2);
