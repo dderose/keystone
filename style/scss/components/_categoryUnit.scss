@@ -16,6 +16,9 @@
 		color: $color6;
 		text-align: center;
 	}
+	.Category-title--product {
+		@include font-size($h1-size);
+	}
 	.Category-section {
 		width: 100%;
 		max-width: 1000px;

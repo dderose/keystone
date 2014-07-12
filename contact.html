@@ -10,8 +10,11 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="dist/fed.min.css">
 
+    <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+    <script src="js/svg4everybody.ie8.min.js"></script>
 </head>
 <body>
     <header class="PageHeader">
@@ -107,7 +110,7 @@
     <section class="PageSection">
         <div class="PageSection-inner">
             <div class="Grid Grid--gutterDouble">
-                <div class="Grid-item b3-u-size1of3 u-hide b3-u-showInlineBlock" id="Blargh">
+                <div class="Grid-item b3-u-size1of3 u-hide b3-u-showInlineBlock">
                     <ul class="List List--menu u-marginTopHalf">
                         <li class="List-item"><a href="#">Company</a></li>
                         <li class="List-item is-selected"><a href="#">Contact Us</a></li>
@@ -117,6 +120,7 @@
                 <div class="Grid-item b3-u-size2of3">
                     <h1 class="PageSection-heading">Contact Us</h1>
 
+                    <!-- Begin Form -->
                     <form class="Form">
                         <p>
                             <label for="first-name">First Name</label>
@@ -133,45 +137,145 @@
                             <input type="text" id="email" name="email" />
                         </p>
 
+                        <!-- For these custom dropdowns/select elements: the data-select attribute triggers the script to automatically create a hidden select that use the value of that data attribute. On each .Dropdown-menu-item there is a data-value attribute which will set the value of each <option> in the hidden select. The hidden select will be synchronized with the selection of items in the custom dropdown such that the correct value is always passed from the hidden select upon form submission. -->
                         <label for="specialty">Speciality</label>
                         <div class="Dropdown Dropdown--block js-dropdown u-clearfix is-closed u-marginBottom" data-select="specialty">
                             <button type="button" class="Dropdown-toggle js-dropdownTrigger">
-                                <span>button.Dropdown-toggle.js-dropdownTrigger</span>
-                                <svg class="Icon">
+                                <span>Select a Speciality</span>
+                                <svg class="Icon Icon--large">
                                     <use xlink:href="svg/icons.svg#Icon--caretDown"></use>
                                 </svg>
                             </button>
 
                             <ul class="Dropdown-menu">
-                                <li class="Dropdown-menu-header">Section Heading</li>
-                                <li class="Dropdown-menu-item" data-value="One"><span>Link One</span></li>
-                                <li class="Dropdown-menu-item" data-value="Two"><span>Link Two</span></li>
-                                <li class="Dropdown-menu-item" data-value="Three"><span>Link Three</span></li>
+                                <li class="Dropdown-menu-header">Specialties</li>
+                                <li class="Dropdown-menu-item" data-value="One"><span>One</span></li>
+                                <li class="Dropdown-menu-item" data-value="Two"><span>Two</span></li>
+                                <li class="Dropdown-menu-item" data-value="Three"><span>Three</span></li>
                             </ul>
                         </div>
 
                         <label for="region">Region</label>
                         <div class="Dropdown Dropdown--block js-dropdown u-clearfix is-closed u-marginBottom" data-select="region">
                             <button type="button" class="Dropdown-toggle js-dropdownTrigger">
-                                <span>button.Dropdown-toggle.js-dropdownTrigger</span>
-                                <svg class="Icon">
+                                <span>Select a Region</span>
+                                <svg class="Icon Icon--large">
                                     <use xlink:href="svg/icons.svg#Icon--caretDown"></use>
                                 </svg>
                             </button>
 
                             <ul class="Dropdown-menu">
-                                <li class="Dropdown-menu-header">Section Heading</li>
-                                <li class="Dropdown-menu-item" data-value="One"><span>Link One</span></li>
-                                <li class="Dropdown-menu-item" data-value="Two"><span>Link Two</span></li>
-                                <li class="Dropdown-menu-item" data-value="Three"><span>Link Three</span></li>
+                                <li class="Dropdown-menu-header">Regions</li>
+                                <li class="Dropdown-menu-item" data-value="One"><span>One</span></li>
+                                <li class="Dropdown-menu-item" data-value="Two"><span>Two</span></li>
+                                <li class="Dropdown-menu-item" data-value="Three"><span>Three</span></li>
                             </ul>
                         </div>
 
                         <p>
-                            <label for="email">Questions/Comments</label>
-                            <textarea></textarea>
+                            <label for="comments">Questions/Comments</label>
+                            <textarea id="comments" name="comments"></textarea>
                         </p>
+
+                        <button type="submit" class="Button Button--action">Submit</button>
                     </form>
+                    <!-- End Form -->
+
+                    <hr class="Divider--horizontal u-marginEndsDouble" />
+
+                    <!-- Start Locations Section -->
+                    <h2 class="PageSection-heading">Locations</h2>
+
+                    <!-- Start Repeating Module -->
+                    <div class="Grid Grid--gutter Grid-gutterVertical">
+                        <div class="Grid-item u-size1of2">
+                            <h3 class="Category-sectionSubTitle u-marginBottomHalf">Global Headquarters</h3>
+                            <p>Keystone Dental, Inc.<br />
+                            144 Middlesex Turnpike<br />
+                            Burlington, MA 01803 USA</p>
+
+                            <p><span class="u-weightNormal">General Inquiries:</span> 781-328-3600<br />
+                            <span class="u-weightNormal">Customer Relations:</span><br />
+                            866-902-9272 or 781-328-3490<br />
+                            <span class="u-weightNormal">Fax:</span> 866-903-9272 or 781-328-3400<br />
+                            <span class="u-weightNormal">Email:</span> <a href="mailto:info@keystonedental.com">info@keystonedental.com</a></p>
+                        </div>
+
+                        <div class="Grid-item u-size1of2 u-valignBottom">
+                            <img src="images/demo-map.jpg" alt="" />
+                            <p><a href="#">Get Directions</a></p>
+                        </div>
+                    </div>
+                    <!-- End Repeating Module -->
+
+                    <hr class="Divider--horizontal" />
+
+                    <!-- Start Repeating Module -->
+                    <div class="Grid Grid--gutter Grid-gutterVertical">
+                        <div class="Grid-item u-size1of2">
+                            <h3 class="Category-sectionSubTitle u-marginBottomHalf">European Headquarters</h3>
+                            <p>Keystone Dental<br />
+                            Via A. Fleming, 19<br />
+                            37135 Verona, Italy</p>
+
+                            <p><span class="u-weightNormal">Phone:</span> +39 045 8230294vvvttvtaqztt<br />
+                            <span class="u-weightNormal">Fax:</span> +39 045 8250296<br />
+                            <span class="u-weightNormal">Email:</span> <a href="mailto:info.it@keystonedental.com">info.it@keystonedental.com</a></p>
+                        </div>
+
+                        <div class="Grid-item u-size1of2 u-valignBottom">
+                            <img src="images/demo-map.jpg" alt="" />
+                            <p><a href="#">Get Directions</a></p>
+                        </div>
+                    </div>
+                    <!-- End Repeating Module -->
+
+                    <hr class="Divider--horizontal" />
+
+                    <!-- Start Repeating Module -->
+                    <div class="Grid Grid--gutter Grid-gutterVertical">
+                        <div class="Grid-item u-size1of2">
+                            <h3 class="Category-sectionSubTitle u-marginBottomHalf">France</h3>
+                            <p>Keystone Dental<br />
+                            100 rue de Courcelles<br />
+                            75017 Paris, France</p>
+
+                            <p><span class="u-weightNormal">Toll Free:</span> 0800 911 292<br />
+                            <span class="u-weightNormal">Fax:</span> +33 1 70 44 50 37<br />
+                            <span class="u-weightNormal">Email:</span> <a href="mailto:info.fr@keystonedental.com">info.fr@keystonedental.com</a></p>
+                        </div>
+
+                        <div class="Grid-item u-size1of2 u-valignBottom">
+                            <img src="images/demo-map.jpg" alt="" />
+                            <p><a href="#">Get Directions</a></p>
+                        </div>
+                    </div>
+                    <!-- End Repeating Module -->
+
+                    <hr class="Divider--horizontal" />
+
+                    <!-- Start Repeating Module -->
+                    <div class="Grid Grid--gutter Grid-gutterVertical">
+                        <div class="Grid-item u-size1of2">
+                            <h3 class="Category-sectionSubTitle u-marginBottomHalf">Germany, Belgium, and the Netherlands</h3>
+                            <p>Jägerstrasse 66<br />
+                            53347 Alfter, Germany</p>
+
+                            <p><span class="u-weightNormal">Toll Free:</span> 0800 1844 168<br />
+                            <span class="u-weightNormal">Tel:</span> +49 2222 92940<br />
+                            <span class="u-weightNormal">Fax:</span> +49 3222 9989247<br />
+                            <span class="u-weightNormal">Email Germany:</span> <a href="mailto:info.de@keystonedental.com">info.de@keystonedental.com</a><br />
+                            <span class="u-weightNormal">Email Belgium:</span> <a href="mailto:info.be@keystonedental.com">info.be@keystonedental.com</a><br />
+                            <span class="u-weightNormal">Email Netherlands:</span> <a href="mailto:info.nl@keystonedental.com">info.nl@keystonedental.com</a></p>
+                        </div>
+
+                        <div class="Grid-item u-size1of2 u-valignBottom">
+                            <img src="images/demo-map.jpg" alt="" />
+                            <p><a href="#">Get Directions</a></p>
+                        </div>
+                    </div>
+                    <!-- End Repeating Module -->
+                    <!-- End Locations Section -->
                 </div>
             </div>
         </div>
@@ -253,7 +357,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/dropdown.js"></script>
-    <script src="js/ie-svg.js"></script>
     <script src="js/sidr.js"></script>
     <script src="js/slidedown.js"></script>
 

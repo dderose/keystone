@@ -189,9 +189,8 @@
     }
     &.is-open > .Dropdown-toggle,
     &.is-open > .Dropdown-toggle    {
-        background-color: $dropdownColor4;
-        border-color: #acacac;
-        color: $dropdownColor3;
+        background-color: #e5edf5;
+        border-color: #b9cfde;
     }
 }
 
@@ -208,7 +207,9 @@
     border-radius: rem($brand-round);
 
     &:hover {
-      background-color: #dee0e3;
+        background-color: #e5edf5;
+        border: 1px solid #b9cfde;
+        border: rem(1) solid #b9cfde;
     }
 
     &.is-error {
@@ -296,7 +297,7 @@
         word-wrap: break-word;
 
         &:hover {
-            background-color: #eef0f1;
+            background-color: #f7f9fb;
             cursor: pointer;
         }
     }
@@ -304,11 +305,11 @@
 
 // Modifier:  makes the dropdown look like a text link
 .Dropdown--plain {
-    &.is-open > .Dropdown-toggle,
-    &.is-open > .Dropdown-toggle:hover {
-        background-color: transparent;
-        color: $dropdownColor1;
-    }
+    // &.is-open > .Dropdown-toggle,
+    // &.is-open > .Dropdown-toggle:hover {
+    //     background-color: transparent;
+    //     color: $dropdownColor1;
+    // }
 
     .Dropdown-toggle {
         border-radius: 0;

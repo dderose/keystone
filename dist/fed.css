@@ -42,6 +42,12 @@
  * Button-colors (in hex). Refer to relevant sections for their implementations.
  */
 /*------------------------------------*\
+    $BUTTON COLLORS AND ATTRIBUTES
+\*------------------------------------*/
+/**
+ * Button-colors (in hex). Refer to relevant sections for their implementations.
+ */
+/*------------------------------------*\
     $QUOTES
 \*------------------------------------*/
 /**
@@ -652,6 +658,57 @@ tbody.collapse.in {
   font-style: normal;
   font-weight: normal; }
 
+.Button {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0 20px;
+  padding: 0 1.25rem;
+  text-align: center;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: normal;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: 44px;
+  line-height: 2.75rem;
+  background-image: none;
+  background-color: #ffffff;
+  color: #394147;
+  border: none;
+  box-shadow: none;
+  border-radius: 0.1875rem;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out; }
+
+.Button:hover {
+  background-color: #d7dadd;
+  text-decoration: none; }
+
+.Button:active {
+  background-color: #58799d; }
+
+.Button:focus {
+  outline: none; }
+
+.Button--action {
+  color: #fff;
+  background-color: #338ecd; }
+
+.Button--action:hover {
+  color: #fff;
+  background-color: #51a5e0; }
+
+.Button--action:active {
+  background-color: #2c7fb8; }
+
 .Slider {
   width: 100%;
   max-width: 75rem;
@@ -769,6 +826,11 @@ tbody.collapse.in {
   font-weight: normal;
   color: #58799d;
   text-align: center; }
+
+.Category-title--product {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.75; }
 
 .Category-section {
   width: 100%;
@@ -1110,13 +1172,32 @@ body {
       font-size: 0.875rem;
       line-height: 2; } }
 
+.Divider--horizontal {
+  width: 100%;
+  height: 1px;
+  height: 0.0625rem;
+  color: #fff;
+  background-color: #fff;
+  border: none;
+  border-top: 1px solid #dee7ee;
+  border-top: 0.0625rem solid #dee7ee;
+  margin: 0 0 20px;
+  margin: 0 0 1.25rem; }
+
+.Divider--vertical {
+  border: none;
+  border-right: 1px solid #dee7ee;
+  border-right: 0.0625rem solid #dee7ee; }
+
+.Divider--dotted {
+  border-style: dotted; }
+
 .Dropdown {
   position: relative;
   display: inline-block; }
   .Dropdown.is-open > .Dropdown-toggle, .Dropdown.is-open > .Dropdown-toggle {
-    background-color: #d9e3ea;
-    border-color: #acacac;
-    color: #5b656d; }
+    background-color: #e5edf5;
+    border-color: #b9cfde; }
 
 .Dropdown-toggle {
   padding: 12px 15px;
@@ -1130,7 +1211,9 @@ body {
   border-radius: 4px;
   border-radius: 0.25rem; }
   .Dropdown-toggle:hover {
-    background-color: #dee0e3; }
+    background-color: #e5edf5;
+    border: 1px solid #b9cfde;
+    border: 0.0625rem solid #b9cfde; }
   .Dropdown-toggle.is-error {
     border: 1px solid #f5463b;
     color: #f5463b; }
@@ -1200,12 +1283,9 @@ body {
     text-decoration: none;
     word-wrap: break-word; }
     .Dropdown-menu-item > span:hover, .Dropdown-menu-item > a:hover {
-      background-color: #eef0f1;
+      background-color: #f7f9fb;
       cursor: pointer; }
 
-.Dropdown--plain.is-open > .Dropdown-toggle, .Dropdown--plain.is-open > .Dropdown-toggle:hover {
-  background-color: transparent;
-  color: #0078c1; }
 .Dropdown--plain .Dropdown-toggle {
   border-radius: 0;
   border: none;
@@ -1391,6 +1471,7 @@ label {
       font-size: 1.5rem; } }
 
 .HeroUnit--product {
+  background-color: #dfebf6;
   border-top: 1px solid #dee4eb;
   border-top: 0.0625rem solid #dee4eb;
   border-bottom: 1px solid #dee4eb;
@@ -1415,6 +1496,12 @@ label {
   height: 1rem; }
 
 .Icon--large {
+  width: 24px;
+  width: 1.5rem;
+  height: 24px;
+  height: 1.5rem; }
+
+.Icon--xlarge {
   width: 32px;
   width: 2rem;
   height: 32px;

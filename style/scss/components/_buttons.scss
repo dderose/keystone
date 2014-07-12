@@ -1,0 +1,44 @@
+.Button {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0 20px;
+    padding: 0 rem(20);
+    text-align: center;
+    font-size: $btnFontSize + px;
+    font-size: rem($btnFontSize);
+    font-weight: normal;
+    vertical-align: middle;
+    cursor: pointer;
+    line-height: 44px;
+    line-height: rem(44);
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    background-color: $btnColor;
+    color: $btnTxtColor;
+    border: none;
+    box-shadow: none;
+    border-radius: rem($btnRound);
+    @include vendor-prefix(user-select, none);
+    @include vendor-prefix(transition, $brand-transition);
+}
+.Button:hover {
+    background-color: $btnColorHover;
+    text-decoration: none;
+}
+.Button:active {
+    background-color: $btnColorActive;
+}
+.Button:focus {
+    outline: none;
+}
+
+.Button--action {
+    color: #fff;
+    background-color: $btnColorAction;
+}
+.Button--action:hover {
+    color: #fff;
+    background-color: $btnColorActionHover;
+}
+.Button--action:active {
+    background-color: $btnColorActionActive;
+}

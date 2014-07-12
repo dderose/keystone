@@ -1,0 +1,67 @@
+// Dividers
+//
+// Dividers are visual separators, generally a line, that are used either horizontally or vertically.
+//
+// Styleguide 10.0.0
+
+// Horizontal Divider
+//
+// The horizontal divider creates a 100% width, styled, horizontal line that is optionally solid or dotted.
+//
+// Markup: <hr class="Divider--horizontal {$modifiers}" />
+//
+// .Divider--dotted - A dotted divider
+//
+// Styleguide 10.1.0
+
+.Divider--horizontal {
+	width: 100%;
+    height: 1px;
+	height: rem(1);
+	color: #fff;
+	background-color: #fff;
+	border: none;
+    border-top: 1px solid #dee7ee;
+	border-top: rem(1) solid #dee7ee;
+    margin: 0 0 $base-spacing-unit+px;
+	margin: 0 0 rem($base-spacing-unit);
+}
+
+// Vertical Divider
+//
+// The vertical divider creates a styled, horizontal line that is optionally solid or dotted.
+//
+// Markup: <div class="Grid Grid--gutter">
+//   <div class="Grid-item u-size1of3 Divider--vertical {$modifiers}">
+//     <p>Column 1</p>
+//     <p>Column 1</p>
+//     <p>Column 1</p>
+//     <p>Column 1</p>
+//   </div>
+//   <div class="Grid-item u-size1of3 Divider--vertical {$modifiers}">
+//     <p>Column 2</p>
+//     <p>Column 2</p>
+//     <p>Column 2</p>
+//     <p>Column 2</p>
+//   </div>
+//   <div class="Grid-item u-size1of3">
+//     <p>Column 3</p>
+//     <p>Column 3</p>
+//     <p>Column 3</p>
+//     <p>Column 3</p>
+//   </div>
+// </div>
+//
+// .Divider--dotted - A dotted divider
+//
+// Styleguide 10.2.0
+
+.Divider--vertical {
+	border: none;
+    border-right: 1px solid #dee7ee;
+	border-right: rem(1) solid #dee7ee;
+}
+
+.Divider--dotted {
+	border-style: dotted;
+}

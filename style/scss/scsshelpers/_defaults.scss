@@ -103,6 +103,30 @@ $brdrColorDark: #b0b6bb!default;
 
 
 /*------------------------------------*\
+    $BUTTON COLLORS AND ATTRIBUTES
+\*------------------------------------*/
+/**
+ * Button-colors (in hex). Refer to relevant sections for their implementations.
+ */
+$btnColor:                  #ffffff!default;
+$btnColorHover:             #d7dadd!default;
+$btnColorActive:            $color6!default;
+$btnTxtColor:               $color3!default;
+$btnTxtColorActive:         $color2!default;
+
+$btnColorDisabled:          #ebedee!default;
+$btnTxtColorDisabled:       $color6!default;
+
+$btnColorAction:            #338ecd!default;
+$btnColorActionHover:       #51a5e0!default;
+$btnColorActionActive:      #2c7fb8!default;
+
+$btnFontSize:               $h4-size!default;
+$btnSmallFontSize:          $milli-size!default;
+
+$btnRound:                  3!default;
+
+/*------------------------------------*\
     $QUOTES
 \*------------------------------------*/
 /**
