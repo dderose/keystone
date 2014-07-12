@@ -134,6 +134,10 @@ body {
 					filter: none;
 				}
 			}
+
+			@include rwd-b5() {
+				margin: 0;
+			}
 		}
 	}
 	.MainNav-list {

@@ -24,8 +24,8 @@
 		max-width: 1000px;
 		max-width: rem(1000);
 		margin: 0 auto;
-		padding: 0 20px;
-		padding: 0 rem(20);
+		padding: 0 4.5%;
+		// padding: 0 rem(20);
 
 		@include rwd-b5() {
 			padding: 0;
