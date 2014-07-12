@@ -10,10 +10,8 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="dist/fed.min.css">
 
-    <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-    <![endif]-->
     <script src="js/svg4everybody.ie8.min.js"></script>
 </head>
 <body>
@@ -115,68 +113,120 @@
 
             <div class="Grid Grid--gutterDouble">
                 <div class="Grid-item b3-u-size1of3 u-hide b3-u-showInlineBlock">
-                    <button class="Accordion-item is-collapsed collapse in" data-toggle="collapse" data-target="#product">Product <svg class="Icon Icon--large u-floatRight"><use xlink:href="svg/icons.svg#Icon--caretDown"></use></svg></button>
+                    <ul class="List List--filter u-listStyleNone u-marginTopHalf">
+                        <li class="List-item List-heading">Locations</li>
+                        <li class="List-item"><a href="#">North America</a> (324)</li>
+                        <li class="List-item"><a href="#">Europe</a> (324)</li>
+                    </ul>
 
-                    <div id="product" class="collapse">
-                        <ul class="List--checkbox">
-                            <li class="List-item">
-                                <input type="checkbox" class="Form-checkbox" id="implant-systems" /> <label for="implant-systems">Implant Systems <span class="List-item-count">(324)</span></label>
-
-                                <ul class="List--checkbox">
-                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="MAX" /> <label for="MAX">MAX <span class="List-item-count">(12)</span></label></li>
-                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Co-Axis" /> <label for="Co-Axis">Co-Axis <span class="List-item-count">(75)</span></label></li>
-                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Genesis" /> <label for="Genesis">Genesis <span class="List-item-count">(34)</span></label></li>
-                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Prima" /> <label for="Prima">Prima <span class="List-item-count">(26)</span></label></li>
-                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="External Hex" /> <label for="External Hex">External Hex <span class="List-item-count">(14)</span></label></li>
-                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Restore" /> <label for="Restore">Restore <span class="List-item-count">(53)</span></label></li>
-                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Zygomatic" /> <label for="Zygomatic">Zygomatic <span class="List-item-count">(6)</span></label></li>
-                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Surface-Roughening" /> <label for="Surface-Roughening">Surface Roughening <span class="List-item-count">(12)</span></label></li>
-                                    <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Other" /> <label for="Other">Other <span class="List-item-count">(17)</span></label></li>
-                                </ul>
-                            </li>
-                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="bone-grafting" /> <label for="bone-grafting">Bone Grafting <span class="List-item-count">(57)</span></label></li>
-                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="membranes" /> <label for="membranes">Membranes <span class="List-item-count">(76)</span></label></li>
-                        </ul>
-                    </div>
-
-                    <button class="Accordion-item is-collapsed" data-toggle="collapse" data-target="#type">Type <svg class="Icon Icon--large u-floatRight"><use xlink:href="svg/icons.svg#Icon--caretDown"></use></svg></button>
-
-                    <div id="type" class="collapse">
-                        <ul class="List--checkbox">
-                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Clinical-Articles" /> <label for="Clinical-Articles">Clinical Articles <span class="List-item-count">(18)</span></label></li>
-                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Powerpoint" /> <label for="Powerpoint">Powerpoint <span class="List-item-count">(12)</span></label></li>
-                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Video" /> <label for="Video">Video <span class="List-item-count">(75)</span></label></li>
-                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Webinars" /> <label for="Webinars">Webinars <span class="List-item-count">(34)</span></label></li>
-                        </ul>
-                    </div>
+                    <ul class="List List--filter u-listStyleNone u-marginTopHalf">
+                        <li class="List-item List-heading">Type</li>
+                        <li class="List-item"><a href="#">All</a> (18)</li>
+                        <li class="List-item"><a href="#">Trade Shows</a> (12)</li>
+                        <li class="List-item"><a href="#">Seminars</a> (75)</li>
+                        <li class="List-item"><a href="#">Webinars</a> (34)</li>
+                    </ul>
                 </div>
 
                 <div class="Grid-item b3-u-size2of3">
-                    <article class="Article Article--summary">
-                        <header>
-                            <h1 class="Article-heading"><a href="#">An Investigation of the Long-Term Bioactivity of Endogenous Growth Factor in OASIS Wound Matrix</a></h1>
+                    <table class="Events">
+                        <tbody>
+                            <tr>
+                                <td class="Event-date">
+                                    08<br />
+                                    <span class="Event-month">JUN</span>
+                                </td>
+                                <td class="Event-summary">
+                                    <h1 class="Event-heading"><a href="#">Immediate Implant Placement in a Molar Socket, by Dr. Michael J. Will</a></h1>
 
-                            <p class="Article-byline">Keystone Dental Tech Insight. 2010 May  |  Hodde JP, Ernst DM, Hiles MC.</p>
-                        </header>
-                    </article>
+                                    <p class="Event-byline">Waltham, Massachusetts</p>
 
-                    <article class="Article Article--summary">
-                        <header>
-                            <h1 class="Article-heading"><a href="#">Decreased Bacterial Adhesion to Surface-Treated Titanium.</a></h1>
+                                    <p class="Event-description">This web broadcast seminar with Dr. Michael J. Will is intended for implant specialist and restorative dentists to gain insights on innovations for immediate implant syst...</p>
+                                </td>
+                            </tr>
 
-                            <p class="Article-byline">Int J Artif Organs. 2005 Jul;28(7):718-30.   |   Del Curto B, Brunella MF, Giordano C, Pedeferri MP, Valtulina V, Visai L, Cigada A.</p>
-                        </header>
+                            <tr>
+                                <td></td>
+                                <td><hr class="Divider--horizontal u-marginTop" /></td>
+                            </tr>
 
-                        <p><strong>This web broadcast seminar with Dr. Michael J. Will is intended for implant specialists and restorative dentists to gain insights on innovations for immediate implant placement.</strong></p>
-                    </article>
+                            <tr>
+                                <td class="Event-date">
+                                    12<br />
+                                    <span class="Event-month">JUN</span>
+                                </td>
+                                <td class="Event-summary">
+                                    <h1 class="Event-heading"><a href="#">Immediate Implant Placement in a Molar Socket, by Dr. Michael J. Will</a></h1>
 
-                    <article class="Article Article--summary">
-                        <header>
-                            <h1 class="Article-heading"><a href="#">Biofilm on Dental Implants: A Review of the Literature.</a></h1>
-                        </header>
+                                    <p class="Event-byline">Waltham, Massachusetts</p>
 
-                        <p><strong>This web broadcast seminar with Dr. Michael J. Will is intended for implant specialists and restorative dentists to gain insights on innovations for immediate implant placement.</strong></p>
-                    </article>
+                                    <p class="Event-description">This web broadcast seminar with Dr. Michael J. Will is intended for implant specialist and restorative dentists to gain insights on innovations for immediate implant syst...</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td><hr class="Divider--horizontal u-marginTop" /></td>
+                            </tr>
+
+                            <tr>
+                                <td class="Event-date">
+                                    24<br />
+                                    <span class="Event-month">AUG</span>
+                                </td>
+                                <td class="Event-summary">
+                                    <h1 class="Event-heading"><a href="#">Immediate Implant Placement in a Molar Socket, by Dr. Michael J. Will</a></h1>
+
+                                    <p class="Event-byline">Waltham, Massachusetts</p>
+
+                                    <p class="Event-description">This web broadcast seminar with Dr. Michael J. Will is intended for implant specialist and restorative dentists to gain insights on innovations for immediate implant syst...</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td><hr class="Divider--horizontal u-marginTop" /></td>
+                            </tr>
+
+                            <tr>
+                                <td class="Event-date">
+                                    25<br />
+                                    <span class="Event-month">SEP</span>
+                                </td>
+                                <td class="Event-summary">
+                                    <h1 class="Event-heading"><a href="#">Immediate Implant Placement in a Molar Socket, by Dr. Michael J. Will</a></h1>
+
+                                    <p class="Event-byline">Waltham, Massachusetts</p>
+
+                                    <p class="Event-description">This web broadcast seminar with Dr. Michael J. Will is intended for implant specialist and restorative dentists to gain insights on innovations for immediate implant syst...</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td><hr class="Divider--horizontal u-marginTop" /></td>
+                            </tr>
+
+                            <tr>
+                                <td class="Event-date">
+                                    3<br />
+                                    <span class="Event-month">NOV</span>
+                                </td>
+                                <td class="Event-summary">
+                                    <h1 class="Event-heading"><a href="#">Immediate Implant Placement in a Molar Socket, by Dr. Michael J. Will</a></h1>
+
+                                    <p class="Event-byline">Waltham, Massachusetts</p>
+
+                                    <p class="Event-description">This web broadcast seminar with Dr. Michael J. Will is intended for implant specialist and restorative dentists to gain insights on innovations for immediate implant syst...</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td><hr class="Divider--horizontal u-marginTop" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

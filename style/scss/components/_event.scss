@@ -1,0 +1,48 @@
+.Events {
+	margin-top: -$one-and-half-spacing-unit + px;
+	margin-top: rem(-$one-and-half-spacing-unit);
+	// border-collapse: separate;
+	// border-spacing: 0 $one-and-half-spacing-unit + px;
+	// border-spacing: 0 rem($one-and-half-spacing-unit);
+	line-height: 1.5;
+}
+
+.Event {
+}
+	.Event-summary {
+		// border-bottom: 1px solid $brdrColor;
+	}
+	.Event-heading {
+		margin-bottom: $half-spacing-unit + px;
+		margin-bottom: rem($half-spacing-unit);
+		@include font-size($h3-size);
+		font-weight: normal;
+	}
+	.Event-byline {
+		margin-bottom: 0;
+		@include font-size($centi-size);
+		color: #94a0ab;
+		font-style: italic;
+	}
+	.Event-description {
+		font-weight: normal;
+		margin-bottom: 0;
+	}
+	.Event-heading + .Event-byline {
+		margin-top: -$half-spacing-unit + px;
+		margin-top: rem(-$half-spacing-unit);
+	}
+	.Event-date {
+		padding: 0 25px 0 10px;
+		border-left: 4px solid #f58f9c;
+		border-left: rem(4) solid #f58f9c;
+		font-size: 22px;
+		font-size: rem(22);
+		color: $color4;
+		line-height: 1;
+		font-weight: bold;
+	}
+	.Event-month {
+		font-size: 15px;
+		font-size: rem(15);
+	}
