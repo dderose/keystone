@@ -1,10 +1,13 @@
 .Events {
-	margin-top: -$one-and-half-spacing-unit + px;
-	margin-top: rem(-$one-and-half-spacing-unit);
 	// border-collapse: separate;
 	// border-spacing: 0 $one-and-half-spacing-unit + px;
 	// border-spacing: 0 rem($one-and-half-spacing-unit);
 	line-height: 1.5;
+
+	@include rwd-b3() {
+		margin-top: -$one-and-half-spacing-unit + px;
+		margin-top: rem(-$one-and-half-spacing-unit);
+	}
 }
 
 .Event {

@@ -1310,9 +1310,11 @@ body {
       margin-top: 0.125rem; }
 
 .Events {
-  margin-top: -42px;
-  margin-top: -2.625rem;
   line-height: 1.5; }
+  @media (min-width: 48.0625em) {
+    .Events {
+      margin-top: -42px;
+      margin-top: -2.625rem; } }
 
 
 
