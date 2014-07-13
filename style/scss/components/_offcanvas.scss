@@ -12,22 +12,27 @@
     height: 100%;
     z-index: 999999;
     width: 260px;
+    width: rem(260);
     overflow-x: none;
     overflow-y: auto;
-    padding: rem(25) rem(20);
-    background: #333;
+    padding: 25px;
+    padding: rem(25);
+    background: $bgcolorPrimary4;
 
     .sidr-inner {
         padding: 0 0 15px;
+        padding: 0 0 rem(25);
     }
 
     &.right {
         left: auto;
         right: -260px;
+        right: rem(-260);
     }
 
     &.left {
         left: -260px;
+        left: rem(-260);
         right: auto;
     }
 }
@@ -35,9 +40,15 @@
         list-style: none;
     }
         .Offcanvas-menuItem {
-            padding: 0 0 rem(15);
+            border-bottom: 1px solid #727c85;
+            margin: 0;
 
             > a {
+                display: block;
+                padding: 15px 0;
+                padding: rem(15) 0;
                 color: #fff;
             }
+
+
         }

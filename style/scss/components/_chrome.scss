@@ -145,18 +145,15 @@ body {
 		width: 100%;
 		margin: 0;
 		background: #eee;
-		border-bottom: 1px solid #ccc;
-		border-bottom: rem(1) solid #ccc;
-
-		@include rwd-b1() {
-			border-bottom: none;
-		}
+		border-bottom: 1px solid $brdrColor;
+		border-bottom: rem(1) solid $brdrColor;
 
 		@include rwd-b2() {
 			display: inline-block;
 			background: #fff;
 			margin-top: 5px;
 			margin-top: rem(5);
+			border-bottom: none;
 		}
 
 		@include rwd-b4() {
@@ -164,11 +161,13 @@ body {
 		}
 	}
 		.MainNav-listItem {
+			z-index: 101;
 			position: relative;
 			padding: 0 !important;
 			width: 50%;
 			text-align: center;
 			margin: 0;
+			padding-bottom: 20px;
 
 			> a {
 				position: relative;
@@ -177,11 +176,24 @@ body {
 				padding: rem(20) rem(15);
 				color: #4d6f95;
 				font-weight: bold;
+				background-color: #fff;
+				border-right: 1px solid $brdrColor;
+			}
+
+			&:nth-child(2) {
+				> a {
+					border-right: none;
+				}
+			}
+
+			.is-active {
+				background-color: #f5f8fa;
+				border-bottom: 1px solid transparent;
 			}
 
 			.is-selected {
 				background: #fff;
-				border-right: 1px solid $brdrColorDark;
+				border-right: 1px solid $brdrColor;
 				border-bottom: 1px solid #fff;
 				bottom: -1px;
 				bottom: rem(-1);
@@ -194,52 +206,59 @@ body {
 			@include rwd-b2() {
 				width: auto;
 				text-align: left;
+				// border: 1px solid transparent;
 
 				.is-selected {
 					background-color: #fff;
 					border: none;
 					// border-bottom: 2px solid #f7a5b0;
 					bottom: auto;
+
+					&:after {
+						content: "";
+						position: relative;
+						display: block;
+						top: 12px;
+						margin-top: -10px;
+						border-bottom: 2px solid #f7a5b0;
+					}
 				}
 
 				.is-active {
 					z-index: 11;
 					background-color: #f5f8fa;
-					outline: 1px solid $brdrColor;
-					outline-bottom: 1px solid transparent;
 					bottom: auto;
-					padding-bottom: 20px;
 				}	
 
 				> a {
-					padding: 10px;
-					padding: rem(10);
+					padding: 10px 10px 15px;
+					padding: rem(10) rem(10) rem(15);
+					border: none;
 				}
 			}
 
 			@include rwd-b4() {
 
 				> a {
-					padding: 10px 15px;
-					padding: rem(10) rem(15);
+					padding: 10px 15px 15px;
+					padding: rem(10) rem(15) rem(15);
 				}
 			}
 		}
 		// ADD TRANSITION EFFECT
 		.SubNav {
-			position: relative;
-			z-index: 10;
-			top: -1px;
-			// margin-bottom: -52px;
+			position: absolute;
+			z-index: 100;
+			margin-top: -1px;
 			width: 100%;
 			background-color: #f5f8fa;
-			margin-top: -20px;
-			margin-top: rem(-20);
 			padding: 20px 0;
 			padding: rem(20) 0;
-			border-top: 1px solid $brdrColor;
-			border-bottom: 1px solid $brdrColor;
 			box-shadow: 0 1px 1px rgba(0,0,0,.18);
+
+			@include rwd-b2() {
+				margin-top: -22px;
+			}
 		}
 			.SubNav-inner {
 				max-width: 1200px;

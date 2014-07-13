@@ -49,6 +49,7 @@
         this.$slidedown = $('.SlideDown');                          // The SlideDown container
         this.$slidedownMenu = $('.js-slideDownMenu');               // The SlideDown menu
         this._data = this.$element.data();
+        this.state = 'closed';
 
         // Hierarchy of settings: ( lowest < highest )
         // defaults < options passed to JS invocation < data attributes on element
@@ -73,6 +74,14 @@
 
                 $.proxy(slidedown.toggle, slidedown)();
             });
+
+            $(document).on('click.Slidedown touchstart.Slidedown', function (e) {
+                e.preventDefault();
+                console.log($(e.target).closest('.SubNav').length);
+                if($(e.target).hasClass('js-slideDown') === false && $(e.target).closest('.SubNav').length === 0 && slidedown.state === 'open') {
+                    $.proxy(slidedown.close, slidedown)();
+                }
+            });
         },
 
         // creates an optional, hidden <select> menu that mimicks the values of the dropdown
@@ -85,14 +94,23 @@
                 $Slidedown.removeClass('is-active');
                 this.$slidedown.addClass('u-visuallyHidden');
                 this.$slidedown.attr('data-SlideDown-state','closed');
+                this.state = 'closed';
             } else {
                 $('.js-slideDown').removeClass('is-active');
                 $Slidedown.addClass('is-active');
                 $(this.element.hash).removeClass('u-visuallyHidden');
                 this.$slidedown.removeClass('u-visuallyHidden');
-                this.$slidedown.css('margin-bottom', this.$slidedown.outerHeight() * -1 + 10);
+                // this.$slidedown.css('margin-bottom', this.$slidedown.outerHeight() * -1 + 10);
                 this.$slidedown.attr('data-SlideDown-state','open');
+                this.state = 'open';
             }
+        },
+
+        close: function() {
+            $('.js-slideDown').removeClass('is-active');
+            $('.js-slideDown').attr('data-SlideDown-state','closed');
+            $('.SubNav').addClass('u-visuallyHidden');
+            this.state = 'closed';
         }
     };
 
