@@ -107,7 +107,7 @@
 
     <section class="PageSection">
         <div class="PageSection-inner">
-            <a href="#resourceSlideOut" class="js-offCanvas Resources-menuButton b3-u-hide u-floatRight">Filter</a>
+            <a href="#eventSlideOut" class="Button Button--small Button--border js-offCanvas Event-menuButton b3-u-hide u-floatRight"><svg class="Icon Button--icon"><use xlink:href="svg/icons.svg#Icon--filter"></use></svg> Filter</a>
 
             <h1 class="PageSection-heading">Resources</h1>
 
@@ -232,7 +232,7 @@
         </div>
     </section>
 
-    <div id="resourceSlideOut" class="Offcanvas">
+    <div id="eventSlideOut" class="Offcanvas">
         <div class="scrollableArea">
             Filters
         </div>
@@ -326,8 +326,8 @@
                 name: 'slideOutNav',
                 side: 'left'
             });
-            $('.Resources-menuButton').sidr({
-                name: 'resourceSlideOut',
+            $('.Event-menuButton').sidr({
+                name: 'eventSlideOut',
                 side: 'right'
             });
         });

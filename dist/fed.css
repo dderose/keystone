@@ -674,6 +674,7 @@ tbody.collapse.in {
   background-image: none;
   background-color: #f7f9fb;
   color: #2584cf;
+  fill: #2584cf;
   border: none;
   box-shadow: none;
   border-radius: 0.1875rem;
@@ -700,6 +701,9 @@ tbody.collapse.in {
 
 .Button--border {
   border: 1px solid #ccdae5; }
+
+.Button--icon {
+  vertical-align: -2px !important; }
 
 .Button--action {
   color: #fff;

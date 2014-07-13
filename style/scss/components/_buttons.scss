@@ -14,6 +14,7 @@
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
     background-color: $btnColor;
     color: $btnTxtColor;
+    fill: $btnTxtColor;
     border: none;
     box-shadow: none;
     border-radius: rem($btnRound);
@@ -32,6 +33,9 @@
 }
 .Button--border {
     border: 1px solid #ccdae5;
+}
+.Button--icon {
+    vertical-align: -2px !important;
 }
 
 .Button--action {
