@@ -30,6 +30,9 @@
 .Button:focus {
     outline: none;
 }
+.Button--border {
+    border: 1px solid #ccdae5;
+}
 
 .Button--action {
     color: #fff;
@@ -41,4 +44,11 @@
 }
 .Button--action:active {
     background-color: $btnColorActionActive;
+}
+
+.Button--small {
+    font-size: $btnSmallFontSize + px;
+    font-size: rem($btnSmallFontSize);
+    line-height: 34px;
+    line-height: rem(34);
 }

@@ -15,8 +15,8 @@
     width: rem(260);
     overflow-x: none;
     overflow-y: auto;
-    padding: 25px;
-    padding: rem(25);
+    padding: 25px 0;
+    padding: rem(25) 0;
     background: $bgcolorPrimary4;
 
     .sidr-inner {
@@ -40,15 +40,31 @@
         list-style: none;
     }
         .Offcanvas-menuItem {
-            border-bottom: 1px solid #727c85;
+            position: relative;
             margin: 0;
+            padding: 0 25px;
+            padding: 0 rem(25);
 
             > a {
+                position: relative;
+                z-index: 1;
                 display: block;
                 padding: 15px 0;
                 padding: rem(15) 0;
+                border-bottom: 1px solid #727c85;
                 color: #fff;
             }
 
+            &:hover,
+            &:active {
+                background-color: $bgcolorPrimary5;
+                z-index: 2;
+                margin-top: -1px;
+                padding-top: 1px;
 
+                > a {
+                    text-decoration: none;
+                    border-bottom: 1px solid transparent;
+                }
+            }
         }

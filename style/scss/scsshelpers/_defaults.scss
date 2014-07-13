@@ -81,6 +81,7 @@ $bgcolorPrimary1:      #00477f!default;
 $bgcolorPrimary2:      #f7f9fb!default;
 $bgcolorPrimary3:      #f5f8fa!default;
 $bgcolorPrimary4:      #5b656d!default;
+$bgcolorPrimary5:      #4b555c!default;
 
 // Dropdown Colors
 $dropdownColor1:  #0078c1!default;
@@ -109,10 +110,10 @@ $brdrColorDark: #b0b6bb!default;
 /**
  * Button-colors (in hex). Refer to relevant sections for their implementations.
  */
-$btnColor:                  #ffffff!default;
-$btnColorHover:             #d7dadd!default;
-$btnColorActive:            $color6!default;
-$btnTxtColor:               $color3!default;
+$btnColor:                  #f7f9fb!default;
+$btnColorHover:             darken($btnColor,10%)!default;
+$btnColorActive:            darken($btnColor,20%)!default;
+$btnTxtColor:               $color2!default;
 $btnTxtColorActive:         $color2!default;
 
 $btnColorDisabled:          #ebedee!default;
@@ -123,7 +124,7 @@ $btnColorActionHover:       #51a5e0!default;
 $btnColorActionActive:      #2c7fb8!default;
 
 $btnFontSize:               $h4-size!default;
-$btnSmallFontSize:          $milli-size!default;
+$btnSmallFontSize:          $base-font-size!default;
 
 $btnRound:                  3!default;
 
