@@ -20,17 +20,19 @@
     border-radius: rem($btnRound);
     @include vendor-prefix(user-select, none);
     @include vendor-prefix(transition, $brand-transition);
+
+    &:hover {
+        background-color: $btnColorHover;
+        text-decoration: none;
+    }
+    &:active {
+        background-color: $btnColorActive;
+    }
+    &:focus {
+        outline: none;
+    }
 }
-.Button:hover {
-    background-color: $btnColorHover;
-    text-decoration: none;
-}
-.Button:active {
-    background-color: $btnColorActive;
-}
-.Button:focus {
-    outline: none;
-}
+
 .Button--border {
     border: 1px solid #ccdae5;
 }
@@ -41,13 +43,15 @@
 .Button--action {
     color: #fff;
     background-color: $btnColorAction;
-}
-.Button--action:hover {
-    color: #fff;
-    background-color: $btnColorActionHover;
-}
-.Button--action:active {
-    background-color: $btnColorActionActive;
+
+    &:hover {
+        color: #fff;
+        background-color: $btnColorActionHover;
+    }
+
+    &:active {
+        background-color: $btnColorActionActive;
+    }
 }
 
 .Button--small {

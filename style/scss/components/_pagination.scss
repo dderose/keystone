@@ -1,0 +1,18 @@
+.Pagination {
+    text-align: center;
+}
+    .Pagination-button {
+        background-color: #fff;
+        border: 1px solid #c7d0d7;
+
+        &:hover {
+            background-color: #e5edf5;
+        }
+
+        &:active,
+        &.is-selected {
+            background-color: #338ecd;
+            border-color: #338ecd;
+            color: #fff;
+        }
+    }
