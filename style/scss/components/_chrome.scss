@@ -267,7 +267,81 @@ body {
 			}
 			.SubNav-image {
 				display: block;
+				max-width: 100%;
 				margin: 0 auto;
+			}
+			.SubNav-list {
+				font-size: 0;
+				margin: 0;
+			}
+				.SubNav-item {
+					display: inline-block;
+					width: 33.333%;
+					margin: 0;
+					padding: $base-spacing-unit + px;
+					padding: rem($base-spacing-unit);
+					text-align: center;
+					@include font-size($h4-size);
+					font-weight: normal;
+
+					@include rwd-b2() {
+						width: 25%;
+					}
+
+					@include rwd-b3() {
+						width: 20%;
+					}
+
+					@include rwd-b4() {
+						width: 16.66%;
+					}
+
+					@include rwd-b5() {
+						width: 12.5%;
+						// width: auto;
+						// margin: 0 $double-spacing-unit + px;
+						// margin: 0 rem($double-spacing-unit);
+						// padding: 0;
+					}
+				}
+		.SubNav-menu {
+			position: relative;
+			width: 100%;
+			margin: 0;
+			list-style-type: none;
+			text-align: center;
+		}
+			.SubNav-menuItem {
+				position: relative;
+				display: inline-block;
+				margin: 0;
+
+				> a {
+					position: relative;
+					display: block;
+					padding: 10px 15px 15px;
+					padding: rem(10) rem(15) rem(15);
+					color: #4d6f95;
+					font-weight: bold;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+				
+				.is-selected {
+					border: none;
+					bottom: auto;
+
+					&:after {
+						content: "";
+						position: relative;
+						display: block;
+						top: 12px;
+						margin-top: -10px;
+						border-bottom: 2px solid #f7a5b0;
+					}
+				}
 			}
 
 .PageFooter {
