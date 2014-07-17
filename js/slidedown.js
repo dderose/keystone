@@ -69,31 +69,27 @@
                 $this = this.$element;
 
             // Bind the trigger element for each dropdown to the open function
-            $this.on('click.Slidedown ', function (e) {
-                e.preventDefault();
+            $this.on('click.Slidedown', function (e) {
+                if(e.type !== 'touchstart') {
+                    e.preventDefault();
+                }
 
-                $.proxy(slidedown.toggle, slidedown)();
-            });
-
-             $this.on('touchstart.Slidedown', function (e) {
                 $.proxy(slidedown.toggle, slidedown)();
             });
 
             $(document).on('click.Slidedown', function (e) {
-                e.preventDefault();
-
                 if($(e.target).hasClass('js-slideDown') === false && $(e.target).closest('.SubNav').length === 0 && slidedown.state === 'open') {
                     $.proxy(slidedown.close, slidedown)();
                 }
             });
 
-            $(document).on('touchstart.Slidedown', function (e) {
-                e.preventDefault();
+            // $(document).on('touchstart.Slidedown', function (e) {
+            //     e.preventDefault();
 
-                if($(e.target).hasClass('js-slideDown') === false && $(e.target).closest('.SubNav').length === 0 && slidedown.state === 'open') {
-                    $.proxy(slidedown.close, slidedown)();
-                }
-            });
+            //     if($(e.target).hasClass('js-slideDown') === false && $(e.target).closest('.SubNav').length === 0 && slidedown.state === 'open') {
+            //         $.proxy(slidedown.close, slidedown)();
+            //     }
+            // });
         },
 
         // creates an optional, hidden <select> menu that mimicks the values of the dropdown
