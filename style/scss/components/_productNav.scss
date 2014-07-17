@@ -5,9 +5,11 @@
 		max-width: 1000px;
 		max-width: rem(1000);
 		margin: 0 auto;
+		text-align: center;
 
 		@include rwd-b1() {
 			padding: 0 4.5%;
+			text-align: left;
 		}
 
 		@include rwd-b5() {
@@ -17,8 +19,8 @@
 	.ProductNav-item {
 		position: relative;
 		display: inline-block;
-		padding: $half-spacing-unit + px 18px;
-		padding: rem($half-spacing-unit) rem(18);	
+		padding: $half-spacing-unit + px 16px;
+		padding: rem($half-spacing-unit) rem(16);	
 		font-size: $h4-size + px;
 		font-size: rem($h4-size);
 		font-weight: 400;
@@ -50,9 +52,5 @@
 				border-top: 10px solid #f9c7cd;
 				border-top: rem(10) solid #f9c7cd;
 			}
-		}
-
-		&:last-child {
-			padding-right: 0;
 		}
 	}
