@@ -51,4 +51,8 @@
 				border-top: rem(10) solid #f9c7cd;
 			}
 		}
+
+		&:last-child {
+			padding-right: 0;
+		}
 	}

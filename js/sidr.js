@@ -109,7 +109,7 @@
         if(displace){
           $body.addClass('sidr-animating').css({
             width: $body.width(),
-            position: 'absolute'
+            position: 'relative'
           }).animate(bodyAnimation, speed, function() {
             $(this).addClass(bodyClass);
           });
