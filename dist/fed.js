@@ -2183,14 +2183,13 @@
     Slidedown.prototype = {
         init: function() {
             var slidedown = this, $this = this.$element;
-            $this.on("click.Slidedown touchstart.Slidedown", function(e) {
-                e.preventDefault();
-                $.proxy(slidedown.toggle, slidedown)();
-            });
-            $(document).on("click.Slidedown touchstart.Slidedown", function(e) {
+            $this.on("click.Slidedown", function(e) {
                 if (e.type !== "touchstart") {
                     e.preventDefault();
                 }
+                $.proxy(slidedown.toggle, slidedown)();
+            });
+            $(document).on("click.Slidedown", function(e) {
                 if ($(e.target).hasClass("js-slideDown") === false && $(e.target).closest(".SubNav").length === 0 && slidedown.state === "open") {
                     $.proxy(slidedown.close, slidedown)();
                 }

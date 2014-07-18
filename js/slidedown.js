@@ -82,14 +82,6 @@
                     $.proxy(slidedown.close, slidedown)();
                 }
             });
-
-            // $(document).on('touchstart.Slidedown', function (e) {
-            //     e.preventDefault();
-
-            //     if($(e.target).hasClass('js-slideDown') === false && $(e.target).closest('.SubNav').length === 0 && slidedown.state === 'open') {
-            //         $.proxy(slidedown.close, slidedown)();
-            //     }
-            // });
         },
 
         // creates an optional, hidden <select> menu that mimicks the values of the dropdown
