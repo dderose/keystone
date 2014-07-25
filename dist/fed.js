@@ -2293,3 +2293,51 @@
         onframe();
     }
 })(document, document.getElementsByTagName("use"), window.requestAnimationFrame || window.setTimeout, {}, /MSIE\s[1-8]\b/.test(navigator.userAgent), /Trident\/[567]\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537, document.createElement("svg"), document.createElement("use"));
+
+(function($, window, document, undefined) {
+    "use strict";
+    var pluginName = "Tab", defaults = {};
+    function Tab(element, options) {
+        this.element = element;
+        this.$element = $(element);
+        this.$slidedown = $(".SlideDown");
+        this._data = this.$element.data();
+        this.settings = $.extend({}, defaults, options, this._data);
+        this._defaults = defaults;
+        this._name = pluginName;
+        this.init();
+    }
+    Tab.prototype = {
+        init: function() {
+            var tab = this, $this = this.$element;
+            $this.on("click.Tab", function(e) {
+                e.preventDefault();
+                $.proxy(tab.toggle, tab)(this);
+            });
+        },
+        toggle: function(o) {
+            $(".js-tabContent").addClass("u-visuallyHidden");
+            $(".js-tab").removeClass("is-selected");
+            var $tab = $(o);
+            $tab.addClass("is-selected");
+            var $tabContent = $(o.hash);
+            $tabContent.removeClass("u-visuallyHidden");
+        }
+    };
+    $.fn[pluginName] = function(options) {
+        var args = Array.prototype.slice.call(arguments);
+        this.each(function() {
+            var $this = $(this), data = $this.data("plugin_" + pluginName);
+            if (!data) {
+                $this.data("plugin_" + pluginName, data = new Tab(this, options));
+            }
+            if (options === "select") {
+                data.select(args[1]);
+            }
+            if (typeof options === "string") {
+                data[options]();
+            }
+        });
+        return this;
+    };
+})(jQuery, window, document);

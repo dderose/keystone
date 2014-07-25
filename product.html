@@ -30,6 +30,7 @@
                     <ul class="u-horizontalList u-marginFlush">
                         <li class="Topnav-item u-hide b2-u-showInlineBlock"><a href="#">Contact</a></li>
                         <li class="Topnav-item">
+                            <input type="search" class="u-inlineBlock" />
                             <a href="#"><svg class="Icon" viewBox="0 0 72 72.1">
                                 <use xlink:href="svg/icons.svg#Icon--magnifier"></use>
                             </svg></a>
@@ -84,12 +85,12 @@
 
                 <nav id="Nav-biomaterials" class="u-visuallyHidden js-slideDownMenu" role="navigation" aria-label="BioMaterials">
                     <ul class="SubNav-menu">
-                        <li class="SubNav-menuItem"><a href="#" class="is-selected js-tab">Membrane</a></li>
-                        <li class="SubNav-menuItem"><a href="#" class="js-tab">Bone Grafting</a></li>
-                        <li class="SubNav-menuItem"><a href="#" class="js-tab">Sutures</a></li>
+                        <li class="SubNav-menuItem"><a href="#membrane" class="is-selected js-tab">Membrane</a></li>
+                        <li class="SubNav-menuItem"><a href="#bone-grafting" class="js-tab">Bone Grafting</a></li>
+                        <li class="SubNav-menuItem"><a href="#sutures" class="js-tab">Sutures</a></li>
                     </ul>
 
-                    <ul class="SubNav-list" data-tab-id="membrane">
+                    <ul class="SubNav-list js-tabContent" id="membrane">
                         <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-acell.png" class="SubNav-image" alt="" />Acell Connexus</a></li>
                         <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-dynablast.png" class="SubNav-image" alt="" />DynaBlast</a></li>
                         <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-dynacore.png" class="SubNav-image" alt="" />DynaCore</a></li>
@@ -99,14 +100,14 @@
                         <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-ocsb.png" class="SubNav-image" alt="" />OCS-B</a></li>
                     </ul>
 
-                    <ul class="SubNav-list u-visuallyHidden" data-tab-id="bone-grafting">
+                    <ul class="SubNav-list u-visuallyHidden js-tabContent" id="bone-grafting">
                         <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-cytoplast.png" class="SubNav-image" alt="" />CytoPlast RTM</a></li>
                         <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-cytoplast.png" class="SubNav-image" alt="" />CytoPlast TI</a></li>
                         <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-dynamatrix.png" class="SubNav-image" alt="" />DynaMatrix</a></li>
                         <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-dynamatrix-plus.png" class="SubNav-image" alt="" />DynaMatrix Plus</a></li>
                     </ul>
 
-                    <ul class="SubNav-list u-visuallyHidden" data-tab-id="sutures">
+                    <ul class="SubNav-list u-visuallyHidden js-tabContent" id="sutures">
                         <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-cytoplast-suture.png" class="SubNav-image" alt="" />CytoPlast PTFE</a></li>
                     </ul>
                 </nav>
@@ -396,6 +397,7 @@
     <script src="js/accordion.js"></script>
     <script src="js/sidr.js"></script>
     <script src="js/slidedown.js"></script>
+    <script src="js/tab.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -407,6 +409,8 @@
         // if($('.js-slideDown').length) {
             $('.js-slideDown').Slidedown();
         // }
+        
+        $('.js-tab').Tab();
     </script>
 </body>
 </html>
