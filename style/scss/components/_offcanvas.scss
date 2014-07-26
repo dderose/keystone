@@ -17,7 +17,7 @@
     overflow-y: auto;
     padding: 25px 0;
     padding: rem(25) 0;
-    background: $bgcolorPrimary4;
+    background: $bgcolorPrimary5;
 
     .sidr-inner {
         padding: 0 0 15px;
@@ -38,33 +38,70 @@
 }
     .Offcanvas-menu {
         list-style: none;
+        border-top: 1px solid #3b454d;
+        border-bottom: 1px solid #576169;
     }
         .Offcanvas-menuItem {
             position: relative;
             margin: 0;
-            padding: 0 25px;
-            padding: 0 rem(25);
 
             > a {
                 position: relative;
                 z-index: 1;
                 display: block;
-                padding: 15px 0;
-                padding: rem(15) 0;
-                border-bottom: 1px solid #727c85;
+                padding: 15px;
+                padding: rem(15);
+                border-bottom: 1px solid #3b454d;
+                border-top: 1px solid #576169;
                 color: #fff;
+                font-weight: 400;
+
+                background-color: #3b454d;
+                border-left: 3px solid #f58f9c;
+
+                &.is-collapsed {
+                    background-color: transparent;
+                    border-left: 3px solid transparent;
+
+                    .Icon {
+                        -webkit-transform: rotate(180deg);
+                        transform: rotate(180deg);
+                    }
+                }
             }
 
             &:hover,
             &:active {
-                background-color: $bgcolorPrimary5;
-                z-index: 2;
-                margin-top: -1px;
-                padding-top: 1px;
+                background-color: #3b454d;
 
                 > a {
                     text-decoration: none;
-                    border-bottom: 1px solid transparent;
+
+                    &:hover {
+                        background-color: #3b454d;
+                        border-left: 3px solid #f58f9c;
+                    }
                 }
             }
         }
+    .Offcanvas-submenu {
+        width: auto;
+        list-style-type: none;
+        margin: 0;
+        padding-bottom: $half-spacing-unit + px;
+        padding-bottom: rem($half-spacing-unit);
+        background-color: #3b454d;
+        border-left: 3px solid #f58f9c;
+
+        .Offcanvas-submenuItem {
+            margin-left: $double-spacing-unit + px;
+            margin-left: rem($double-spacing-unit);
+
+            > a {
+                position: relative;
+                display: block;
+                color: #fff;
+                font-weight: 300;
+            }
+        }
+    }
