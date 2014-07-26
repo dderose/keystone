@@ -1837,6 +1837,9 @@ label {
       .Offcanvas-menuItem > a.is-collapsed .Icon {
         -webkit-transform: rotate(180deg);
         transform: rotate(180deg); }
+    .Offcanvas-menuItem > a.is-selected {
+      background-color: #3b454d;
+      border-left: 3px solid #f58f9c; }
   .Offcanvas-menuItem:hover, .Offcanvas-menuItem:active {
     background-color: #3b454d; }
     .Offcanvas-menuItem:hover > a, .Offcanvas-menuItem:active > a {
@@ -1844,6 +1847,8 @@ label {
       .Offcanvas-menuItem:hover > a:hover, .Offcanvas-menuItem:active > a:hover {
         background-color: #3b454d;
         border-left: 3px solid #f58f9c; }
+  .Offcanvas-menuItem .Icon {
+    fill: #fff; }
 
 .Offcanvas-submenu {
   width: auto;
