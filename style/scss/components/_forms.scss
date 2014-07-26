@@ -65,3 +65,50 @@
 			}
 		}
 	}
+
+	.Form-inputGroup {
+		display: table;
+		width: 100%;
+		border-collapse: separate;
+		margin-bottom: $base-line-height + px;
+		margin-bottom: rem($base-line-height);
+		padding: 2px;
+		padding: rem(2);
+		border: 1px solid #b0b6bb;
+		border-radius: rem($brand-round);
+		box-shadow: inset 0 rem(1) rem(2) rgba(0,0,0,.1);
+
+		input[type="text"],
+		input[type="email"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="url"],
+		input[type="number"] {
+			display: table-cell;
+			width: 100%;
+			padding: 8px 15px;
+			padding: rem(8) rem(15);
+			border: none;
+			box-shadow: none;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+		.Form-inputAddOn {
+			display: table-cell;
+			width: 1%;
+			vertical-align: middle;
+			border: none;
+			background-color: transparent;
+
+			&:first-child {
+				padding-left: 20px;
+				padding-left: rem(20);
+			}
+			&:last-child {
+				padding-right: 20px;
+				padding-right: rem(20);
+			}
+		}

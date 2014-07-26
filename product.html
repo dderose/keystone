@@ -30,8 +30,14 @@
                     <ul class="u-horizontalList u-marginFlush">
                         <li class="Topnav-item u-hide b2-u-showInlineBlock"><a href="#">Contact</a></li>
                         <li class="Topnav-item">
-                            <input type="search" class="u-inlineBlock" />
-                            <a href="#"><svg class="Icon" viewBox="0 0 72 72.1">
+                            <!-- <div class="Form-inputGroup Topnav-search js-searchInput" tabindex="1">
+                                <input type="text" id="search" />
+                                <span class="Form-inputAddOn"><svg class="Icon">
+                                    <use xlink:href="svg/icons.svg#Icon--magnifier"></use>
+                                </svg></span>
+                            </div> -->
+
+                            <a href="#" class="js-search" data-searchID="main-search"><svg class="Icon" viewBox="0 0 72 72.1">
                                 <use xlink:href="svg/icons.svg#Icon--magnifier"></use>
                             </svg></a>
                         </li>
@@ -45,6 +51,17 @@
             </div>
         </div>
     </header>
+
+    <div id="main-search" class="Searchbar is-closed">
+        <div class="Searchbar-inner">
+            <div class="Form-inputGroup Topnav-search js-searchInput" tabindex="1">
+                <input type="text" id="search" />
+                <span class="Form-inputAddOn"><svg class="Icon">
+                    <use xlink:href="svg/icons.svg#Icon--magnifier"></use>
+                </svg></span>
+            </div>
+        </div>
+    </div>
 
     <nav class="MainNav">
         <div class="MainNav-inner">
@@ -143,6 +160,8 @@
     </section>
 
     <nav class="ProductNav">
+        <div class="addthis_sharing_toolbox ProductNav-share u-hide b2-u-show"></div>
+
         <div class="ProductNav-inner">
             <a href="#" class="ProductNav-item is-selected">Why Genesis</a>
             <a href="#" class="ProductNav-item">Surgical</a>
@@ -398,6 +417,7 @@
     <script src="js/sidr.js"></script>
     <script src="js/slidedown.js"></script>
     <script src="js/tab.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53d1bcfa25deca76"></script>
 
     <script>
         $(document).ready(function() {
