@@ -23,14 +23,14 @@
                 <a href="#slideOutNav" class="js-offCanvas Topnav-menuButton">Menu</a>
             </div>
             <div class="PageHeader-column PageHeader-column--logo">
-                <h1 class="PageHeader-logo"><span>Keystone Dental</span></h1>
+                <a href="index.html"><h1 class="PageHeader-logo"><span>Keystone Dental</span></h1></a>
             </div>
             <div class="PageHeader-column">
                 <nav class="Topnav" data-spy="affix" data-offset-top="150">
                     <ul class="u-horizontalList u-marginFlush">
                         <li class="Topnav-item u-hide b2-u-showInlineBlock"><a href="#">Contact</a></li>
                         <li class="Topnav-item">
-                            <a href="#"><svg class="Icon">
+                            <a href="#" class="js-search" data-searchID="main-search"><svg class="Icon" viewBox="0 0 72 72.1">
                                 <use xlink:href="svg/icons.svg#Icon--magnifier"></use>
                             </svg></a>
                         </li>
@@ -45,48 +45,80 @@
         </div>
     </header>
 
+    <div id="main-search" class="Searchbar is-closed">
+        <div class="Searchbar-inner">
+            <div class="Form-inputGroup Topnav-search js-searchInput" tabindex="1">
+                <input type="text" id="search" />
+                <span class="Form-inputAddOn"><svg class="Icon">
+                    <use xlink:href="svg/icons.svg#Icon--magnifier"></use>
+                </svg></span>
+            </div>
+        </div>
+    </div>
+
     <nav class="MainNav">
         <div class="MainNav-inner">
             <div class="Grid u-marginFlush u-clearfix">
                 <div class="Grid-item b4-u-sizeShrinkWrapLeft">
-                    <h1 class="PageHeader-logo"><span>Keystone Dental</span></h1>
+                    <a href="index.html"><h1 class="PageHeader-logo"><span>Keystone Dental</span></h1></a>
                 </div>
                 
                 <div class="Grid-item b4-u-sizeFill">
                     <ul class="MainNav-list u-horizontalList">
                         <li class="MainNav-listItem"><a href="#Nav-implant-systems" class="js-slideDown">Implant Systems</a></li>
                         <li class="MainNav-listItem"><a href="#Nav-biomaterials" class="js-slideDown">Biomaterials</a></li>
-                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="#">Events</a></li>
-                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="#" class="is-selected">Literature</a></li>
-                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="#">Resources</a></li>
-                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="#">Company</a></li>
+                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="events.html">Events</a></li>
+                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="literature.html" class="is-selected">Literature</a></li>
+                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="resources.html">Resources</a></li>
+                        <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="company.html">Company</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="SubNav SlideDown u-visuallyHidden" data-state="closed">
+        <div class="SubNav SlideDown" data-state="closed">
             <div class="SubNav-inner">
                 <nav id="Nav-implant-systems" class="u-visuallyHidden js-slideDownMenu" role="navigation" aria-label="Implant Systems">
-                    <ul class="u-horizontalList u-marginFlush">
-                        <li class="u-marginBottomFlush"><a href="#">MAX</a></li>
-                        <li class="u-marginBottomFlush"><a href="#">CoAxis</a></li>
-                        <li class="u-marginBottomFlush"><a href="#">Genesis</a></li>
-                        <li class="u-marginBottomFlush"><a href="#">Prima</a></li>
-                        <li class="u-marginBottomFlush"><a href="#">TriNex</a></li>
-                        <li class="u-marginBottomFlush"><a href="#">OCT</a></li>
-                        <li class="u-marginBottomFlush"><a href="#">Restore</a></li>
+                    <ul class="SubNav-list">
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/implant-coaxis.png" class="SubNav-image" alt="" />CoAxis</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/implant-exhex.png" class="SubNav-image" alt="" />ExHex</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/implant-genesis.png" class="SubNav-image" alt="" />Genesis</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/implant-max.png" class="SubNav-image" alt="" />MAX</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/implant-oct.png" class="SubNav-image" alt="" />OCT</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/implant-prima.png" class="SubNav-image" alt="" />Prima</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/implant-renova.png" class="SubNav-image" alt="" />Renova</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/implant-restore.png" class="SubNav-image" alt="" />Restore</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/implant-stage1.png" class="SubNav-image" alt="" />Stage 1</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/implant-trinex.png" class="SubNav-image" alt="" />TriNex</a></li>
                     </ul>
                 </nav>
 
                 <nav id="Nav-biomaterials" class="u-visuallyHidden js-slideDownMenu" role="navigation" aria-label="BioMaterials">
-                    <ul class="u-horizontalList u-marginFlush">
-                        <li class="u-marginBottomFlush"><a href="#">MAX</a></li>
-                        <li class="u-marginBottomFlush"><a href="#">CoAxis</a></li>
-                        <li class="u-marginBottomFlush"><a href="#">Genesis</a></li>
-                        <li class="u-marginBottomFlush"><a href="#">Prima</a></li>
-                        <li class="u-marginBottomFlush"><a href="#">TriNex</a></li>
-                        <li class="u-marginBottomFlush"><a href="#">OCT</a></li>
+                    <ul class="SubNav-menu">
+                        <li class="SubNav-menuItem"><a href="#membrane" class="is-selected js-tab">Membrane</a></li>
+                        <li class="SubNav-menuItem"><a href="#bone-grafting" class="js-tab">Bone Grafting</a></li>
+                        <li class="SubNav-menuItem"><a href="#sutures" class="js-tab">Sutures</a></li>
+                    </ul>
+
+                    <ul class="SubNav-list js-tabContent" id="membrane">
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-acell.png" class="SubNav-image" alt="" />Acell Connexus</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-dynablast.png" class="SubNav-image" alt="" />DynaBlast</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-dynacore.png" class="SubNav-image" alt="" />DynaCore</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-dynagraft-d.png" class="SubNav-image" alt="" />DynaGraft-D</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-in-oss.png" class="SubNav-image" alt="" />In-Oss</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-mbcp.png" class="SubNav-image" alt="" />MBCP</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-ocsb.png" class="SubNav-image" alt="" />OCS-B</a></li>
+                    </ul>
+
+                    <ul class="SubNav-list u-visuallyHidden js-tabContent" id="bone-grafting">
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-cytoplast.png" class="SubNav-image" alt="" />CytoPlast RTM</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-cytoplast.png" class="SubNav-image" alt="" />CytoPlast TI</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-dynamatrix.png" class="SubNav-image" alt="" />DynaMatrix</a></li>
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-dynamatrix-plus.png" class="SubNav-image" alt="" />DynaMatrix Plus</a></li>
+                    </ul>
+
+                    <ul class="SubNav-list u-visuallyHidden js-tabContent" id="sutures">
+                        <li class="SubNav-item"><a href="#"><img src="images/navigation/biomaterials-cytoplast-suture.png" class="SubNav-image" alt="" />CytoPlast PTFE</a></li>
                     </ul>
                 </nav>
             </div>
@@ -285,6 +317,7 @@
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/chrome.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/sidr.js"></script>
     <script src="js/slidedown.js"></script>
