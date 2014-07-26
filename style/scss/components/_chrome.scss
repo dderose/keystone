@@ -86,44 +86,7 @@ body {
 				font-size: $centi-size + px;
 				font-size: rem($centi-size);
 			}
-		}
-		// .is-enabled {
-
-		// 	.Topnav-search {
-		// 		display: inline-table !important;
-		// 		transition: all 0.5s ease;
-		// 	}
-		// 	.js-search {
-		// 		display: none;
-		// 	}
-		// }
-
-		.Searchbar {
-			position: absolute;
-			z-index: 102;
-			width: 100%;
-			background-color: $bgcolorPrimary3;
-			text-align: right;
-			box-shadow: 0 1px 1px rgba(0,0,0,.18);
-
-			transition-property: all;
-			transition-duration: .4s;
-			transition-timing-function: cubic-bezier(1, 0, 0.5, 1);
-			max-height: 200px;
-			overflow-y: hidden;
-
-			&.is-closed {
-				max-height: 0;
-			}
-		}
-			.Searchbar-inner {
-				max-width: 1200px;
-				max-width: rem(1200);
-				margin: 0 auto;
-				padding: $half-spacing-unit + px;
-				padding: rem($half-spacing-unit);
-			}
-			
+		}	
 
 	.PageHeader-logo {
 		width: rem(112.5);
@@ -310,18 +273,28 @@ body {
 			margin-top: -1px;
 			width: 100%;
 			background-color: #f5f8fa;
-			padding: 20px 0;
-			padding: rem(20) 0;
 			box-shadow: 0 1px 1px rgba(0,0,0,.18);
 
 			@include rwd-b2() {
 				margin-top: -22px;
+			}
+
+			transition-property: all;
+			transition-duration: .4s;
+			transition-timing-function: cubic-bezier(1, 0, 0.5, 1);
+			max-height: 0;
+			overflow-y: hidden;
+
+			&.is-open {
+				max-height: 500px;
 			}
 		}
 			.SubNav-inner {
 				max-width: 1200px;
 				max-width: rem(1200);
 				margin: 0 auto;
+				padding: 20px 0;
+				padding: rem(20) 0;
 			}
 			.SubNav-image {
 				display: block;

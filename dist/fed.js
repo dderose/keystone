@@ -96,6 +96,11 @@
     });
 }();
 
+$(document).on("click", ".js-search", function() {
+    var searchID = $(this).data("searchid");
+    $("#" + searchID).toggleClass("is-closed");
+});
+
 (function($, window, document, undefined) {
     "use strict";
     var pluginName = "Dropdown", defaults = {
@@ -2197,25 +2202,22 @@
         },
         toggle: function() {
             var $Slidedown = this.$element;
-            this.$slidedownMenu.addClass("u-visuallyHidden");
             if ($Slidedown.hasClass("is-active")) {
                 $Slidedown.removeClass("is-active");
-                this.$slidedown.addClass("u-visuallyHidden");
-                this.$slidedown.attr("data-SlideDown-state", "closed");
+                this.$slidedown.removeClass("is-open");
                 this.state = "closed";
             } else {
+                this.$slidedownMenu.addClass("u-visuallyHidden");
                 $(".js-slideDown").removeClass("is-active");
                 $Slidedown.addClass("is-active");
                 $(this.element.hash).removeClass("u-visuallyHidden");
-                this.$slidedown.removeClass("u-visuallyHidden");
-                this.$slidedown.attr("data-SlideDown-state", "open");
+                this.$slidedown.addClass("is-open");
                 this.state = "open";
             }
         },
         close: function() {
             $(".js-slideDown").removeClass("is-active");
-            $(".js-slideDown").attr("data-SlideDown-state", "closed");
-            $(".SubNav").addClass("u-visuallyHidden");
+            $(".SubNav").removeClass("is-open");
             this.state = "closed";
         }
     };
@@ -2341,8 +2343,3 @@
         return this;
     };
 })(jQuery, window, document);
-
-$(document).on("click", ".js-search", function() {
-    var searchID = $(this).data("searchid");
-    $("#" + searchID).toggleClass("is-closed");
-});

@@ -83,7 +83,7 @@
             </div>
         </div>
 
-        <div class="SubNav SlideDown u-visuallyHidden" data-state="closed">
+        <div class="SubNav SlideDown" data-state="closed">
             <div class="SubNav-inner">
                 <nav id="Nav-implant-systems" class="u-visuallyHidden js-slideDownMenu" role="navigation" aria-label="Implant Systems">
                     <ul class="SubNav-list">
@@ -413,6 +413,7 @@
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/chrome.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/sidr.js"></script>
     <script src="js/slidedown.js"></script>
@@ -426,11 +427,13 @@
             });
         });
 
-        // if($('.js-slideDown').length) {
+        if($('.js-slideDown').length) {
             $('.js-slideDown').Slidedown();
-        // }
+        }
         
-        $('.js-tab').Tab();
+        if($('.js-tab').length) {
+            $('.js-tab').Tab();
+        }
     </script>
 </body>
 </html>

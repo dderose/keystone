@@ -88,28 +88,24 @@
         toggle: function () {
             var $Slidedown = this.$element;
 
-            this.$slidedownMenu.addClass('u-visuallyHidden');
-
             if($Slidedown.hasClass('is-active')) {
                 $Slidedown.removeClass('is-active');
-                this.$slidedown.addClass('u-visuallyHidden');
-                this.$slidedown.attr('data-SlideDown-state','closed');
+                this.$slidedown.removeClass('is-open');
                 this.state = 'closed';
             } else {
+                this.$slidedownMenu.addClass('u-visuallyHidden');
+                
                 $('.js-slideDown').removeClass('is-active');
                 $Slidedown.addClass('is-active');
                 $(this.element.hash).removeClass('u-visuallyHidden');
-                this.$slidedown.removeClass('u-visuallyHidden');
-                // this.$slidedown.css('margin-bottom', this.$slidedown.outerHeight() * -1 + 10);
-                this.$slidedown.attr('data-SlideDown-state','open');
+                this.$slidedown.addClass('is-open');
                 this.state = 'open';
             }
         },
 
         close: function() {
             $('.js-slideDown').removeClass('is-active');
-            $('.js-slideDown').attr('data-SlideDown-state','closed');
-            $('.SubNav').addClass('u-visuallyHidden');
+            $('.SubNav').removeClass('is-open');
             this.state = 'closed';
         }
     };
