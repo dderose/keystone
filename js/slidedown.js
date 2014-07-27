@@ -82,6 +82,10 @@
                     $.proxy(slidedown.close, slidedown)();
                 }
             });
+
+            $('.SubNav-item').on('click.Slidedown', 'a', function () {
+                $.proxy(slidedown.close, slidedown)();
+            });
         },
 
         // creates an optional, hidden <select> menu that mimicks the values of the dropdown

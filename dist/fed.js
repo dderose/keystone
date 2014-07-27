@@ -101,6 +101,10 @@ $(document).on("click", ".js-search", function() {
     $("#" + searchID).toggleClass("is-closed");
 });
 
+$(".Offcanvas-submenuItem").on("click", "a", function() {
+    $.sidr("close", "slideOutNav");
+});
+
 (function($, window, document, undefined) {
     "use strict";
     var pluginName = "Dropdown", defaults = {
@@ -2198,6 +2202,9 @@ $(document).on("click", ".js-search", function() {
                 if ($(e.target).hasClass("js-slideDown") === false && $(e.target).closest(".SubNav").length === 0 && slidedown.state === "open") {
                     $.proxy(slidedown.close, slidedown)();
                 }
+            });
+            $(".SubNav-item").on("click.Slidedown", "a", function() {
+                $.proxy(slidedown.close, slidedown)();
             });
         },
         toggle: function() {
