@@ -96,12 +96,12 @@
     });
 }();
 
-$(document).on("click", ".js-search", function() {
+$(document).on("click.keystone", ".js-search", function() {
     var searchID = $(this).data("searchid");
     $("#" + searchID).toggleClass("is-closed");
 });
 
-$(".Offcanvas-submenuItem").on("click", "a", function() {
+$(".Offcanvas-submenuItem").on("click.keystone", "a", function() {
     $.sidr("close", "slideOutNav");
 });
 
@@ -794,6 +794,141 @@ $(".Offcanvas-submenuItem").on("click", "a", function() {
         }
     };
 })(jQuery);
+
+(function($, window, document, undefined) {
+    "use strict";
+    var pluginName = "modal", defaults = {
+        modalTemplate: $('<div class="Modal Modal--hidden"><div class="Modal-inner"><button title="Close (Esc)" type="button" class="Icon--close Modal-close js-modalClose"></button></div></div>'),
+        disableClose: false,
+        autoOpen: false
+    };
+    function Modal(element, options) {
+        this.element = element;
+        this.$element = $(element);
+        this.$modal = null;
+        this.state = "hidden";
+        this.settings = $.extend({}, defaults, options);
+        this._defaults = defaults;
+        this._name = pluginName;
+        this.options = options || {};
+        this.init();
+    }
+    Modal.prototype = {
+        init: function() {
+            var modal = this, $this = this.$element;
+            $.proxy(modal.create, modal)($this);
+            if (this.settings.autoOpen === true) {
+                this.show($this);
+            }
+            if ($this.hasClass("js-modal") === true) {
+                $this.on("click.modal touchstart.modal", function(e) {
+                    e.preventDefault();
+                    modal.$modal = $($(this).data("modal-id"));
+                    $.proxy(modal.show, modal)();
+                });
+            }
+            $(document).on("click.modal touchstart.modal", ".js-modalClose", function(e) {
+                if (modal.state === "shown") {
+                    $.proxy(modal.hide, modal)();
+                }
+            });
+            $(document).on("keydown.modal", function(e) {
+                if (e.which === 27 && modal.state === "shown") {
+                    e.preventDefault();
+                    $.proxy(modal.hide, modal)();
+                }
+            });
+            $(document).on("click.modal touchstart.modal", ".Modal", function(e) {
+                if (modal.state === "shown" && $(e.target).closest(".Modal-inner").length === 0) {
+                    $.proxy(modal.hide, modal)();
+                }
+            });
+        },
+        show: function() {
+            this.$modal.removeClass("Modal--hidden");
+            this.state = "shown";
+            this.lockScroll();
+        },
+        hide: function() {
+            this.$modal.addClass("Modal--hidden");
+            this.state = "hidden";
+            this.unlockScroll();
+        },
+        destroy: function(obj) {
+            var $this = $(obj);
+            var $isChild = $this.closest(".Modal");
+            if ($isChild.length > 0) {
+                $isChild.remove();
+            } else {
+                $this.remove();
+            }
+        },
+        disableClose: function(obj) {},
+        lockScroll: function() {
+            var $html = $("html");
+            var $body = $("body");
+            var initWidth = $body.outerWidth();
+            var initHeight = $body.outerHeight();
+            var scrollPosition = [ self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft, self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop ];
+            $html.data("scroll-position", scrollPosition);
+            $html.data("previous-overflow", $html.css("overflow"));
+            $html.css("overflow", "hidden");
+            window.scrollTo(scrollPosition[0], scrollPosition[1]);
+            var marginR = $body.outerWidth() - initWidth;
+            var marginB = $body.outerHeight() - initHeight;
+            $body.css({
+                "margin-right": marginR,
+                "margin-bottom": marginB
+            });
+        },
+        unlockScroll: function() {
+            var $html = $("html");
+            var $body = $("body");
+            $html.css("overflow", $html.data("previous-overflow"));
+            var scrollPosition = $html.data("scroll-position");
+            window.scrollTo(scrollPosition[0], scrollPosition[1]);
+        },
+        create: function($obj) {
+            if ($obj.hasClass("Modal") === true) {
+                this.$modal = $obj;
+                this.$modal.appendTo("body");
+            } else if ($obj.closest(".js-modal").length === 0) {
+                var $modalTemplate = this.settings.modalTemplate.clone();
+                $modalTemplate.find(".Modal-inner").append($obj);
+                this.$modal = $modalTemplate;
+                this.$modal.appendTo("body");
+            }
+            if (this.$element.data("async") === true) {
+                var $this = this;
+                var id = this.$element.data("modal-id");
+                var content = this.settings.modalTemplate.clone().attr("id", id.slice(1));
+                $.ajax({
+                    url: this.element.href,
+                    type: "get",
+                    dataType: "html",
+                    async: true,
+                    success: function(data) {
+                        content.find(".Modal-inner").append($(data));
+                        $("body").append(content);
+                    }
+                });
+            }
+        }
+    };
+    $.fn[pluginName] = function(options) {
+        var args = Array.prototype.slice.call(arguments);
+        this.each(function() {
+            var $this = $(this), data = $this.data("plugin_" + pluginName);
+            if (!data) {
+                $this.data("plugin_" + pluginName, data = new Modal(this, options));
+            }
+            if (typeof options === "string") {
+                data[options](this);
+            }
+        });
+        return this;
+    };
+})(jQuery, window, document);
 
 (function($) {
     var sidrMoving = false, sidrOpened = false;
