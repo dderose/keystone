@@ -1,0 +1,105 @@
+.Table {
+	width: 100%;
+
+	caption {
+		margin-bottom: 6px;
+		text-align: left;
+		@include font-size($h3-size);
+		font-weight: 400;
+	}
+
+	th {
+		text-align: left;
+		color: $tableHeaderText;
+		font-weight: normal;
+	}
+
+	tr {
+    	> th,
+    	> td {
+    		display: block;
+    		padding: $half-spacing-unit + px $base-spacing-unit + px 0;
+            padding: rem($half-spacing-unit) rem($base-spacing-unit) 0;
+
+            &:before {
+            	display: block;
+            	content: attr(data-title);
+            	font-weight: bold;
+            	line-height: 1.25;
+            }
+
+            &:first-child {
+        		background-color: $tableBackground;
+        		padding: $half-spacing-unit + px $base-spacing-unit + px;
+            	padding: rem($half-spacing-unit) rem($base-spacing-unit);
+            }
+
+            &:last-child {
+            	padding-bottom: $half-spacing-unit + px;
+            	padding-bottom: rem($half-spacing-unit);
+            }
+
+            @include rwd-b2() {
+            	display: table-cell;
+            	padding: $half-spacing-unit + px $base-spacing-unit + px;
+            	padding: rem($half-spacing-unit) rem($base-spacing-unit);
+
+            	&:before {
+            		content: none;
+            	}
+
+           		&:first-child {
+           			background-color: transparent;
+           		}
+            }
+    	}
+    }
+}
+    
+    .Table--border {
+        border: 1px solid $tableBrdr;
+    }
+
+    .Table--cellBorders {
+
+    	tr {
+    		border-top: 1px solid $tableBrdr;
+
+    		@include rwd-b2() {
+	    		th,
+	    		td {
+	        		border-right: 1px solid $tableBrdr;
+
+	        		&:last-child {
+		        		border-right: none;
+	        		}
+	    		}
+	    	}
+    	}
+    }
+
+    .Table-head {
+    	display: none;
+        background-color: $tableBackground;
+
+        > tr {
+            background-color: $tableBackground;
+        }
+
+        @include rwd-b2() {
+        	display: table-header-group;
+        }
+    }
+
+	.Table-heading {
+		display: block;
+		width: 100%;
+		padding-bottom: 10px;
+        padding-bottom: rem(10);
+		border-bottom: 1px solid $color1;
+        border-bottom: rem(1) solid $color1;
+		@include font-size($milli-size);
+		text-transform: uppercase;
+		font-weight: 600;
+		color: $color1;
+	}

@@ -2000,6 +2000,79 @@ label {
   padding: 10px;
   padding: 0.625rem; }
 
+.Table {
+  width: 100%; }
+  .Table caption {
+    margin-bottom: 6px;
+    text-align: left;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 400; }
+  .Table th {
+    text-align: left;
+    color: #4d6f95;
+    font-weight: normal; }
+  .Table tr > th, .Table tr > td {
+    display: block;
+    padding: 10px 20px 0;
+    padding: 0.625rem 1.25rem 0; }
+    .Table tr > th:before, .Table tr > td:before {
+      display: block;
+      content: attr(data-title);
+      font-weight: bold;
+      line-height: 1.25; }
+    .Table tr > th:first-child, .Table tr > td:first-child {
+      background-color: #f5f8fa;
+      padding: 10px 20px;
+      padding: 0.625rem 1.25rem; }
+    .Table tr > th:last-child, .Table tr > td:last-child {
+      padding-bottom: 10px;
+      padding-bottom: 0.625rem; }
+    @media (min-width: 38.75em) {
+      .Table tr > th, .Table tr > td {
+        display: table-cell;
+        padding: 10px 20px;
+        padding: 0.625rem 1.25rem; }
+        .Table tr > th:before, .Table tr > td:before {
+          content: none; }
+        .Table tr > th:first-child, .Table tr > td:first-child {
+          background-color: transparent; } }
+
+.Table--border {
+  border: 1px solid #e2e5e7; }
+
+.Table--cellBorders tr {
+  border-top: 1px solid #e2e5e7; }
+  @media (min-width: 38.75em) {
+    .Table--cellBorders tr th, .Table--cellBorders tr td {
+      border-right: 1px solid #e2e5e7; }
+      .Table--cellBorders tr th:last-child, .Table--cellBorders tr td:last-child {
+        border-right: none; } }
+
+.Table-head {
+  display: none;
+  background-color: #f5f8fa; }
+  .Table-head > tr {
+    background-color: #f5f8fa; }
+  @media (min-width: 38.75em) {
+    .Table-head {
+      display: table-header-group; } }
+
+.Table-heading {
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid #67737c;
+  border-bottom: 0.0625rem solid #67737c;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2.33333;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #67737c; }
+
 .u-border {
   border: 1px solid #dee4eb;
   border: 0.0625rem solid #dee4eb; }
