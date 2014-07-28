@@ -444,6 +444,7 @@
     <script src="js/dropdown.js"></script>
     <script src="js/sidr.js"></script>
     <script src="js/slidedown.js"></script>
+    <script src="js/tab.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53d1bcfa25deca76"></script>
 
     <script>
@@ -460,6 +461,10 @@
                 name: 'slideOutNav',
                 side: 'left'
             });
+
+             if($('.js-tab').length) {
+                $('.js-tab').Tab();
+            }
         });
     </script>
 </body>

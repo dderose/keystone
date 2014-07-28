@@ -408,6 +408,7 @@
     <script src="js/sidr.js"></script>
     <script src="js/slidedown.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/tab.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53d1bcfa25deca76"></script>
 
     <script>
@@ -422,7 +423,10 @@
             });
 
             $('.js-modal').modal();
-            // var modal = $('#modal-filters').fedModal();
+            
+             if($('.js-tab').length) {
+                $('.js-tab').Tab();
+            }
         });
     </script>
 </body>

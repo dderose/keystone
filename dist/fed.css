@@ -1649,11 +1649,7 @@ label {
       font-size: 1.5rem; } }
 
 .HeroUnit--product {
-  background-color: #dfebf6;
-  border-top: 1px solid #dee4eb;
-  border-top: 0.0625rem solid #dee4eb;
-  border-bottom: 1px solid #dee4eb;
-  border-bottom: 0.0625rem solid #dee4eb; }
+  background-color: #f5f8fa; }
   .HeroUnit--product .HeroUnit-inner {
     max-width: 1000px;
     max-width: 62.5rem; }
@@ -1847,6 +1843,7 @@ label {
 .Modal-fullScreen .Modal-inner {
   width: 100%;
   max-width: 100%;
+  min-width: 1px;
   height: 100%;
   max-height: 100%;
   border-radius: 0;
