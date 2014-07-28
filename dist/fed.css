@@ -888,10 +888,6 @@ tbody.collapse.in {
   margin: 0 auto;
   padding: 20px 0;
   padding: 1.25rem 0; }
-  @media (min-width: 38.75em) {
-    .Category-image {
-      margin-top: -70px;
-      margin-top: -4.375rem; } }
 
 .Category-image--product {
   margin-top: 0;
