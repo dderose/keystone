@@ -1987,7 +1987,7 @@ label {
 .ProductNav {
   width: 100%;
   border-bottom: 5px solid #f9c7cd;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);
   z-index: 103; }
 
 .ProductNav-inner {
@@ -2006,10 +2006,10 @@ label {
 .ProductNav-item {
   position: relative;
   display: inline-block;
-  padding: 10px 16px;
-  padding: 0.625rem 1rem;
-  font-size: 18px;
-  font-size: 1.125rem;
+  padding: 10px 12px;
+  padding: 0.625rem 0.75rem;
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: #5b656d; }
   @media (min-width: 48.0625em) {

@@ -1,7 +1,7 @@
 .ProductNav {
 	width: 100%;
 	border-bottom: 5px solid #f9c7cd;
-	background-color: #fff;
+	background-color: rgba(255,255,255,.95);
 	z-index: 103;
 }
 	.ProductNav-inner {
@@ -22,10 +22,10 @@
 	.ProductNav-item {
 		position: relative;
 		display: inline-block;
-		padding: $half-spacing-unit + px 16px;
-		padding: rem($half-spacing-unit) rem(16);	
-		font-size: $h4-size + px;
-		font-size: rem($h4-size);
+		padding: $half-spacing-unit + px 12px;
+		padding: rem($half-spacing-unit) rem(12);
+		font-size: $base-font-size + px;
+		font-size: rem($base-font-size);
 		font-weight: 400;
 		color: $color4;
 
