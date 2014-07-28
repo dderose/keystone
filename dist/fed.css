@@ -717,6 +717,15 @@ tbody.collapse.in {
   line-height: 34px;
   line-height: 2.125rem; }
 
+.Button--full {
+  border-radius: 0;
+  width: 100%; }
+
+.Button--sticky-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0; }
+
 .Slider {
   width: 100%;
   max-width: 75rem;

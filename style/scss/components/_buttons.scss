@@ -60,3 +60,14 @@
     line-height: 34px;
     line-height: rem(34);
 }
+
+.Button--full {
+    border-radius: 0;
+    width: 100%;
+}
+
+.Button--sticky-bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
