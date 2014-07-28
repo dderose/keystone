@@ -77,7 +77,7 @@
                 $.proxy(slidedown.toggle, slidedown)();
             });
 
-            $(document).on('click.Slidedown', function (e) {
+            $(document).on('click.Slidedown touchstart.Slidedown', function (e) {
                 if($(e.target).hasClass('js-slideDown') === false && $(e.target).closest('.SubNav').length === 0 && slidedown.state === 'open') {
                     $.proxy(slidedown.close, slidedown)();
                 }
