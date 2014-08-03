@@ -70,6 +70,11 @@
 	.Category-image--product {
 		margin-top: 0;
 		padding: 0;
+
+		&+.Category-contentHeading {
+			margin-top: $base-spacing-unit + px;
+			margin-top: rem($base-spacing-unit);
+		}
 	}
 	.Category-caption {
 		font-size: $micro-size + px;

@@ -901,6 +901,9 @@ tbody.collapse.in {
 .Category-image--product {
   margin-top: 0;
   padding: 0; }
+  .Category-image--product + .Category-contentHeading {
+    margin-top: 20px;
+    margin-top: 1.25rem; }
 
 .Category-caption {
   font-size: 10px;
@@ -1150,7 +1153,8 @@ body {
 
 .SubNav-list {
   font-size: 0;
-  margin: 0; }
+  margin: 0;
+  text-align: center; }
 
 .SubNav-item {
   display: inline-block;

@@ -26,7 +26,7 @@
                 <a href="index.html"><h1 class="PageHeader-logo"><span>Keystone Dental</span></h1></a>
             </div>
             <div class="PageHeader-column">
-                <nav class="Topnav" data-spy="affix" data-offset-top="150">
+                <nav class="Topnav">
                     <ul class="u-horizontalList u-marginFlush">
                         <li class="Topnav-item u-hide b2-u-showInlineBlock"><a href="#">Contact</a></li>
                         <li class="Topnav-item">
@@ -488,7 +488,6 @@
     <script src="js/sidr.js"></script>
     <script src="js/slidedown.js"></script>
     <script src="js/tab.js"></script>
-    <!--<script src="js/stickUp.js"></script>-->
     <script src="js/jquery.sticky.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53d1bcfa25deca76"></script>
 
@@ -498,7 +497,9 @@
                 name: 'slideOutNav'
             });
 
-            $('.ProductNav').sticky({topSpacing:0});
+            if($('.ProductNav').length) {
+                $('.ProductNav').sticky({topSpacing:0});
+            }
 
             if($('.js-slideDown').length) {
                 $('.js-slideDown').Slidedown();
