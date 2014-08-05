@@ -8,6 +8,18 @@
 	padding: 50px 0 20px;
 	padding: rem(50) 0 rem(20);
 }
+.Category-section--centered {
+	.Grid-item {
+		vertical-align: middle;
+	}
+}
+.Category-section--links {
+	border-top: 1px solid $brdrColor;
+	padding-top: $double-spacing-unit + px !important;
+	padding-top: rem($double-spacing-unit) !important;
+	margin-top: $double-spacing-unit*1.25 + px !important;
+	margin-top: rem($double-spacing-unit*1.25) !important;
+}
 	.Category-title {
 		margin-bottom: 40px;
 		margin-bottom: rem(40);

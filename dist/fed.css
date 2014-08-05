@@ -834,6 +834,16 @@ tbody.collapse.in {
   padding: 50px 0 20px;
   padding: 3.125rem 0 1.25rem; }
 
+.Category-section--centered .Grid-item {
+  vertical-align: middle; }
+
+.Category-section--links {
+  border-top: 1px solid #dee4eb;
+  padding-top: 40px !important;
+  padding-top: 2.5rem !important;
+  margin-top: 50px !important;
+  margin-top: 3.125rem !important; }
+
 .Category-title {
   margin-bottom: 40px;
   margin-bottom: 2.5rem;
@@ -1547,6 +1557,17 @@ label {
     padding-right: 20px;
     padding-right: 1.25rem; }
 
+.Form-required {
+  position: relative; }
+  .Form-required:before {
+    content: "\2217";
+    position: absolute;
+    top: -4px;
+    top: -0.25rem;
+    left: -8px;
+    left: -0.5rem;
+    color: red; }
+
 /**
  * Grid wrapper
  */
@@ -1634,7 +1655,7 @@ label {
       margin-left: 0; } }
 
 .HeroUnit-image--product {
-  width: 100%;
+  max-width: 100%;
   margin-left: 0; }
 
 .HeroUnit-content {
@@ -1979,6 +2000,8 @@ label {
   text-align: center; }
 
 .Pagination-button {
+  display: none;
+  margin: 0 2px;
   background-color: #fff;
   border: 1px solid #c7d0d7; }
   .Pagination-button:hover {
@@ -1987,6 +2010,11 @@ label {
     background-color: #338ecd;
     border-color: #338ecd;
     color: #fff; }
+  .Pagination-button:first-child, .Pagination-button:last-child {
+    display: inline-block; }
+  @media (min-width: 38.75em) {
+    .Pagination-button {
+      display: inline-block; } }
 
 .ProductNav {
   width: 100%;

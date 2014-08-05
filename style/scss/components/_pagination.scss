@@ -2,6 +2,8 @@
     text-align: center;
 }
     .Pagination-button {
+        display: none;
+        margin: 0 2px;
         background-color: #fff;
         border: 1px solid #c7d0d7;
 
@@ -14,5 +16,14 @@
             background-color: #338ecd;
             border-color: #338ecd;
             color: #fff;
+        }
+
+        &:first-child,
+        &:last-child {
+            display: inline-block;
+        }
+
+        @include rwd-b2() {
+            display: inline-block;
         }
     }

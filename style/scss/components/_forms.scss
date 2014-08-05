@@ -112,3 +112,21 @@
 				padding-right: rem(20);
 			}
 		}
+
+// Required Fields
+//
+// A field may be marked as required.
+
+.Form-required {
+	position: relative;
+
+	&:before {
+		content: "\2217";
+		position: absolute;
+		top: -4px;
+		top: rem(-4);
+		left: -8px;
+		left: rem(-8);
+		color: red;
+	}
+}

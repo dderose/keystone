@@ -418,7 +418,9 @@
                 side: 'left'
             });
 
-            $('.js-modal').modal();
+            if($('.js-modal').length) {
+                $('.js-modal').modal();
+            }
             
              if($('.js-tab').length) {
                 $('.js-tab').Tab();
