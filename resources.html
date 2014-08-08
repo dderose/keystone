@@ -189,14 +189,19 @@
 
             <div class="Grid Grid--gutterDouble">
                 <div class="Grid-item b3-u-size1of3 u-hide b3-u-showInlineBlock">
-                    <button class="Accordion-item is-collapsed collapse in" data-toggle="collapse" data-target="#product">Product <svg class="Icon Icon--large u-floatRight"><use xlink:href="svg/icons.svg#Icon--caretDown"></use></svg></button>
+                    <button class="Accordion-item" data-toggle="collapse" data-target="#product">Product <svg class="Icon u-floatRight" style="margin-top:7px;"><use xlink:href="svg/icons.svg#Icon--arrowDown"></use></svg></button>
 
-                    <div id="product" class="collapse">
+                    <div id="product" class="collapse in">
                         <ul class="List--checkbox">
                             <li class="List-item">
-                                <input type="checkbox" class="Form-checkbox" id="implant-systems" /> <label for="implant-systems">Implant Systems <span class="List-item-count">(324)</span></label>
 
-                                <ul class="List--checkbox">
+                                <div class="u-tableCell">
+                                    <span class="is-collapsed Accordion-item Accordion-item--plain u-floatRight" data-toggle="collapse" data-target="#implants"><svg class="Icon Icon--small"><use xlink:href="svg/icons.svg#Icon--arrowDown"></use></svg></span>
+                                    <input type="checkbox" class="Form-checkbox" id="implant-systems-checkbox" /> 
+                                    <label for="implant-systems-checkbox">Implant Systems <span class="List-item-count">(324)</span></label>
+                                </div>
+
+                                <ul class="List--checkbox collapse" id="implants">
                                     <li class="List-item"><input type="checkbox" class="Form-checkbox" id="MAX" /> <label for="MAX">MAX <span class="List-item-count">(12)</span></label></li>
                                     <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Co-Axis" /> <label for="Co-Axis">Co-Axis <span class="List-item-count">(75)</span></label></li>
                                     <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Genesis" /> <label for="Genesis">Genesis <span class="List-item-count">(34)</span></label></li>
@@ -208,14 +213,14 @@
                                     <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Other" /> <label for="Other">Other <span class="List-item-count">(17)</span></label></li>
                                 </ul>
                             </li>
-                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="bone-grafting" /> <label for="bone-grafting">Bone Grafting <span class="List-item-count">(57)</span></label></li>
+                            <li class="List-item"><input type="checkbox" class="Form-checkbox" id="bone-grafting-checkbox" /> <label for="bone-grafting-checkbox">Bone Grafting <span class="List-item-count">(57)</span></label></li>
                             <li class="List-item"><input type="checkbox" class="Form-checkbox" id="membranes" /> <label for="membranes">Membranes <span class="List-item-count">(76)</span></label></li>
                         </ul>
                     </div>
 
-                    <button class="Accordion-item is-collapsed" data-toggle="collapse" data-target="#type">Type <svg class="Icon Icon--large u-floatRight"><use xlink:href="svg/icons.svg#Icon--caretDown"></use></svg></button>
+                    <button class="Accordion-item" data-toggle="collapse" data-target="#type">Type <svg class="Icon u-floatRight"><use xlink:href="svg/icons.svg#Icon--arrowDown"></use></svg></button>
 
-                    <div id="type" class="collapse">
+                    <div id="type" class="collapse in">
                         <ul class="List--checkbox">
                             <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Clinical-Articles" /> <label for="Clinical-Articles">Clinical Articles <span class="List-item-count">(18)</span></label></li>
                             <li class="List-item"><input type="checkbox" class="Form-checkbox" id="Powerpoint" /> <label for="Powerpoint">Powerpoint <span class="List-item-count">(12)</span></label></li>
@@ -359,14 +364,18 @@
 
             <h1 class="Modal-heading">Filter By</h1>
 
-            <button class="Accordion-item is-collapsed collapse in" data-toggle="collapse" data-target="#product2">Product <svg class="Icon Icon--large u-floatRight"><use xlink:href="svg/icons.svg#Icon--caretDown"></use></svg></button>
+            <button class="Accordion-item" data-toggle="collapse" data-target="#product2">Product <svg class="Icon Icon--large u-floatRight"><use xlink:href="svg/icons.svg#Icon--caretDown"></use></svg></button>
 
-            <div id="product2" class="collapse">
+            <div id="product2" class="collapse in">
                 <ul class="List--checkbox">
                     <li class="List-item">
-                        <input type="checkbox" class="Form-checkbox" id="rwd-implant-systems" /> <label for="rwd-implant-systems">Implant Systems <span class="List-item-count">(324)</span></label>
+                        <div class="u-tableCell">
+                            <span class="is-collapsed Accordion-item Accordion-item--plain u-floatRight" data-toggle="collapse" data-target="#implants-rwd"><svg class="Icon Icon--small"><use xlink:href="svg/icons.svg#Icon--arrowDown"></use></svg></span>
+                            <input type="checkbox" class="Form-checkbox" id="rwd-implant-systems" /> 
+                            <label for="rwd-implant-systems">Implant Systems <span class="List-item-count">(324)</span></label>
+                        </div>
 
-                        <ul class="List--checkbox">
+                        <ul class="List--checkbox collapse" id="implants-rwd">
                             <li class="List-item"><input type="checkbox" class="Form-checkbox" id="rwd-MAX" /> <label for="rwd-MAX">MAX <span class="List-item-count">(12)</span></label></li>
                             <li class="List-item"><input type="checkbox" class="Form-checkbox" id="rwd-Co-Axis" /> <label for="rwd-Co-Axis">Co-Axis <span class="List-item-count">(75)</span></label></li>
                             <li class="List-item"><input type="checkbox" class="Form-checkbox" id="rwd-Genesis" /> <label for="rwd-Genesis">Genesis <span class="List-item-count">(34)</span></label></li>
@@ -383,9 +392,9 @@
                 </ul>
             </div>
 
-            <button class="Accordion-item is-collapsed" data-toggle="collapse" data-target="#type2">Type <svg class="Icon Icon--large u-floatRight"><use xlink:href="svg/icons.svg#Icon--caretDown"></use></svg></button>
+            <button class="Accordion-item" data-toggle="collapse" data-target="#type2">Type <svg class="Icon Icon--large u-floatRight"><use xlink:href="svg/icons.svg#Icon--caretDown"></use></svg></button>
 
-            <div id="type2" class="collapse">
+            <div id="type2" class="collapse in">
                 <ul class="List--checkbox">
                     <li class="List-item"><input type="checkbox" class="Form-checkbox" id="rwd-Clinical-Articles" /> <label for="rwd-Clinical-Articles">Clinical Articles <span class="List-item-count">(18)</span></label></li>
                     <li class="List-item"><input type="checkbox" class="Form-checkbox" id="rwd-Powerpoint" /> <label for="rwd-Powerpoint">Powerpoint <span class="List-item-count">(12)</span></label></li>

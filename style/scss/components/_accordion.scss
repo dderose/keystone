@@ -34,3 +34,15 @@
 			}
 		}
 	}
+	.Accordion-item--plain {
+		width: auto;
+		margin: 0;
+		padding: 1px 5px;
+		padding: rem(1) rem(5);
+		background-color: transparent;
+		cursor: pointer;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}

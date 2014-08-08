@@ -2,6 +2,10 @@ body {
 	font-weight: 300;
 }
 
+svg {
+	pointer-events: none;
+}
+
 .PageHeader {
 	position: relative;
 	width: 100%;
@@ -291,8 +295,8 @@ body {
 			}
 		}
 			.SubNav-inner {
-				max-width: 1200px;
-				max-width: rem(1200);
+				// max-width: 1200px;
+				// max-width: rem(1200);
 				margin: 0 auto;
 				padding: 20px 0;
 				padding: rem(20) 0;
@@ -306,6 +310,10 @@ body {
 				font-size: 0;
 				margin: 0;
 				text-align: center;
+
+				@include rwd-b2() {
+					white-space: nowrap;
+				}
 			}
 				.SubNav-item {
 					display: inline-block;

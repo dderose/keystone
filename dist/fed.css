@@ -589,6 +589,16 @@ blockquote {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg); }
 
+.Accordion-item--plain {
+  width: auto;
+  margin: 0;
+  padding: 1px 5px;
+  padding: 0.0625rem 0.3125rem;
+  background-color: transparent;
+  cursor: pointer; }
+  .Accordion-item--plain:hover {
+    background-color: transparent; }
+
 
 .Article-heading {
   margin-bottom: 10px;
@@ -927,6 +937,9 @@ tbody.collapse.in {
 body {
   font-weight: 300; }
 
+svg {
+  pointer-events: none; }
+
 .PageHeader {
   position: relative;
   width: 100%;
@@ -1150,8 +1163,6 @@ body {
     max-height: 700px; }
 
 .SubNav-inner {
-  max-width: 1200px;
-  max-width: 75rem;
   margin: 0 auto;
   padding: 20px 0;
   padding: 1.25rem 0; }
@@ -1165,6 +1176,9 @@ body {
   font-size: 0;
   margin: 0;
   text-align: center; }
+  @media (min-width: 38.75em) {
+    .SubNav-list {
+      white-space: nowrap; } }
 
 .SubNav-item {
   display: inline-block;
@@ -1715,6 +1729,12 @@ label {
   width: 2rem;
   height: 32px;
   height: 2rem; }
+
+.Icon--small {
+  width: 12px;
+  width: 0.75rem;
+  height: 12px;
+  height: 0.75rem; }
 
 .LinkBar {
   margin-bottom: 40px;
