@@ -1634,8 +1634,17 @@ label {
   font-size: 1rem; }
 
 .HeroUnit {
+  position: relative;
   width: 100%;
   background-color: #d2e4f3; }
+
+.HeroUnit-gradient {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 33px;
+  height: 2.0625rem;
+  background: linear-gradient(to right, #f5f8fa, #f5f8fa 30%, #f5f8fa 30%, #e9f0f5 100%); }
 
 .HeroUnit-inner {
   width: 100%;
