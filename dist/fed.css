@@ -841,8 +841,12 @@ tbody.collapse.in {
   content: "\2192"; }
 
 .Category {
-  padding: 50px 0 20px;
-  padding: 3.125rem 0 1.25rem; }
+  padding: 30px 0 20px;
+  padding: 1.875rem 0 1.25rem; }
+  @media (min-width: 38.75em) {
+    .Category {
+      padding: 50px 0 20px;
+      padding: 3.125rem 0 1.25rem; } }
 
 .Category-section--centered .Grid-item {
   vertical-align: middle; }
@@ -851,8 +855,7 @@ tbody.collapse.in {
   border-top: 1px solid #dee4eb;
   padding-top: 40px !important;
   padding-top: 2.5rem !important;
-  margin-top: 50px !important;
-  margin-top: 3.125rem !important; }
+  margin-top: 0; }
 
 .Category-title {
   margin-bottom: 40px;
@@ -890,6 +893,7 @@ tbody.collapse.in {
   font-size: 32px;
   font-size: 2rem;
   line-height: 1.75;
+  line-height: 1.25;
   margin-bottom: 0;
   font-weight: normal;
   color: #5b656d; }
@@ -1106,16 +1110,18 @@ svg {
     border-right: 1px solid #dee4eb; }
   .MainNav-listItem:nth-child(2) > a {
     border-right: none; }
-  .MainNav-listItem .is-active {
-    background-color: #f5f8fa;
-    border-bottom: 1px solid transparent; }
   .MainNav-listItem .is-selected {
     background: #fff;
     border-right: 1px solid #dee4eb;
     border-bottom: 1px solid #fff;
     bottom: -1px;
     bottom: -0.0625rem; }
-    @media (min-width: 38.75em) { }
+    @media (min-width: 38.75em) {
+      .MainNav-listItem .is-selected {
+        background-color: #f5f8fa; } }
+  .MainNav-listItem .is-active {
+    background-color: #f5f8fa;
+    border-bottom: 1px solid transparent; }
   @media (min-width: 38.75em) {
     .MainNav-listItem {
       width: auto;
@@ -1163,6 +1169,8 @@ svg {
     max-height: 700px; }
 
 .SubNav-inner {
+  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
   padding: 20px 0;
   padding: 1.25rem 0; }
@@ -1176,9 +1184,6 @@ svg {
   font-size: 0;
   margin: 0;
   text-align: center; }
-  @media (min-width: 38.75em) {
-    .SubNav-list {
-      white-space: nowrap; } }
 
 .SubNav-item {
   display: inline-block;
@@ -1653,14 +1658,16 @@ label {
   margin: 0 auto; }
 
 .HeroUnit-heading {
-  font-size: 38px;
-  font-size: 2.375rem;
-  line-height: 1.47368;
-  font-weight: 300;
-  text-align: center; }
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.75;
+  line-height: 1.5;
+  font-weight: 300; }
   @media (min-width: 38.75em) {
     .HeroUnit-heading {
-      text-align: left; } }
+      font-size: 38px;
+      font-size: 2.375rem;
+      line-height: 1.47368; } }
   @media (min-width: 62.5em) {
     .HeroUnit-heading {
       font-size: 56px;
@@ -1669,12 +1676,15 @@ label {
 
 .HeroUnit-image {
   max-height: 300px;
+  max-width: 100%;
   vertical-align: top;
-  line-height: 0;
-  margin-left: -125px; }
+  line-height: 0; }
+  @media (min-width: 48.0625em) {
+    .HeroUnit-image {
+      max-width: none;
+      margin-left: -125px; } }
   @media (min-width: 62.5em) {
     .HeroUnit-image {
-      max-height: 100%;
       margin-left: 0; } }
 
 .HeroUnit-image--product {
@@ -1692,11 +1702,7 @@ label {
   color: #394147;
   font-weight: 300;
   font-size: 18px;
-  font-size: 1.125rem;
-  text-align: justify; }
-  @media (min-width: 38.75em) {
-    .HeroUnit-content {
-      text-align: left; } }
+  font-size: 1.125rem; }
 
 .HeroUnit-content--product {
   font-size: 16px;
@@ -1712,8 +1718,8 @@ label {
     max-width: 1000px;
     max-width: 62.5rem; }
   .HeroUnit--product .HeroUnit-content {
-    padding: 20px 20px 0 20px;
-    padding: 1.25rem 1.25rem 0 1.25rem; }
+    padding: 20px 20px;
+    padding: 1.25rem 1.25rem; }
     @media (min-width: 62.5em) {
       .HeroUnit--product .HeroUnit-content {
         padding: 50px 50px 0 50px;
@@ -2048,6 +2054,7 @@ label {
 .ProductNav {
   width: 100%;
   border-bottom: 5px solid #f9c7cd;
+  background-color: #fff;
   background-color: rgba(255, 255, 255, 0.95);
   z-index: 103; }
 
@@ -2073,12 +2080,20 @@ label {
   font-size: 1rem;
   font-weight: 400;
   color: #5b656d; }
-  @media (min-width: 48.0625em) {
+  @media (min-width: 38.75em) {
     .ProductNav-item {
-      margin-right: 100px;
-      margin-right: 6.25rem;
+      margin-right: 32px;
+      margin-right: 2rem;
       font-size: 20px;
       font-size: 1.25rem; } }
+  @media (min-width: 48.0625em) {
+    .ProductNav-item {
+      margin-right: 78px;
+      margin-right: 4.875rem; } }
+  @media (min-width: 62.5em) {
+    .ProductNav-item {
+      margin-right: 100px;
+      margin-right: 6.25rem; } }
   .ProductNav-item.is-selected:after {
     content: " ";
     position: absolute;
@@ -2104,10 +2119,17 @@ label {
 .References {
   max-width: 1000px;
   max-width: 62.5rem;
-  margin: 20px auto;
-  margin: 1.25rem auto;
+  margin: 20px auto 0;
+  margin: 1.25rem auto 0;
   padding: 20px;
   padding: 1.25rem; }
+  .References ol {
+    margin-left: 0; }
+    .References ol li {
+      font-size: 12px;
+      font-size: 0.75rem;
+      line-height: 2.33333;
+      line-height: 1.5; }
 
 .References-heading {
   font-size: 13px;

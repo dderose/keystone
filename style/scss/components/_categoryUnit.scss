@@ -5,8 +5,13 @@
 // Styleguide 8.0.0
 
 .Category {
-	padding: 50px 0 20px;
-	padding: rem(50) 0 rem(20);
+	padding: 30px 0 20px;
+	padding: rem(30) 0 rem(20);
+
+	@include rwd-b2() {
+		padding: 50px 0 20px;
+		padding: rem(50) 0 rem(20);
+	}
 }
 .Category-section--centered {
 	.Grid-item {
@@ -17,8 +22,7 @@
 	border-top: 1px solid $brdrColor;
 	padding-top: $double-spacing-unit + px !important;
 	padding-top: rem($double-spacing-unit) !important;
-	margin-top: $double-spacing-unit*1.25 + px !important;
-	margin-top: rem($double-spacing-unit*1.25) !important;
+	margin-top: 0;
 }
 	.Category-title {
 		margin-bottom: 40px;
@@ -52,6 +56,7 @@
 	}
 	.Category-sectionTitle {
 		@include font-size($h1-size);
+		line-height: 1.25;
 		margin-bottom: 0;
 		font-weight: normal;
 		color: $color4;

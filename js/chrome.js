@@ -4,6 +4,6 @@ $(document).on('click.keystone', '.js-search', function(e) {
     $('#' + searchID).toggleClass('is-closed');
 });
 
-$('.Offcanvas-submenuItem').on('click.keystone', 'a', function() {
+$('.Offcanvas').on('click.keystone', '.js-offCanvasItem', function() {
 	$.sidr('close', 'slideOutNav');	
 });

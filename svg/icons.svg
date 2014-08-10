@@ -33,11 +33,11 @@
 	</symbol>
 
 	<symbol id="Icon--arrowUp" viewBox="251.5 560.7 612 376.6">
-		<path fill="#5E7B9D" d="M557.5,560.7l306,376.6h-612L557.5,560.7z"/>
+		<path fill="#94a0ab" d="M557.5,560.7l306,376.6h-612L557.5,560.7z"/>
 	</symbol>
 
 	<symbol id="Icon--arrowDown" viewBox="251.5 560.7 612 376.6">
-		<path fill="#5E7B9D" d="M557.5,937.3l-306-376.6h612L557.5,937.3z"/>
+		<path fill="#94a0ab" d="M557.5,937.3l-306-376.6h612L557.5,937.3z"/>
 	</symbol>
 
 	<symbol id="Icon--filter" viewBox="0 0 100 100">

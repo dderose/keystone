@@ -1,10 +1,19 @@
 .References {
 	max-width: 1000px;
 	max-width: rem(1000);
-	margin: $base-spacing-unit + px auto;
-	margin: rem($base-spacing-unit) auto;
+	margin: $base-spacing-unit + px auto 0;
+	margin: rem($base-spacing-unit) auto 0;
 	padding: $base-spacing-unit + px;
 	padding: rem($base-spacing-unit);
+
+	ol {
+		margin-left: 0;
+
+		li {
+			@include font-size(12);
+			line-height: 1.5;
+		}
+	}
 }
 	.References-heading {
 		@include font-size(13);
