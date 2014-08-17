@@ -33,11 +33,12 @@
 		text-align: center;
 	}
 	.Category-title--product {
-		@include font-size($h2-size);
+		@include font-size($h1-size);
 		line-height: 1.25;
+		text-align: left;
 
 		@include rwd-b2() {
-			@include font-size($h1-size);
+			text-align: center;
 		}
 	}
 	.Category-section {
@@ -46,7 +47,6 @@
 		max-width: rem(1000);
 		margin: 0 auto;
 		padding: 0 4.5%;
-		// padding: 0 rem(20);
 
 		&:last-child {
 			border-bottom: none !important;

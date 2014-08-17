@@ -868,15 +868,14 @@ tbody.collapse.in {
   text-align: center; }
 
 .Category-title--product {
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 32px;
+  font-size: 2rem;
   line-height: 1.75;
-  line-height: 1.25; }
+  line-height: 1.25;
+  text-align: left; }
   @media (min-width: 38.75em) {
     .Category-title--product {
-      font-size: 32px;
-      font-size: 2rem;
-      line-height: 1.75; } }
+      text-align: center; } }
 
 .Category-section {
   width: 100%;
