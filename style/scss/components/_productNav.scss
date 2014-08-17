@@ -31,15 +31,15 @@
 		color: $color4;
 
 		@include rwd-b2() {
-			margin-right: 24px;
-			margin-right: rem(24);
+			margin-right: 12px;
+			margin-right: rem(12);
 			font-size: $h3-size + px;
 			font-size: rem($h3-size);
 		}
 
 		@include rwd-b3() {
-			margin-right: 78px;
-			margin-right: rem(78);
+			margin-right: 55px;
+			margin-right: rem(55);
 		}
 
 		@include rwd-b4() {

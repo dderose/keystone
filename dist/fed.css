@@ -2149,14 +2149,14 @@ label {
   color: #5b656d; }
   @media (min-width: 38.75em) {
     .ProductNav-item {
-      margin-right: 24px;
-      margin-right: 1.5rem;
+      margin-right: 12px;
+      margin-right: 0.75rem;
       font-size: 20px;
       font-size: 1.25rem; } }
   @media (min-width: 48.0625em) {
     .ProductNav-item {
-      margin-right: 78px;
-      margin-right: 4.875rem; } }
+      margin-right: 55px;
+      margin-right: 3.4375rem; } }
   @media (min-width: 62.5em) {
     .ProductNav-item {
       margin-right: 100px;
