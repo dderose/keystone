@@ -243,6 +243,7 @@ svg {
 					&:after {
 						content: "";
 						position: relative;
+						z-index: 3;
 						display: block;
 						top: 12px;
 						margin-top: -10px;
@@ -254,6 +255,20 @@ svg {
 					z-index: 11;
 					background-color: #f5f8fa;
 					bottom: auto;
+
+					&:before {
+						content: "";
+						position: absolute;
+						z-index: 2;
+						bottom: -10px;
+						bottom: rem(-10);
+						width: 100%;
+						height: 10px;
+						height: rem(10);
+						margin-left: -15px;
+						margin-left: rem(-15);
+						background-color: #f5f8fa;
+					}
 				}	
 
 				> a {
@@ -460,3 +475,40 @@ svg {
 			@include font-size($centi-size);
 		}
 	}
+
+.addthis_toolbox {
+	font-size: 0;
+
+	> a {
+		font-size: 16px;
+		font-size: rem(16);
+	}
+}
+
+.addthis_toolbox--product {
+	margin: -$half-spacing-unit + px 0 $half-spacing-unit + px;
+	margin: rem(-$half-spacing-unit) 0 rem($half-spacing-unit);
+
+	@include rwd-b2() {
+		margin: 0;
+	}
+}
+
+.addthis_default_style .addthis_separator,
+.addthis_default_style .at300b,
+.addthis_default_style .at300bo,
+.addthis_default_style .at300m,
+.addthis_default_style .at300bs {
+	float: none !important;
+	display: inline-block !important;
+	padding: 0 5px !important;
+	line-height: 1 !important;
+
+	&:first-child {
+		padding-left: 0 !important;
+	}
+
+	&:last-of-type {
+		padding-right: 0 !important;
+	}
+}

@@ -63,7 +63,7 @@
                 
                 <div class="Grid-item b4-u-sizeFill">
                     <ul class="MainNav-list u-horizontalList">
-                        <li class="MainNav-listItem"><a href="#Nav-implant-systems" class="js-slideDown">Implant Systems</a></li>
+                        <li class="MainNav-listItem"><a href="#Nav-implant-systems" class="is-selected js-slideDown">Implant Systems</a></li>
                         <li class="MainNav-listItem"><a href="#Nav-biomaterials" class="js-slideDown">Biomaterials</a></li>
                         <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="events.html">Events</a></li>
                         <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="literature.html">Literature</a></li>
@@ -188,7 +188,13 @@
 
     <nav class="ProductNav">
         <div class="ProductNav-inner">
-            <div class="addthis_sharing_toolbox ProductNav-share u-hide b2-u-show"></div>
+            <div data-addthis-toolbox data-url="/contact" id="companyToolBox" class="addthis_toolbox addthis_toolbox addthis_default_style addthis_32x32_style ProductNav-share u-hide b2-u-show">
+                <a class="addthis_button_email"></a>
+                <a class="addthis_button_linkedin"></a>
+                <a class="addthis_button_google_plusone_share"></a>
+                <a class="addthis_button_twitter"></a>
+            </div>
+
             <a href="#" class="ProductNav-item is-selected">Why Genesis</a>
             <a href="#" class="ProductNav-item">Surgical</a>
             <a href="#" class="ProductNav-item">Prosthetics</a>
@@ -197,6 +203,13 @@
 
     <section class="Category">
         <div class="Category-section">
+            <div data-addthis-toolbox data-url="/contact" id="companyToolBox" class="addthis_toolbox addthis_toolbox--product addthis_default_style addthis_32x32_style b2-u-hide u-textRight">
+                <a class="addthis_button_email"></a>
+                <a class="addthis_button_linkedin"></a>
+                <a class="addthis_button_google_plusone_share"></a>
+                <a class="addthis_button_twitter"></a>
+            </div>
+
             <h1 class="Category-title Category-title--product">The Genesis Dental Implant System</h1>
         </div>
 
@@ -357,12 +370,22 @@
                     <h2 class="Category-sectionSubTitle u-textCenter">DynaMatrix Facilitates Tissue Ingrowth</h2>
                     
                     <img src="images/demo-dyna1.jpg" alt="" class="Category-image Category-image--product" />
+
+                    <span class="Category-sectionCaption">
+                        <p>Grey shadow of implant results in poor esthetic outcomes</p>
+                        <p>Photo courtesy of Dr. David Garber, DMD</p>
+                    </span>
                 </div>
 
                 <div class="Grid-item b3-u-size1of2">
                     <h2 class="Category-sectionSubTitle u-textCenter">DynaMatrix Facilitates Angiogenesis</h2>
 
                     <img src="images/demo-dyna2.jpg" alt="" class="Category-image Category-image--product" />
+
+                    <span class="Category-sectionCaption">
+                        <p>AnaTite pink collar and abutment creates a natural esthetic hue</p>
+                        <p>Photo courtesy of Dr. Francesco Pieri, DDS, PhD</p>
+                    </span>
                 </div>
             </div>
         </article>

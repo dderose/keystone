@@ -63,7 +63,7 @@
                 
                 <div class="Grid-item b4-u-sizeFill">
                     <ul class="MainNav-list u-horizontalList">
-                        <li class="MainNav-listItem"><a href="#Nav-implant-systems" class="js-slideDown">Implant Systems</a></li>
+                        <li class="MainNav-listItem"><a href="#Nav-implant-systems" class="js-slideDown is-selected">Implant Systems</a></li>
                         <li class="MainNav-listItem"><a href="#Nav-biomaterials" class="js-slideDown">Biomaterials</a></li>
                         <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="events.html" class="is-selected">Events</a></li>
                         <li class="MainNav-listItem u-hide b2-u-showInlineBlock"><a href="literature.html">Literature</a></li>
@@ -174,14 +174,34 @@
 
     <section class="PageSection">
         <div class="PageSection-inner">
-            <a href="#eventSlideOut" class="Button Button--small Button--border js-offCanvas Event-menuButton b3-u-hide u-floatRight"><svg class="Icon Button--icon"><use xlink:href="svg/icons.svg#Icon--filter"></use></svg> Filter</a>
+            <div class="Dropdown Dropdown--block js-dropdown u-clearfix is-closed u-marginBottomHalf b3-u-hide">
+                <button type="button" class="Dropdown-toggle js-dropdownTrigger">
+                    <span>Filter By:</span>
+                    <svg class="Icon Icon--large">
+                        <use xlink:href="svg/icons.svg#Icon--caretDown"></use>
+                    </svg>
+                </button>
 
-            <div class="u-table">
-                <div class="u-tableCell u-sizeFillAlt">
+                <ul class="Dropdown-menu">
+                    <li class="Dropdown-menu-item"><a href="#">All</a></li>
+                    <li class="Dropdown-menu-item"><a href="#">Trade Shows</a></li>
+                    <li class="Dropdown-menu-item"><a href="#">Seminars</a></li>
+                    <li class="Dropdown-menu-item"><a href="#">Webinars</a></li>
+                </ul>
+            </div>
+
+
+            <div class="b3-u-table u-marginBottom">
+                <div class="b3-u-tableCell u-valignMiddle">
                     <h1 class="PageSection-heading">Events</h1>
                 </div>
-                <div class="u-tableCell u-textNoWrap u-valignMiddle">
-                    <div class="addthis_sharing_toolbox"></div>
+                <div class="b3-u-tableCell u-valignMiddle">
+                    <div data-addthis-toolbox data-url="/literature" id="literatureToolBox" class="addthis_toolbox addthis_default_style addthis_32x32_style b3-u-floatRight">
+                        <a class="addthis_button_email"></a>
+                        <a class="addthis_button_linkedin"></a>
+                        <a class="addthis_button_google_plusone_share"></a>
+                        <a class="addthis_button_twitter"></a>
+                    </div>
                 </div>
             </div>
 
@@ -391,9 +411,11 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/chrome.js"></script>
     <script src="js/accordion.js"></script>
+    <script src="js/dropdown.js"></script>
     <script src="js/sidr.js"></script>
     <script src="js/slidedown.js"></script>
     <script src="js/tab.js"></script>
+    <script src="js/modal.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53d1bcfa25deca76"></script>
 
     <script>
@@ -406,13 +428,17 @@
                 name: 'slideOutNav',
                 side: 'left'
             });
-            $('.Event-menuButton').sidr({
-                name: 'eventSlideOut',
-                side: 'right'
-            });
 
-             if($('.js-tab').length) {
+            if($('.js-modal').length) {
+                $('.js-modal').modal();
+            }
+
+            if($('.js-tab').length) {
                 $('.js-tab').Tab();
+            }
+
+            if($('.js-dropdown').length) {
+                $('.js-dropdown').Dropdown();
             }
         });
     </script>

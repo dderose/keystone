@@ -868,9 +868,15 @@ tbody.collapse.in {
   text-align: center; }
 
 .Category-title--product {
-  font-size: 32px;
-  font-size: 2rem;
-  line-height: 1.75; }
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.75;
+  line-height: 1.25; }
+  @media (min-width: 38.75em) {
+    .Category-title--product {
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 1.75; } }
 
 .Category-section {
   width: 100%;
@@ -878,6 +884,8 @@ tbody.collapse.in {
   max-width: 62.5rem;
   margin: 0 auto;
   padding: 0 4.5%; }
+  .Category-section:last-child {
+    border-bottom: none !important; }
   @media (min-width: 80em) {
     .Category-section {
       padding: 0; } }
@@ -908,6 +916,21 @@ tbody.collapse.in {
   line-height: 1.4;
   font-weight: normal;
   color: #5b656d; }
+
+.Category-sectionCaption {
+  display: block;
+  max-width: 275px;
+  max-width: 17.1875rem;
+  margin: 10px auto 0;
+  margin: 0.625rem auto 0;
+  text-align: center; }
+  .Category-sectionCaption p:last-child {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 2.33333;
+    line-height: 1.5;
+    font-weight: 500; }
 
 .Category-contentHeading {
   margin-bottom: 0;
@@ -1133,6 +1156,7 @@ svg {
         .MainNav-listItem .is-selected:after {
           content: "";
           position: relative;
+          z-index: 3;
           display: block;
           top: 12px;
           margin-top: -10px;
@@ -1141,6 +1165,18 @@ svg {
         z-index: 11;
         background-color: #f5f8fa;
         bottom: auto; }
+        .MainNav-listItem .is-active:before {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          bottom: -10px;
+          bottom: -0.625rem;
+          width: 100%;
+          height: 10px;
+          height: 0.625rem;
+          margin-left: -15px;
+          margin-left: -0.9375rem;
+          background-color: #f5f8fa; }
       .MainNav-listItem > a {
         padding: 10px 10px 15px;
         padding: 0.625rem 0.625rem 0.9375rem;
@@ -1316,6 +1352,29 @@ svg {
       font-size: 14px;
       font-size: 0.875rem;
       line-height: 2; } }
+
+.addthis_toolbox {
+  font-size: 0; }
+  .addthis_toolbox > a {
+    font-size: 16px;
+    font-size: 1rem; }
+
+.addthis_toolbox--product {
+  margin: -10px 0 10px;
+  margin: -0.625rem 0 0.625rem; }
+  @media (min-width: 38.75em) {
+    .addthis_toolbox--product {
+      margin: 0; } }
+
+.addthis_default_style .addthis_separator, .addthis_default_style .at300b, .addthis_default_style .at300bo, .addthis_default_style .at300m, .addthis_default_style .at300bs {
+  float: none !important;
+  display: inline-block !important;
+  padding: 0 5px !important;
+  line-height: 1 !important; }
+  .addthis_default_style .addthis_separator:first-child, .addthis_default_style .at300b:first-child, .addthis_default_style .at300bo:first-child, .addthis_default_style .at300m:first-child, .addthis_default_style .at300bs:first-child {
+    padding-left: 0 !important; }
+  .addthis_default_style .addthis_separator:last-of-type, .addthis_default_style .at300b:last-of-type, .addthis_default_style .at300bo:last-of-type, .addthis_default_style .at300m:last-of-type, .addthis_default_style .at300bs:last-of-type {
+    padding-right: 0 !important; }
 
 .Divider--horizontal {
   width: 100%;
@@ -1758,23 +1817,26 @@ label {
 
 .LinkBar-item {
   display: inline-block;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   padding: 0 10px;
   padding: 0 0.625rem;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 2;
   font-weight: 400;
-  border-left: 1px solid #ccc; }
+  border-left: 1px solid #ccc;
+  line-height: 1; }
   .LinkBar-item:first-of-type {
     margin-left: -10px;
     margin-left: -rem(-10);
     border-left: none; }
   @media (min-width: 38.75em) {
     .LinkBar-item {
+      margin-bottom: 0;
       font-size: 18px;
       font-size: 1.125rem;
-      line-height: 1.55556;
-      line-height: 1; } }
+      line-height: 1.55556; } }
 
 .LinkBar-heading {
   margin-bottom: 10px;
@@ -2028,8 +2090,13 @@ label {
   font-size: 32px;
   font-size: 2rem;
   line-height: 1.75;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   font-weight: normal;
   color: #394147; }
+  @media (min-width: 48.0625em) {
+    .PageSection-heading {
+      margin-bottom: 0; } }
 
 .Pagination {
   text-align: center; }
@@ -2082,8 +2149,8 @@ label {
   color: #5b656d; }
   @media (min-width: 38.75em) {
     .ProductNav-item {
-      margin-right: 32px;
-      margin-right: 2rem;
+      margin-right: 24px;
+      margin-right: 1.5rem;
       font-size: 20px;
       font-size: 1.25rem; } }
   @media (min-width: 48.0625em) {
@@ -2113,8 +2180,8 @@ label {
 
 .ProductNav-share {
   float: right;
-  padding: 17px 10px 0 0;
-  padding: 1.0625rem 0.625rem 0 0; }
+  padding: 12px 10px 0 0;
+  padding: 0.75rem 0.625rem 0 0; }
 
 .References {
   max-width: 1000px;
@@ -2123,9 +2190,9 @@ label {
   margin: 1.25rem auto 0;
   padding: 20px;
   padding: 1.25rem; }
-  .References ol {
+  .References ul, .References ol {
     margin-left: 0; }
-    .References ol li {
+    .References ul li, .References ol li {
       font-size: 12px;
       font-size: 0.75rem;
       line-height: 2.33333;

@@ -31,8 +31,8 @@
 		color: $color4;
 
 		@include rwd-b2() {
-			margin-right: 32px;
-			margin-right: rem(32);
+			margin-right: 24px;
+			margin-right: rem(24);
 			font-size: $h3-size + px;
 			font-size: rem($h3-size);
 		}
@@ -70,6 +70,6 @@
 	}
 	.ProductNav-share {
 		float: right;
-		padding: 17px 10px 0 0;
-		padding: rem(17) rem(10) 0 0;
+		padding: 12px 10px 0 0;
+		padding: rem(12) rem(10) 0 0;
 	}

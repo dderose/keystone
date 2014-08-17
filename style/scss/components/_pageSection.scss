@@ -14,6 +14,12 @@
 	}
 	.PageSection-heading {
 		@include font-size($h1-size);
+		margin-bottom: $half-spacing-unit + px;
+		margin-bottom: rem($half-spacing-unit);
 		font-weight: normal;
 		color: $color3;
+
+		@include rwd-b3() {
+			margin-bottom: 0;
+		}
 	}
