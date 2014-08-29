@@ -567,6 +567,34 @@ blockquote {
   blockquote p:last-of-type {
     margin-bottom: 0; }
 
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/lato-regular-webfont.eot');
+  src: url('fonts/lato-regular-webfont.eot?#iefix') format('eot'), url('fonts/lato-regular-webfont.svg#latoregular') format('svg'), url('fonts/lato-regular-webfont.woff') format('woff'), url('fonts/lato-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/lato-light-webfont.eot');
+  src: url('fonts/lato-light-webfont.eot?#iefix') format('eot'), url('fonts/lato-light-webfont.svg#latolight') format('svg'), url('fonts/lato-light-webfont.woff') format('woff'), url('fonts/lato-light-webfont.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/lato-light-webfont.eot');
+  src: url('fonts/lato-light-webfont.eot?#iefix') format('eot'), url('fonts/lato-light-webfont.svg#latoitalic') format('svg'), url('fonts/lato-light-webfont.woff') format('woff'), url('fonts/lato-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/lato-bold-webfont.eot');
+  src: url('fonts/lato-bold-webfont.eot?#iefix') format('eot'), url('fonts/lato-bold-webfont.svg#latobold') format('svg'), url('fonts/lato-bold-webfont.woff') format('woff'), url('fonts/lato-bold-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal; }
+
 
 .Accordion-item {
   width: 100%;
@@ -965,6 +993,44 @@ body {
 
 svg {
   pointer-events: none; }
+
+.Select-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #d9e3ea;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  background-color: #f7f9fb; }
+
+.Select {
+  width: 100%;
+  padding: 12px 15px;
+  padding: 0.75rem 0.9375rem;
+  color: #5b656d;
+  font-size: 14px;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  .Select:focus {
+    outline: none; }
+  .Select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000; }
+
+.Select-arrow {
+  position: absolute;
+  top: 15px;
+  top: 0.9375rem;
+  right: 15px;
+  right: 0.9375rem; }
 
 .PageHeader {
   position: relative;
@@ -1375,6 +1441,16 @@ svg {
   .addthis_default_style .addthis_separator:last-of-type, .addthis_default_style .at300b:last-of-type, .addthis_default_style .at300bo:last-of-type, .addthis_default_style .at300m:last-of-type, .addthis_default_style .at300bs:last-of-type {
     padding-right: 0 !important; }
 
+.sticky-wrapper {
+  height: 60px !important;
+  height: 3.75rem !important; }
+
+@media print {
+  body {
+    font-weight: normal; }
+  .MainNav-list, .sticky-wrapper {
+    display: none; } }
+
 .Divider--horizontal {
   width: 100%;
   height: 1px;
@@ -1406,7 +1482,6 @@ svg {
   padding: 12px 15px;
   padding: 0.75rem 0.9375rem;
   border: 1px solid #d9e3ea;
-  border: 0.0625rem solid #d9e3ea;
   background-color: #f7f9fb;
   color: #5b656d;
   font-size: 14px;
